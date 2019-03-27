@@ -1,4 +1,5 @@
-___awdiv: CODE, 32280 0 164
-_main: CODE, 32444 0 324
-__initialization: CODE, 32202 0 32
-Total: 520
+_main: CODE, 32746 0 10
+__initialization: CODE, 32730 0 0
+_pwm_25: CODE, 32736 0 10
+_init_pwm: CODE, 32756 0 12
+Total: 32

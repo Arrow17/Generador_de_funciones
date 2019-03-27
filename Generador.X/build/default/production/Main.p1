@@ -1,47 +1,9 @@
 Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
-"13104 /opt/microchip/xc8/v1.32/include/pic18f45k50.h
-[v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
-"5514
-[s S354 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S354 . TRISC0 TRISC1 TRISC2 . TRISC4 TRISC5 TRISC6 TRISC7 ]
-"5524
-[s S355 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S355 . RC0 RC1 RC2 . RC6 RC7 ]
-"5532
-[s S356 :3 `uc 1 :1 `uc 1 ]
-[n S356 . . TRISC3 ]
-"5513
-[u S353 `S354 1 `S355 1 `S356 1 ]
-[n S353 . . . . ]
-"5537
-[v _TRISCbits `VS353 ~T0 @X0 0 e@3988 ]
-"3416
-[s S233 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S233 . RC0 RC1 RC2 . RC4 RC5 RC6 RC7 ]
-"3426
-[s S234 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S234 . T1OSO T1OSI CCP1 . TX RX ]
-"3434
-[s S235 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S235 . T13CKI . P1A . CK DT ]
-"3442
-[s S236 :1 `uc 1 :1 `uc 1 ]
-[n S236 . . CCP2 ]
-"3446
-[s S237 :2 `uc 1 :1 `uc 1 ]
-[n S237 . . PA1 ]
-"3450
-[s S238 :1 `uc 1 :1 `uc 1 ]
-[n S238 . . PA2 ]
-"3454
-[s S239 :3 `uc 1 :1 `uc 1 ]
-[n S239 . . RC3 ]
-"3415
-[u S232 `S233 1 `S234 1 `S235 1 `S236 1 `S237 1 `S238 1 `S239 1 ]
-[n S232 . . . . . . . . ]
-"3459
-[v _PORTCbits `VS232 ~T0 @X0 0 e@3970 ]
+"7 PWM.h
+[v _init_pwm `(v ~T0 @X0 0 ef ]
+"9
+[v _pwm_25 `(v ~T0 @X0 0 ef ]
 [; ;htc.h: 21: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 24: extern void __builtin_software_breakpoint(void);
 [; ;pic18f45k50.h: 47: extern volatile unsigned char SRCON1 @ 0xF57;
@@ -6732,153 +6694,122 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 147: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 149: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 151: extern __nonreentrant void _delay3(unsigned char);
-"11 Main.c
+"7 configuracion_bite.h
+[p x PLLSEL=PLL4X ]
+"8
+[p x CFGPLLEN=OFF ]
+"9
+[p x CPUDIV=NOCLKDIV ]
+"10
+[p x LS48MHZ=SYS24X4 ]
+"13
+[p x FOSC=INTOSCIO ]
+"14
+[p x PCLKEN=OFF ]
+"15
+[p x FCMEN=OFF ]
+"16
+[p x IESO=OFF ]
+"19
+[p x nPWRTEN=ON ]
+"20
+[p x BOREN=SBORDIS ]
+"21
+[p x BORV=190 ]
+"22
+[p x nLPBOR=OFF ]
+"25
+[p x WDTEN=OFF ]
+"26
+[p x WDTPS=32768 ]
+"29
+[p x CCP2MX=RC1 ]
+"30
+[p x PBADEN=ON ]
+"31
+[p x T3CMX=RC0 ]
+"32
+[p x SDOMX=RB3 ]
+"33
+[p x MCLRE=ON ]
+"37
+[p x STVREN=ON ]
+"38
+[p x LVP=OFF ]
+"39
+[p x ICPRT=OFF ]
+"40
+[p x XINST=OFF ]
+"43
+[p x CP0=OFF ]
+"44
+[p x CP1=OFF ]
+"45
+[p x CP2=OFF ]
+"46
+[p x CP3=OFF ]
+"49
+[p x CPB=OFF ]
+"50
+[p x CPD=OFF ]
+"53
+[p x WRT0=OFF ]
+"54
+[p x WRT1=OFF ]
+"55
+[p x WRT2=OFF ]
+"56
+[p x WRT3=OFF ]
+"59
+[p x WRTC=OFF ]
+"60
+[p x WRTB=OFF ]
+"61
+[p x WRTD=OFF ]
+"64
+[p x EBTR0=OFF ]
+"65
+[p x EBTR1=OFF ]
+"66
+[p x EBTR2=OFF ]
+"67
+[p x EBTR3=OFF ]
+"70
+[p x EBTRB=OFF ]
+[; ;PWM.h: 7: void init_pwm();
+[; ;PWM.h: 9: void pwm_25();
+[; ;PWM.h: 11: void pwm_50();
+[; ;PWM.h: 13: void pwm_75();
+[; ;PWM.h: 15: void pwm_100();
+"13 Main.c
 [v _main `(v ~T0 @X0 1 ef ]
-"12
+"14
 {
-[; ;Main.c: 11: void main(void)
-[; ;Main.c: 12: {
+[; ;Main.c: 13: void main(void)
+[; ;Main.c: 14: {
 [e :U _main ]
 [f ]
-[; ;Main.c: 14: OSCCON= 0b01110010;
-"14
-[e = _OSCCON -> -> 114 `i `uc ]
-[; ;Main.c: 15: TRISCbits.RC2=0;
+[; ;Main.c: 15: init_pwm();
 "15
-[e = . . _TRISCbits 1 2 -> -> 0 `i `uc ]
-[v F7353 `i ~T0 @X0 -> 20 `i s ]
-[i F7353
-:U ..
+[e ( _init_pwm ..  ]
+[; ;Main.c: 16: while(1){
 "16
--> 50 `i
--> 35 `i
--> 21 `i
--> 10 `i
--> 2 `i
--> 0 `i
--> 2 `i
--> 10 `i
--> 21 `i
--> 35 `i
--> 50 `i
--> 65 `i
--> 79 `i
--> 90 `i
--> 98 `i
-"17
--> 100 `i
--> 98 `i
--> 90 `i
--> 79 `i
--> 65 `i
-..
-]
-"16
-[v _valoresSeno `i ~T0 @X0 -> 20 `i a ]
-[; ;Main.c: 16: int valoresSeno [20]= {50,35,21,10, 2, 0, 2,10, 21, 35, 50, 65, 79, 90, 98,
-[; ;Main.c: 17: 100, 98, 90, 79, 65};
-"17
-[e = _valoresSeno F7353 ]
-"18
-[v _i `i ~T0 @X0 1 a ]
-[v _j `i ~T0 @X0 1 a ]
-[v _k `i ~T0 @X0 1 a ]
-[; ;Main.c: 18: int i, j,k;
-[; ;Main.c: 19: for (i=0;i<20;i++){
-"19
-{
-[e = _i -> 0 `i ]
-[e $ < _i -> 20 `i 940  ]
-[e $U 941  ]
-[e :U 940 ]
-{
-[; ;Main.c: 20: valoresSeno [i]=valoresSeno [i]/10;
-"20
-[e = *U + &U _valoresSeno * -> -> _i `ui `ux -> -> # *U &U _valoresSeno `ui `ux / *U + &U _valoresSeno * -> -> _i `ui `ux -> -> # *U &U _valoresSeno `ui `ux -> 10 `i ]
-"21
-}
-"19
-[e ++ _i -> 1 `i ]
-[e $ < _i -> 20 `i 940  ]
 [e :U 941 ]
-"21
-}
-[; ;Main.c: 21: }
-[; ;Main.c: 22: while(1){
-"22
-[e :U 944 ]
 {
-[; ;Main.c: 23: for (i=0;i<20;i++){
-"23
-{
-[e = _i -> 0 `i ]
-[e $ < _i -> 20 `i 946  ]
-[e $U 947  ]
-[e :U 946 ]
-{
-[; ;Main.c: 24: for (j=0;j<valoresSeno[i];j++){
-"24
-{
-[e = _j -> 0 `i ]
-[e $U 952  ]
-[e :U 949 ]
-{
-[; ;Main.c: 25: PORTCbits.RC2=1;
-"25
-[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
-"26
+[; ;Main.c: 17: pwm_25();
+"17
+[e ( _pwm_25 ..  ]
+"18
 }
-"24
-[e ++ _j -> 1 `i ]
-[e :U 952 ]
-[e $ < _j *U + &U _valoresSeno * -> -> _i `ui `ux -> -> # *U &U _valoresSeno `ui `ux 949  ]
-[e :U 950 ]
-"26
-}
-[; ;Main.c: 26: }
-[; ;Main.c: 27: k=100/10-valoresSeno[i];
-"27
-[e = _k - / -> 100 `i -> 10 `i *U + &U _valoresSeno * -> -> _i `ui `ux -> -> # *U &U _valoresSeno `ui `ux ]
-[; ;Main.c: 28: for (j=0;j<k;j++){
-"28
-{
-[e = _j -> 0 `i ]
-[e $U 956  ]
-[e :U 953 ]
-{
-[; ;Main.c: 29: PORTCbits.RC2=0;
-"29
-[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-"30
-}
-"28
-[e ++ _j -> 1 `i ]
-[e :U 956 ]
-[e $ < _j _k 953  ]
-[e :U 954 ]
-"30
-}
-"31
-}
-"23
-[e ++ _i -> 1 `i ]
-[e $ < _i -> 20 `i 946  ]
-[e :U 947 ]
-"31
-}
-"32
-}
-[e :U 943 ]
-"22
-[e $U 944  ]
-[e :U 945 ]
-[; ;Main.c: 30: }
-[; ;Main.c: 31: }
-[; ;Main.c: 32: }
-[; ;Main.c: 33: return;
-"33
+[e :U 940 ]
+"16
+[e $U 941  ]
+[e :U 942 ]
+[; ;Main.c: 18: }
+[; ;Main.c: 19: return;
+"19
 [e $UE 939  ]
-[; ;Main.c: 34: }
-"34
+[; ;Main.c: 20: }
+"20
 [e :UE 939 ]
 }

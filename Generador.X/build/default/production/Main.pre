@@ -8581,28 +8581,90 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
-# 11 "Main.c"
+
+# 7 "configuracion_bite.h"
+#pragma config PLLSEL = PLL4X
+#pragma config CFGPLLEN = OFF
+#pragma config CPUDIV = NOCLKDIV
+#pragma config LS48MHZ = SYS24X4
+
+
+#pragma config FOSC = INTOSCIO
+#pragma config PCLKEN = OFF
+#pragma config FCMEN = OFF
+#pragma config IESO = OFF
+
+
+#pragma config nPWRTEN = ON
+#pragma config BOREN = SBORDIS
+#pragma config BORV = 190
+#pragma config nLPBOR = OFF
+
+
+#pragma config WDTEN = OFF
+#pragma config WDTPS = 32768
+
+
+#pragma config CCP2MX = RC1
+#pragma config PBADEN = ON
+#pragma config T3CMX = RC0
+#pragma config SDOMX = RB3
+#pragma config MCLRE = ON
+
+
+
+#pragma config STVREN = ON
+#pragma config LVP = OFF
+#pragma config ICPRT = OFF
+#pragma config XINST = OFF
+
+
+#pragma config CP0 = OFF
+#pragma config CP1 = OFF
+#pragma config CP2 = OFF
+#pragma config CP3 = OFF
+
+
+#pragma config CPB = OFF
+#pragma config CPD = OFF
+
+
+#pragma config WRT0 = OFF
+#pragma config WRT1 = OFF
+#pragma config WRT2 = OFF
+#pragma config WRT3 = OFF
+
+
+#pragma config WRTC = OFF
+#pragma config WRTB = OFF
+#pragma config WRTD = OFF
+
+
+#pragma config EBTR0 = OFF
+#pragma config EBTR1 = OFF
+#pragma config EBTR2 = OFF
+#pragma config EBTR3 = OFF
+
+
+#pragma config EBTRB = OFF
+
+# 7 "PWM.h"
+void init_pwm();
+
+void pwm_25();
+
+void pwm_50();
+
+void pwm_75();
+
+void pwm_100();
+
+# 13 "Main.c"
 void main(void)
 {
-
-OSCCON= 0b01110010;
-TRISCbits.RC2=0;
-int valoresSeno [20]= {50,35,21,10, 2, 0, 2,10, 21, 35, 50, 65, 79, 90, 98,
-100, 98, 90, 79, 65};
-int i, j,k;
-for (i=0;i<20;i++){
-valoresSeno [i]=valoresSeno [i]/10;
-}
+init_pwm();
 while(1){
-for (i=0;i<20;i++){
-for (j=0;j<valoresSeno[i];j++){
-PORTCbits.RC2=1;
-}
-k=100/10-valoresSeno[i];
-for (j=0;j<k;j++){
-PORTCbits.RC2=0;
-}
-}
+pwm_25();
 }
 return;
 }
