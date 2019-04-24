@@ -8810,7 +8810,9 @@ void lcd_time_control();
 void lcd_Pos(char columna, char fila);
 int lcd_Cadena(char* cadena,unsigned char* columna, unsigned char* fila);
 
-# 27
+void lcd_off();
+
+# 29
 void lcd_init() {
 TRISEbits.TRISE0 = 0;
 TRISEbits.TRISE1 = 0;
@@ -8819,7 +8821,7 @@ LATEbits.LATE0 = 0;
 LATEbits.LATE1 = 0;
 LATA = 0;
 
-# 37
+# 39
 _delay((unsigned long)((5)*(8000000/4000.0)));
 lcd_control(0x02);
 lcd_control(0x28);
@@ -8827,7 +8829,7 @@ lcd_control(0x0C);
 lcd_control(0x06);
 }
 
-# 49
+# 51
 void lcd_control(char dato) {
 LATEbits.LATE0 = 0;
 LATA = dato & 0xF0;
@@ -8837,7 +8839,7 @@ lcd_time_control();
 _delay((unsigned long)((2)*(8000000/4000.0)));
 }
 
-# 63
+# 65
 void lcd_dato(char dato) {
 LATEbits.LATE0 = 1;
 LATA = dato & 0xF0;
@@ -8847,17 +8849,17 @@ lcd_time_control();
 _delay((unsigned long)((50)*(8000000/4000000.0)));
 }
 
-# 75
+# 77
 void lcd_clear_display() {
 lcd_control(0x01);
 }
 
-# 82
+# 84
 void lcd_cursor_home() {
 lcd_control(0x02);
 }
 
-# 89
+# 91
 void lcd_print(char *dato) {
 while (*dato)
 {
@@ -8866,7 +8868,7 @@ dato++;
 }
 }
 
-# 100
+# 102
 void lcd_print_with_position(int x, int y, char *dato) {
 char posicion;
 switch (y) {
@@ -8881,7 +8883,7 @@ lcd_control(posicion);
 lcd_print(dato);
 }
 
-# 122
+# 124
 void lcd_goto(int x, int y) {
 char posicion;
 switch (y) {
@@ -8895,7 +8897,7 @@ break;
 lcd_control(posicion);
 }
 
-# 138
+# 140
 void lcd_put_caracter(char adress, char caracter[]) {
 int i;
 lcd_control(0x40 + (adress * 8));
@@ -8904,7 +8906,7 @@ lcd_dato(caracter[i]);
 }
 }
 
-# 149
+# 151
 void lcd_time_control() {
 LATEbits.LATE1 = 1;
 _delay((unsigned long)((5)*(8000000/4000000.0)));
@@ -8917,7 +8919,7 @@ int lcd_Cadena(char* cadena,unsigned char* columna, unsigned char* fila)
 {
 register int conteo=0;
 
-# 170
+# 172
 *fila+=(*columna>>4);
 lcd_Pos(*columna,*fila);
 while(*cadena)
@@ -8948,34 +8950,36 @@ lcd_control(direccion);
 
 }
 
-# 23 "Main.c"
+void lcd_off(){
+TRISEbits.TRISE0 = 0;
+TRISEbits.TRISE1 = 0;
+TRISA = 0x00;
+LATEbits.LATE0 = 0;
+LATEbits.LATE1 = 0;
+LATA = 0;
+
+}
+
+# 3 "Funciones.h"
+void Presentacion();
+void Menu();
+void Menu_Pwm();
 void Tec(char *cadena);
 void Imprimir_pantalla(char *N);
 void Frecuencia(char *frecuencia);
 void Ciclo(char *ciclo);
 
+void Prueba1();
+void Prueba2();
+
 int q,w,e,r,t;
 int a=1,s,d,f,g;
+char key;
 unsigned char frecuencia[10],ciclo[10],columna=0,cantidad=0,fila=0,cadena[10],cad[10];
 
-void main() {
-
-char key;
-OSCCON= 0b01100011;
-lcd_init();
-int_teclado();
-do{
+void Presentacion(){
 
 
-
-key = Recuperar();
-
-
-
-if(key==' '){
-q=1;
-do{
-key = Recuperar();
 lcd_clear_display();
 lcd_goto(1,1);
 lcd_print("Universidad de ");
@@ -8990,24 +8994,12 @@ lcd_goto(3,2);
 lcd_print("Generador");
 tm_1s();
 tm_1s();
-key = Recuperar();
-tm_100();
-if(key=='D'){
-q=0;
-}
-}while(q==1);
 
 
 }
 
+void Menu(){
 
-if(key=='D'){
-
-key = Recuperar();
-q=1;
-do{
-
-key = Recuperar();
 lcd_clear_display();
 lcd_goto(1,1);
 lcd_print("A.-Cuadrada");
@@ -9021,94 +9013,20 @@ lcd_goto(1,1);
 lcd_print("C.-Triangular");
 tm_1s();
 tm_1s();
-key = Recuperar();
 
+}
 
-if(key=='A'){
-w=1;
+void Menu_Pwm(){
 lcd_init();
 lcd_clear_display();
-int_teclado();
-key=Recuperar();
-do{
-lcd_init();
-lcd_clear_display();
-int_teclado();
-key=Recuperar();
 lcd_goto(1,1);
 lcd_print("1.-Datos");
 lcd_goto(1,2);
 lcd_print("2.-Comenzar");
 
 tm_500();
-key=Recuperar();
-
-
-if(key=='1') {
-r=1;
-do{
-Frecuencia(frecuencia);
-Imprimir_pantalla(frecuencia);
-Ciclo(ciclo);
-Imprimir_pantalla(ciclo);
-s=atoi(frecuencia);
-t=atoi(ciclo);
-
-key=Recuperar();
-if(key=='*'){
-
-r=0;
 }
 
-}while(r==1);
-}
-
-
-if(key=='2') {
-lcd_init();
-lcd_clear_display();
-e=s*100;
-f=t*100;
-
-cantidad= Conv_Entero(e,cadena);
-lcd_Cadena(cadena,&columna,&fila);
-tm_1s();
-key=Recuperar();
-r=1;
-do{
-
-key=Recuperar();
-
-
-if(key=='*'){
-
-r=0;
-}
-
-}while(r==1);
-}
-
-
-if(key=='D')
-{
-lcd_clear_display();
-w=0;
-}
-}while(w==1);
-
-};
-
-if(key=='#'){
-lcd_clear_display();
-q=0;
-}
-}while(q==1);
-}
-
-
-
-}while(1);
-}
 
 void Frecuencia(char *frecuencia){
 lcd_init();
@@ -9175,4 +9093,138 @@ lcd_Cadena(N,&columna,&fila);
 tm_1s();
 lcd_clear_display();
 
+}
+
+void Prueba1(){
+Frecuencia(frecuencia);
+Imprimir_pantalla(frecuencia);
+Ciclo(ciclo);
+Imprimir_pantalla(ciclo);
+s=atoi(frecuencia);
+t=atoi(ciclo);
+}
+
+void Prueba2(){
+lcd_init();
+lcd_clear_display();
+e=s*100;
+f=t*100;
+
+cantidad= Conv_Entero(e,cadena);
+lcd_Cadena(cadena,&columna,&fila);
+tm_1s();
+}
+
+# 24 "Main.c"
+int q,w,e,r,t;
+
+
+
+void main() {
+
+char key;
+OSCCON= 0b01100011;
+lcd_init();
+int_teclado();
+do{
+
+
+
+key = Recuperar();
+
+
+
+if(key==' '){
+q=1;
+do{
+Presentacion();
+key=Recuperar();
+if(key=='D' | key=='0'){
+q=0;
+}
+}while(q==1);
+}
+
+
+if(key=='D'){
+key = Recuperar();
+q=1;
+do{
+Menu();
+key = Recuperar();
+
+if(key=='A'){
+w=1;
+lcd_init();
+lcd_clear_display();
+int_teclado();
+key=Recuperar();
+do{
+Menu_Pwm();
+key=Recuperar();
+if(key=='1') {
+r=1;
+do{
+Prueba1();
+key=Recuperar();
+if(key=='*'){
+r=0;
+}
+}while(r==1);
+}
+
+
+if(key=='2') {
+Prueba2();
+key=Recuperar();
+r=1;
+do{
+
+key=Recuperar();
+
+
+if(key=='*'){
+
+r=0;
+}
+
+}while(r==1);
+}
+
+
+if(key=='D')
+{
+lcd_clear_display();
+w=0;
+}
+}while(w==1);
+
+};
+
+if(key=='#'){
+lcd_clear_display();
+q=0;
+}
+}while(q==1);
+}
+
+if(key=='0'){
+q=1;
+lcd_init();
+lcd_clear_display();
+lcd_print("Adios");
+tm_1s();
+key = Recuperar();
+do{
+lcd_clear_display();
+key = Recuperar();
+
+if(key=='*'){
+q=0;
+}
+}while(q==1);
+
+}
+
+}while(1);
 }
