@@ -8787,9 +8787,9 @@ _delay((unsigned long)((50)*(8000000/4000.0)));
 }
 
 # 7 "senoidal.h"
-void SENO_GENERAR_100();
-void SENO_GENERAR_50();
-void SENO_GENERAR_20();
+void SENO_100();
+void SENO_50();
+void SENO_20();
 
 # 10 "teclado.h"
 void int_teclado();
@@ -8809,8 +8809,6 @@ void lcd_put_caracter(char, char[]);
 void lcd_time_control();
 void lcd_Pos(char columna, char fila);
 int lcd_Cadena(char* cadena,unsigned char* columna, unsigned char* fila);
-
-void lcd_off();
 
 # 29
 void lcd_init() {
@@ -8947,16 +8945,6 @@ register long direccion=0x80;
 direccion|=columna&0xF;
 direccion|=((fila&0x1)<<6);
 lcd_control(direccion);
-
-}
-
-void lcd_off(){
-TRISEbits.TRISE0 = 0;
-TRISEbits.TRISE1 = 0;
-TRISA = 0x00;
-LATEbits.LATE0 = 0;
-LATEbits.LATE1 = 0;
-LATA = 0;
 
 }
 

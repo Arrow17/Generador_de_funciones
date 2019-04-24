@@ -20,7 +20,7 @@ void lcd_time_control();
 void lcd_Pos(char columna, char fila);
 int lcd_Cadena(char* cadena,unsigned char* columna, unsigned char* fila);
 
-void lcd_off();
+
 /*
  * Configuracion de Puertos
  * Iniciliaza el los puertos requeridos para el LCD
@@ -199,12 +199,3 @@ void lcd_Pos(char columna, char fila)
     
 }
 
-void lcd_off(){
-    TRISRS = 0; //Configuramos el Pin RS como salida
-    TRISEN = 0; //Configuramos el Pin E como salida
-    PUERTOTRS = 0x00; //Configuramos El nibble mas significativo como Salidas (Bus de 4 Bits))
-    RS = 0; //Aseguramos RS en 0            
-    EN = 0; //Aseguramos E en 0
-    PUERTO = 0; //Aseguramos el Puerto de datos en 0
-
-}
