@@ -1,5 +1,30 @@
-_main: CODE, 32746 0 10
-__initialization: CODE, 32730 0 0
-_pwm_25: CODE, 32736 0 10
-_init_pwm: CODE, 32756 0 12
-Total: 32
+_lcd_time_control: CODE, 6150 0 22
+_tm_500: CODE, 5148 0 142
+___aldiv: CODE, 4148 0 252
+_Teclado: CODE, 4994 0 154
+__stringdata: SMALLCONST, 2049 0 144
+_lcd_dato: CODE, 5940 0 42
+_main: CODE, 2194 0 906
+___almod: CODE, 4400 0 220
+_Tec: CODE, 3572 0 294
+_atoi: CODE, 4620 0 202
+___lmul: CODE, 5592 0 86
+__initialization: CODE, 5502 0 80
+_lcd_Cadena: CODE, 4822 0 172
+_lcd_goto: CODE, 5792 0 56
+_lcd_print: CODE, 5898 0 42
+_int_teclado: CODE, 6186 0 10
+_isdigit: CODE, 6088 0 32
+_Ciclo: CODE, 6054 0 34
+_Frecuencia: CODE, 6020 0 34
+_tm_100: CODE, 6120 0 30
+_tm_1s: CODE, 3866 0 282
+_lcd_control: CODE, 5848 0 50
+_Imprimir_pantalla: CODE, 5678 0 58
+_Conv_Entero: CODE, 3100 0 472
+_Recuperar: CODE, 6172 0 14
+_lcd_Pos: CODE, 5410 0 92
+___wmul: CODE, 5982 0 38
+_lcd_clear_display: CODE, 6196 0 8
+_lcd_init: CODE, 5736 0 56
+Total: 4024
