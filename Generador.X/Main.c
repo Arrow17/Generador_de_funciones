@@ -16,7 +16,7 @@
 #include "senoidal.h"
 #include "teclado.h"
 #include "pantalla.h"
-#include "Funciones_principales.h"
+
 
 #define XTAL_FREQ 8000000 //8Mhz
 
