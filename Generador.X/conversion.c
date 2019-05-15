@@ -11,7 +11,7 @@
 
 int Conv_Entero(long long numero,char* conv)
 {
-    char   convTemp[21]; //longitud maxima de long 12 digitos con signo
+     char   convTemp[21]; //longitud maxima de long 12 digitos con signo
     register char *punteroActual;
     register int num=0;
     register char i=0;

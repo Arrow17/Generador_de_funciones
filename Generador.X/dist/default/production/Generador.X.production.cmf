@@ -1,0 +1,1242 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$/tmp/cgtkgyS1o.obj
+end_init CODE 0 0 0 4 1
+idloc IDLOC 0 200000 200000 8 1
+config CONFIG 0 300000 300000 E 1
+$dist/default/production/Generador.X.production.obj
+smallconst SMALLCONST 0 800 800 E4 1
+text23 CODE 0 1B46 1B46 126 1
+text22 CODE 0 18F8 18F8 128 1
+text21 CODE 0 17CC 17CC 12C 1
+text20 CODE 0 219E 219E 90 1
+text19 CODE 0 2104 2104 9A 1
+text18 CODE 0 24F2 24F2 E 1
+text17 CODE 0 23C2 23C2 4E 1
+text16 CODE 0 1A20 1A20 126 1
+text15 CODE 0 247C 247C 30 1
+text14 CODE 0 1D86 1D86 FC 1
+text13 CODE 0 1F5E 1F5E DC 1
+text12 CODE 0 236C 236C 56 1
+text11 CODE 0 15F4 15F4 1D8 1
+text10 CODE 0 244C 244C 30 1
+text9 CODE 0 1C6C 1C6C 11A 1
+text8 CODE 0 2410 2410 3C 1
+text7 CODE 0 22B0 22B0 62 1
+text6 CODE 0 222E 222E 82 1
+text5 CODE 0 13C6 13C6 22E 1
+text4 CODE 0 24AC 24AC 26 1
+text3 CODE 0 24D2 24D2 20 1
+text2 CODE 0 203A 203A CA 1
+text1 CODE 0 2500 2500 A 1
+text0 CODE 0 8E4 8E4 AE2 1
+cstackCOMRAM COMRAM 1 1 1 3C 1
+cstackBANK0 BANK0 1 60 60 6F 1
+dataBANK1 BANK1 1 100 100 DC 1
+bssBANK0 BANK0 1 CF CF 28 1
+dataCOMRAM COMRAM 1 53 53 2 1
+bssCOMRAM COMRAM 1 3D 3D 16 1
+cinit CODE 0 2312 2312 5A 1
+idataBANK1 CODE 0 1E82 1E82 DC 1
+idataCOMRAM CODE 0 250A 250A 2 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+BANK0 0000F7-0000FF 1
+BANK1 0001DC-0001FF 1
+BANK2 000200-0002FF 1
+BANK3 000300-0003FF 1
+BANK4 000400-0004FF 1
+BANK5 000500-0005FF 1
+BANK6 000600-0006FF 1
+BANK7 000700-0007FF 1
+BIGRAM 000055-00005F 1
+BIGRAM 0000F7-0000FF 1
+BIGRAM 0001DC-0007FF 1
+CODE 000004-0007FF 1
+CODE 00250C-007FFF 1
+COMRAM 000055-00005F 1
+CONST 000004-0007FF 1
+CONST 00250C-007FFF 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST 00250C-007FFF 1
+RAM 0000F7-0000FF 1
+RAM 0001DC-0007FF 1
+SFR 000F53-000FFF 1
+SMALLCONST 00250C-007FFF 1
+STACK 0001DC-0007FF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <file name>:<line number> <address> <psect name> <class name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production/Generador.X.production.obj
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":27 8E4 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":31 8E4 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":32 8EA text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":33 8EE text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":38 8F2 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":42 8FA text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":43 904 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":45 910 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":46 914 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":47 918 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":48 91E text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":49 924 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":50 936 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":51 944 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":52 956 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":53 964 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":54 96A text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":55 97C text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":56 98E text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":57 99C text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":58 9A2 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":59 9A8 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":60 9B8 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":61 9C8 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":62 9D0 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":63 9E4 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":65 9F0 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":69 9FA text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":70 A06 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":71 A0E text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":73 A1A text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":74 A1E text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":75 A24 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":76 A2A text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":77 A3C text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":78 A4E text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":79 A5C text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":80 A6A text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":81 A78 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":82 A80 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":83 A84 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":84 A8A text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":85 A90 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":86 AA2 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":87 AB0 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":88 ABE text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":89 ACC text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":92 AD4 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":93 ADE text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":94 AEA text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":95 AEE text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":96 AF4 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":97 AFA text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":98 AFE text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":100 B06 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":101 B0A text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":102 B10 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":103 B16 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":104 B28 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":105 B3A text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":106 B48 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":107 B56 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":108 B5E text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":109 B62 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":110 B68 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":111 B6E text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":112 B80 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":113 B8E text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":114 B9C text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":115 BA4 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":116 BAE text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":117 BBA text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":118 BBE text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":119 BC4 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":120 BCA text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":121 BCE text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":123 BD6 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":124 BDA text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":125 BE0 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":126 BE6 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":128 BF8 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":135 BFA text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":137 C0C text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":141 C32 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":142 C50 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":143 C5E text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":142 C60 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":145 CA4 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":146 CE2 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":147 CF0 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":146 CF2 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":141 D14 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":150 D1C text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":151 D24 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":152 D32 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":153 D40 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":154 D4E text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":155 D5C text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":156 D6A text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":157 D78 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":158 D80 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":159 D8E text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":160 D9C text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":161 DAA text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":162 DB8 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":163 DC6 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":164 DD4 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":165 DE2 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":166 DEA text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":167 E00 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":169 E0A text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":170 E20 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":175 E2A text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":176 E34 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":177 E40 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":178 E44 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":179 E4A text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":180 E50 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":181 E54 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":183 E5C text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":184 E60 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":185 E66 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":186 E6C text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":187 E7E text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":188 E90 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":189 E9E text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":190 EAC text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":191 EB4 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":192 EB8 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":193 EBE text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":194 EC4 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":195 ED6 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":196 EE4 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":197 EF2 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":198 EFA text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":199 F04 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":200 F10 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":201 F14 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":202 F1A text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":203 F20 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":204 F24 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":206 F2C text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":207 F30 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":208 F36 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":209 F3C text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":210 F4E text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":211 F5C text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":212 F64 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":213 F7A text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":215 F84 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":216 F9A text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":219 FA4 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":220 FAE text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":221 FBA text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":222 FBE text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":223 FC4 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":224 FCA text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":225 FCE text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":227 FD6 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":228 FDA text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":229 FE0 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":230 FE6 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":231 FF8 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":232 100A text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":233 1018 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":234 1026 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":235 102E text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":236 1038 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":238 1044 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":239 104A text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":240 1050 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":241 1062 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":242 1074 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":243 1082 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":244 1090 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":245 1098 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":246 10A2 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":248 10AE text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":249 10BE text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":250 10CE text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":251 10E6 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":252 10EE text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":253 10F8 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":255 1104 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":257 110E text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":258 1118 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":260 1124 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":261 1134 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":262 1144 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":263 115C text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":264 1164 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":265 116E text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":267 117A text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":269 1184 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":270 118E text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":272 119A text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":276 11A4 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":277 11AE text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":278 11B2 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":279 11B8 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":280 11BE text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":281 11D0 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":283 11E2 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":285 1206 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":286 121C text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":287 122E text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":289 1240 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":291 1264 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":292 127A text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":294 128E text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":295 1296 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":298 12A2 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":301 12AA text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":303 12B4 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":306 12C0 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":310 12CA text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":313 12D4 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":314 12DA text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":316 12E6 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":320 12F0 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":321 12FA text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":322 1300 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":324 130C text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":327 1318 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":328 1324 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":329 1330 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":330 1334 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":331 133A text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":332 1340 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":334 1352 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":335 1360 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":336 136E text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":337 137C text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":339 1384 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":340 1388 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":341 138E text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":342 1394 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":343 139A text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":345 13A2 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":346 13AC text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c":348 13B8 text0 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c":10 13C6 text5 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c":17 13C6 text5 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c":19 13C8 text5 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c":20 13D0 text5 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c":21 13E0 text5 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c":22 1410 text5 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c":23 1442 text5 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c":24 1446 text5 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c":25 1448 text5 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c":26 1464 text5 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c":27 1466 text5 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c":24 1498 text5 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c":29 14BC text5 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c":30 14C6 text5 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c":37 14CA text5 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c":38 14DA text5 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c":39 14E6 text5 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c":40 1516 text5 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c":41 1546 text5 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c":42 157A text5 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c":43 1582 text5 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c":44 158A text5 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c":45 15AC text5 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c":46 15B0 text5 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c":47 15B6 text5 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c":48 15E8 text5 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c":49 15EC text5 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c":50 15EE text5 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c":51 15F2 text5 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/conversion.c":12 15F4 text11 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/conversion.c":16 15F4 text11 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/conversion.c":17 15FC text11 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/conversion.c":18 1600 text11 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/conversion.c":20 1610 text11 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/conversion.c":21 1618 text11 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/conversion.c":23 1624 text11 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/conversion.c":25 1640 text11 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/conversion.c":29 1674 text11 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/conversion.c":30 167A text11 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/conversion.c":32 16B6 text11 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/conversion.c":33 16C4 text11 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/conversion.c":35 1704 text11 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/conversion.c":37 1720 text11 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/conversion.c":38 1726 text11 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/conversion.c":41 1732 text11 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/conversion.c":42 176C text11 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/conversion.c":49 1772 text11 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/conversion.c":42 1796 text11 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/conversion.c":52 17BE text11 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":134 17CC text21 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":135 17CE text21 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":136 17D2 text21 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":137 1810 text21 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":138 184C text21 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":139 1854 text21 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":140 185E text21 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":141 18A0 text21 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":142 18CE text21 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":143 18D6 text21 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":144 18E0 text21 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":145 18F6 text21 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":48 18F8 text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":50 18F8 text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":51 18FA text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":52 18FC text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":53 18FE text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":54 1900 text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":55 1902 text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":56 1904 text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":57 1906 text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":58 1908 text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":59 190A text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":60 190C text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":61 190E text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":62 1910 text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":63 1912 text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":64 1914 text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":65 1924 text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":66 1934 text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":67 1944 text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":68 1954 text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":69 1964 text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":70 1974 text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":71 197A text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":72 197A text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":73 1984 text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":74 198E text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":75 1992 text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":76 1998 text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":77 19A2 text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":78 19A4 text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":70 19B4 text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":80 19BC text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":81 19C8 text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":82 19D4 text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":83 19DA text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":84 19E6 text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":85 19F6 text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":86 1A00 text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":87 1A0A text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":88 1A14 text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":89 1A1E text22 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":83 1A20 text16 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":85 1A20 text16 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":86 1A24 text16 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":88 1A3C text16 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":92 1A50 text16 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":93 1A56 text16 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":94 1A5E text16 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":95 1A66 text16 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":96 1A6E text16 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":97 1A88 text16 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":98 1A96 text16 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":99 1A9A text16 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":102 1A9C text16 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":104 1AA2 text16 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":105 1AAA text16 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":106 1AB6 text16 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":107 1ACE text16 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":108 1AE2 text16 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":110 1AE4 text16 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":112 1AEC text16 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":116 1AFC text16 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":117 1B10 text16 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":118 1B24 text16 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":119 1B2A text16 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":120 1B2E text16 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":122 1B34 text16 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":125 1B44 text16 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":148 1B46 text23 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":149 1B48 text23 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":150 1B4C text23 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":151 1B8A text23 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":152 1BC6 text23 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":153 1BCE text23 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":154 1BD8 text23 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":155 1C1A text23 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":156 1C48 text23 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":157 1C50 text23 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":158 1C5A text23 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":159 1C6A text23 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/delays.h":35 1C6C text9 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/delays.h":36 1C6C text9 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/delays.h":37 1C7A text9 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/delays.h":38 1C88 text9 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/delays.h":39 1C96 text9 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/delays.h":41 1CA4 text9 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/delays.h":42 1CB2 text9 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/delays.h":43 1CC0 text9 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/delays.h":44 1CCE text9 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/delays.h":46 1CDC text9 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/delays.h":47 1CEA text9 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/delays.h":49 1CF8 text9 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/delays.h":50 1D06 text9 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/delays.h":51 1D14 text9 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/delays.h":52 1D22 text9 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/delays.h":54 1D30 text9 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/delays.h":55 1D3E text9 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/delays.h":56 1D4C text9 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/delays.h":57 1D5A text9 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/delays.h":59 1D68 text9 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/delays.h":60 1D76 text9 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/delays.h":63 1D84 text9 CODE
+"/opt/microchip/xc8/v1.32/sources/common/aldiv.c":8 1D86 text14 CODE
+"/opt/microchip/xc8/v1.32/sources/common/aldiv.c":14 1D86 text14 CODE
+"/opt/microchip/xc8/v1.32/sources/common/aldiv.c":15 1D8A text14 CODE
+"/opt/microchip/xc8/v1.32/sources/common/aldiv.c":16 1DA6 text14 CODE
+"/opt/microchip/xc8/v1.32/sources/common/aldiv.c":17 1DB6 text14 CODE
+"/opt/microchip/xc8/v1.32/sources/common/aldiv.c":19 1DBA text14 CODE
+"/opt/microchip/xc8/v1.32/sources/common/aldiv.c":20 1DD6 text14 CODE
+"/opt/microchip/xc8/v1.32/sources/common/aldiv.c":21 1DE6 text14 CODE
+"/opt/microchip/xc8/v1.32/sources/common/aldiv.c":23 1DEA text14 CODE
+"/opt/microchip/xc8/v1.32/sources/common/aldiv.c":24 1DFA text14 CODE
+"/opt/microchip/xc8/v1.32/sources/common/aldiv.c":25 1E06 text14 CODE
+"/opt/microchip/xc8/v1.32/sources/common/aldiv.c":26 1E0A text14 CODE
+"/opt/microchip/xc8/v1.32/sources/common/aldiv.c":27 1E0C text14 CODE
+"/opt/microchip/xc8/v1.32/sources/common/aldiv.c":28 1E16 text14 CODE
+"/opt/microchip/xc8/v1.32/sources/common/aldiv.c":26 1E18 text14 CODE
+"/opt/microchip/xc8/v1.32/sources/common/aldiv.c":31 1E1C text14 CODE
+"/opt/microchip/xc8/v1.32/sources/common/aldiv.c":32 1E26 text14 CODE
+"/opt/microchip/xc8/v1.32/sources/common/aldiv.c":33 1E3A text14 CODE
+"/opt/microchip/xc8/v1.32/sources/common/aldiv.c":34 1E4A text14 CODE
+"/opt/microchip/xc8/v1.32/sources/common/aldiv.c":36 1E4C text14 CODE
+"/opt/microchip/xc8/v1.32/sources/common/aldiv.c":37 1E56 text14 CODE
+"/opt/microchip/xc8/v1.32/sources/common/aldiv.c":39 1E5A text14 CODE
+"/opt/microchip/xc8/v1.32/sources/common/aldiv.c":40 1E60 text14 CODE
+"/opt/microchip/xc8/v1.32/sources/common/aldiv.c":41 1E70 text14 CODE
+"/opt/microchip/xc8/v1.32/sources/common/almod.c":8 1F5E text13 CODE
+"/opt/microchip/xc8/v1.32/sources/common/almod.c":13 1F5E text13 CODE
+"/opt/microchip/xc8/v1.32/sources/common/almod.c":14 1F62 text13 CODE
+"/opt/microchip/xc8/v1.32/sources/common/almod.c":15 1F7E text13 CODE
+"/opt/microchip/xc8/v1.32/sources/common/almod.c":16 1F8E text13 CODE
+"/opt/microchip/xc8/v1.32/sources/common/almod.c":18 1F92 text13 CODE
+"/opt/microchip/xc8/v1.32/sources/common/almod.c":19 1FAE text13 CODE
+"/opt/microchip/xc8/v1.32/sources/common/almod.c":20 1FBE text13 CODE
+"/opt/microchip/xc8/v1.32/sources/common/almod.c":21 1FCA text13 CODE
+"/opt/microchip/xc8/v1.32/sources/common/almod.c":22 1FCE text13 CODE
+"/opt/microchip/xc8/v1.32/sources/common/almod.c":23 1FD0 text13 CODE
+"/opt/microchip/xc8/v1.32/sources/common/almod.c":24 1FDA text13 CODE
+"/opt/microchip/xc8/v1.32/sources/common/almod.c":22 1FDC text13 CODE
+"/opt/microchip/xc8/v1.32/sources/common/almod.c":27 1FE0 text13 CODE
+"/opt/microchip/xc8/v1.32/sources/common/almod.c":28 1FF4 text13 CODE
+"/opt/microchip/xc8/v1.32/sources/common/almod.c":29 2004 text13 CODE
+"/opt/microchip/xc8/v1.32/sources/common/almod.c":30 200E text13 CODE
+"/opt/microchip/xc8/v1.32/sources/common/almod.c":32 2012 text13 CODE
+"/opt/microchip/xc8/v1.32/sources/common/almod.c":33 2018 text13 CODE
+"/opt/microchip/xc8/v1.32/sources/common/almod.c":34 2028 text13 CODE
+"/opt/microchip/xc8/v1.32/sources/common/atoi.c":5 203A text2 CODE
+"/opt/microchip/xc8/v1.32/sources/common/atoi.c":10 203A text2 CODE
+"/opt/microchip/xc8/v1.32/sources/common/atoi.c":11 203C text2 CODE
+"/opt/microchip/xc8/v1.32/sources/common/atoi.c":10 2040 text2 CODE
+"/opt/microchip/xc8/v1.32/sources/common/atoi.c":12 2060 text2 CODE
+"/opt/microchip/xc8/v1.32/sources/common/atoi.c":13 2068 text2 CODE
+"/opt/microchip/xc8/v1.32/sources/common/atoi.c":14 206C text2 CODE
+"/opt/microchip/xc8/v1.32/sources/common/atoi.c":15 207A text2 CODE
+"/opt/microchip/xc8/v1.32/sources/common/atoi.c":17 207E text2 CODE
+"/opt/microchip/xc8/v1.32/sources/common/atoi.c":20 208E text2 CODE
+"/opt/microchip/xc8/v1.32/sources/common/atoi.c":19 20C8 text2 CODE
+"/opt/microchip/xc8/v1.32/sources/common/atoi.c":21 20DA text2 CODE
+"/opt/microchip/xc8/v1.32/sources/common/atoi.c":22 20E0 text2 CODE
+"/opt/microchip/xc8/v1.32/sources/common/atoi.c":23 20FA text2 CODE
+"/opt/microchip/xc8/v1.32/sources/common/atoi.c":24 2102 text2 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":19 2104 text19 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":22 2104 text19 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":23 2108 text19 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":25 210A text19 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":26 210C text19 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":27 2114 text19 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":28 211C text19 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":29 2124 text19 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":30 212C text19 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":32 212E text19 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":33 2130 text19 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":34 2138 text19 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":35 2140 text19 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":36 2148 text19 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":37 2150 text19 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":39 2152 text19 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":40 2154 text19 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":41 215C text19 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":42 2164 text19 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":43 216C text19 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":44 2174 text19 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":46 2176 text19 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":47 2178 text19 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":48 2180 text19 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":49 2188 text19 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":50 2190 text19 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":51 2198 text19 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":53 219A text19 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":113 219E text20 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":116 21A0 text20 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":118 21A2 text20 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":119 21A8 text20 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":120 21AE text20 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":121 21B4 text20 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":116 21BC text20 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":124 21D6 text20 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":125 21DC text20 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":127 21DE text20 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":128 2202 text20 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":125 2206 text20 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":131 222A text20 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":125 222C text20 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lldiv.c":8 222E text6 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lldiv.c":14 222E text6 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lldiv.c":15 223E text6 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lldiv.c":16 224A text6 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lldiv.c":17 224E text6 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lldiv.c":18 2250 text6 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lldiv.c":19 225A text6 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lldiv.c":17 225C text6 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lldiv.c":22 2260 text6 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lldiv.c":23 226A text6 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lldiv.c":24 227E text6 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lldiv.c":25 228E text6 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lldiv.c":27 2290 text6 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lldiv.c":28 229A text6 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lldiv.c":29 229E text6 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lldiv.c":30 229E text6 CODE
+"/opt/microchip/xc8/v1.32/sources/common/lldiv.c":31 22AE text6 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":92 22B0 text7 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":95 22B2 text7 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":97 22B4 text7 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":98 22BA text7 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":99 22C0 text7 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":100 22C6 text7 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":95 22CE text7 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":103 22E8 text7 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":104 22EE text7 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":106 22F0 text7 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":107 22FE text7 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":104 2302 text7 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":110 230E text7 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":104 2310 text7 CODE
+"/tmp/cgtuc7CUa":2691 2312 cinit CODE
+"/tmp/cgtuc7CUa":2693 2312 cinit CODE
+"/tmp/cgtuc7CUa":2696 2312 cinit CODE
+"/tmp/cgtuc7CUa":2797 2312 cinit CODE
+"/tmp/cgtuc7CUa":2798 2316 cinit CODE
+"/tmp/cgtuc7CUa":2799 2318 cinit CODE
+"/tmp/cgtuc7CUa":2800 2318 cinit CODE
+"/tmp/cgtuc7CUa":2801 231A cinit CODE
+"/tmp/cgtuc7CUa":2802 231C cinit CODE
+"/tmp/cgtuc7CUa":2805 231E cinit CODE
+"/tmp/cgtuc7CUa":2806 2322 cinit CODE
+"/tmp/cgtuc7CUa":2807 2324 cinit CODE
+"/tmp/cgtuc7CUa":2808 2324 cinit CODE
+"/tmp/cgtuc7CUa":2809 2326 cinit CODE
+"/tmp/cgtuc7CUa":2810 2328 cinit CODE
+"/tmp/cgtuc7CUa":2815 232A cinit CODE
+"/tmp/cgtuc7CUa":2816 232C cinit CODE
+"/tmp/cgtuc7CUa":2817 232E cinit CODE
+"/tmp/cgtuc7CUa":2818 2330 cinit CODE
+"/tmp/cgtuc7CUa":2819 2332 cinit CODE
+"/tmp/cgtuc7CUa":2820 2334 cinit CODE
+"/tmp/cgtuc7CUa":2821 2336 cinit CODE
+"/tmp/cgtuc7CUa":2822 233A cinit CODE
+"/tmp/cgtuc7CUa":2823 233E cinit CODE
+"/tmp/cgtuc7CUa":2824 233E cinit CODE
+"/tmp/cgtuc7CUa":2825 2340 cinit CODE
+"/tmp/cgtuc7CUa":2826 2344 cinit CODE
+"/tmp/cgtuc7CUa":2827 2346 cinit CODE
+"/tmp/cgtuc7CUa":2828 2348 cinit CODE
+"/tmp/cgtuc7CUa":2832 234A cinit CODE
+"/tmp/cgtuc7CUa":2833 234C cinit CODE
+"/tmp/cgtuc7CUa":2834 234E cinit CODE
+"/tmp/cgtuc7CUa":2835 2350 cinit CODE
+"/tmp/cgtuc7CUa":2836 2352 cinit CODE
+"/tmp/cgtuc7CUa":2837 2354 cinit CODE
+"/tmp/cgtuc7CUa":2838 2356 cinit CODE
+"/tmp/cgtuc7CUa":2839 2358 cinit CODE
+"/tmp/cgtuc7CUa":2840 235C cinit CODE
+"/tmp/cgtuc7CUa":2841 235E cinit CODE
+"/tmp/cgtuc7CUa":2847 2362 cinit CODE
+"/tmp/cgtuc7CUa":2849 2362 cinit CODE
+"/tmp/cgtuc7CUa":2850 2364 cinit CODE
+"/tmp/cgtuc7CUa":2851 2366 cinit CODE
+"/tmp/cgtuc7CUa":2852 2368 cinit CODE
+"/opt/microchip/xc8/v1.32/sources/common/Umul32.c":15 236C text12 CODE
+"/opt/microchip/xc8/v1.32/sources/common/Umul32.c":119 236C text12 CODE
+"/opt/microchip/xc8/v1.32/sources/common/Umul32.c":121 237C text12 CODE
+"/opt/microchip/xc8/v1.32/sources/common/Umul32.c":122 2380 text12 CODE
+"/opt/microchip/xc8/v1.32/sources/common/Umul32.c":123 2390 text12 CODE
+"/opt/microchip/xc8/v1.32/sources/common/Umul32.c":124 239A text12 CODE
+"/opt/microchip/xc8/v1.32/sources/common/Umul32.c":125 23A4 text12 CODE
+"/opt/microchip/xc8/v1.32/sources/common/Umul32.c":128 23B0 text12 CODE
+"/opt/microchip/xc8/v1.32/sources/common/Umul32.c":129 23C0 text12 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":161 23C2 text17 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":163 23C2 text17 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":164 23C4 text17 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":165 23CA text17 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":166 23D0 text17 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":167 23D6 text17 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":163 23DE text17 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":170 2408 text17 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h":171 240E text17 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":127 2410 text8 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":129 2410 text8 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":130 2418 text8 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":131 241C text8 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":132 2422 text8 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":135 2428 text8 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":136 243A text8 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":137 243E text8 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":138 2444 text8 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":140 244A text8 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":69 244C text10 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":70 244C text10 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":71 2450 text10 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":72 2456 text10 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":73 245C text10 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":74 246E text10 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":75 247A text10 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":76 247C text15 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":77 247C text15 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":78 2480 text15 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":79 2486 text15 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":80 248C text15 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":81 249E text15 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h":82 24AA text15 CODE
+"/opt/microchip/xc8/v1.32/sources/common/Umul16.c":15 24AC text4 CODE
+"/opt/microchip/xc8/v1.32/sources/common/Umul16.c":37 24AC text4 CODE
+"/opt/microchip/xc8/v1.32/sources/common/Umul16.c":38 24B8 text4 CODE
+"/opt/microchip/xc8/v1.32/sources/common/Umul16.c":39 24C0 text4 CODE
+"/opt/microchip/xc8/v1.32/sources/common/Umul16.c":52 24C8 text4 CODE
+"/opt/microchip/xc8/v1.32/sources/common/isdigit.c":8 24D2 text3 CODE
+"/opt/microchip/xc8/v1.32/sources/common/isdigit.c":14 24D4 text3 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":56 24F2 text18 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":58 24F2 text18 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":60 24F6 text18 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":62 24FC text18 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":13 2500 text1 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":15 2500 text1 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":16 2502 text1 CODE
+"/home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c":17 2508 text1 CODE
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___aldiv@counter 9 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__CFG_XINST$OFF 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+___lldiv@counter D 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+_a 53 0 COMRAM 1 dataCOMRAM dist/default/production/Generador.X.production.obj
+_d 47 0 COMRAM 1 bssCOMRAM dist/default/production/Generador.X.production.obj
+_e 49 0 COMRAM 1 bssCOMRAM dist/default/production/Generador.X.production.obj
+_f 4B 0 COMRAM 1 bssCOMRAM dist/default/production/Generador.X.production.obj
+_g 4D 0 COMRAM 1 bssCOMRAM dist/default/production/Generador.X.production.obj
+_q CF 0 BANK0 1 bssBANK0 dist/default/production/Generador.X.production.obj
+_r D1 0 BANK0 1 bssBANK0 dist/default/production/Generador.X.production.obj
+_s D3 0 BANK0 1 bssBANK0 dist/default/production/Generador.X.production.obj
+_t D5 0 BANK0 1 bssBANK0 dist/default/production/Generador.X.production.obj
+_w D7 0 BANK0 1 bssBANK0 dist/default/production/Generador.X.production.obj
+__size_of_Lcd_Cmd 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+Conv_Entero@punteroActual 32 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+_PR2 FBB 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__S0 30000E 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__S1 1DC 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__S2 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__size_of_Frecuencia 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__Hintentry 0 0 ABS 0 intentry dist/default/production/Generador.X.production.obj
+__Lintentry 0 0 ABS 0 intentry dist/default/production/Generador.X.production.obj
+_Tec 1A20 0 CODE 0 text16 dist/default/production/Generador.X.production.obj
+_cad 3D 0 COMRAM 1 bssCOMRAM dist/default/production/Generador.X.production.obj
+_key 52 0 COMRAM 1 bssCOMRAM dist/default/production/Generador.X.production.obj
+_TMR2 FBC 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__CFG_SDOMX$RB3 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__size_of___almod 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+Conv_Entero@numero F 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+Lcd_Out2@x 4 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+Tec@i D 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+Tec@j 12 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+_fila 51 0 COMRAM 1 bssCOMRAM dist/default/production/Generador.X.production.obj
+_main 8E4 0 CODE 0 text0 dist/default/production/Generador.X.production.obj
+_atoi 203A 0 CODE 0 text2 dist/default/production/Generador.X.production.obj
+Lcd_Out2@y 7 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+___sp 0 0 STACK 2 stack /tmp/cgtkgyS1o.obj
+start 0 0 CODE 0 init /tmp/cgtkgyS1o.obj
+_cantidad 4F 0 COMRAM 1 bssCOMRAM dist/default/production/Generador.X.production.obj
+__CFG_T3CMX$RC0 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+Lcd_Out2@buffer 5 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__end_of___aldiv 1E82 0 CODE 0 text14 dist/default/production/Generador.X.production.obj
+Lcd_Chr_CP@data 3 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+_int_teclado 2500 0 CODE 0 text1 dist/default/production/Generador.X.production.obj
+_TRISB F93 0 ABS 0 - dist/default/production/Generador.X.production.obj
+_PORTB F81 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__Hirdata 0 0 CODE 0 irdata dist/default/production/Generador.X.production.obj
+__Lirdata 0 0 CODE 0 irdata dist/default/production/Generador.X.production.obj
+__HRAM 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__LRAM 1 0 ABS 0 - dist/default/production/Generador.X.production.obj
+_T2CON FBA 0 ABS 0 - dist/default/production/Generador.X.production.obj
+Conv_Entero@conv 13 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+Lcd_Out@x 4 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+Conv_Entero@numeroReg 34 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__CFG_WDTPS$32768 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__Hconfig 30000E 0 CONFIG 0 config dist/default/production/Generador.X.production.obj
+__Lconfig 300000 0 CONFIG 0 config dist/default/production/Generador.X.production.obj
+Lcd_Out@y 7 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__end_of_Lcd_Init 1A20 0 CODE 0 text22 dist/default/production/Generador.X.production.obj
+?___almod 1 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+Lcd_Out@buffer 5 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__end_of_Lcd_Out 2312 0 CODE 0 text7 dist/default/production/Generador.X.production.obj
+atoi@a C 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__end_of_Lcd_Out2 222E 0 CODE 0 text20 dist/default/production/Generador.X.production.obj
+_tm_1s 1C6C 0 CODE 0 text9 dist/default/production/Generador.X.production.obj
+main@i CC 0 BANK0 1 cstackBANK0 dist/default/production/Generador.X.production.obj
+main@j CA 0 BANK0 1 cstackBANK0 dist/default/production/Generador.X.production.obj
+__size_of_Imprimir_pantalla 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+main@k C4 0 BANK0 1 cstackBANK0 dist/default/production/Generador.X.production.obj
+__end_of_Teclado 219E 0 CODE 0 text19 dist/default/production/Generador.X.production.obj
+atoi@s 7 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__Hbigram 0 0 ABS 0 bigram dist/default/production/Generador.X.production.obj
+__Lbigram 0 0 ABS 0 bigram dist/default/production/Generador.X.production.obj
+__Hrparam 0 0 ABS 0 rparam dist/default/production/Generador.X.production.obj
+__Lrparam 0 0 ABS 0 rparam dist/default/production/Generador.X.production.obj
+__Hram 0 0 ABS 0 ram dist/default/production/Generador.X.production.obj
+__Lram 0 0 ABS 0 ram dist/default/production/Generador.X.production.obj
+__Hcomram 0 0 ABS 0 comram dist/default/production/Generador.X.production.obj
+__Lcomram 0 0 ABS 0 comram dist/default/production/Generador.X.production.obj
+Conv_Entero@convTemp 1A 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+?_atoi 7 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+_Ciclo 247C 0 CODE 0 text15 dist/default/production/Generador.X.production.obj
+atoi@sign B 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__Hsfr 0 0 ABS 0 sfr dist/default/production/Generador.X.production.obj
+_ciclo E3 0 BANK0 1 bssBANK0 dist/default/production/Generador.X.production.obj
+__Lsfr 0 0 ABS 0 sfr dist/default/production/Generador.X.production.obj
+__end_of__stringdata 8E3 0 SMALLCONST 0 smallconst dist/default/production/Generador.X.production.obj
+__Hbss 0 0 RAM 1 bss dist/default/production/Generador.X.production.obj
+__CFG_STVREN$ON 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__Lbss 0 0 RAM 1 bss dist/default/production/Generador.X.production.obj
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/production/Generador.X.production.obj
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/production/Generador.X.production.obj
+Tec@cadena B 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+_Lcd_Init 18F8 0 CODE 0 text22 dist/default/production/Generador.X.production.obj
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production/Generador.X.production.obj
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production/Generador.X.production.obj
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production/Generador.X.production.obj
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production/Generador.X.production.obj
+?___aldiv 1 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+_CCPR2L F90 0 ABS 0 - dist/default/production/Generador.X.production.obj
+_ANSELB F5C 0 ABS 0 - dist/default/production/Generador.X.production.obj
+?___lldiv 1 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+_lcd_goto 23C2 0 CODE 0 text17 dist/default/production/Generador.X.production.obj
+_ANSELD F5E 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production/Generador.X.production.obj
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production/Generador.X.production.obj
+__Hintret 0 0 ABS 0 intret dist/default/production/Generador.X.production.obj
+__Lintret 0 0 ABS 0 intret dist/default/production/Generador.X.production.obj
+__Hramtop 800 0 RAM 0 ramtop dist/default/production/Generador.X.production.obj
+__Lramtop 800 0 RAM 0 ramtop dist/default/production/Generador.X.production.obj
+__Hstruct 0 0 COMRAM 1 struct dist/default/production/Generador.X.production.obj
+__Lstruct 0 0 COMRAM 1 struct dist/default/production/Generador.X.production.obj
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production/Generador.X.production.obj
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production/Generador.X.production.obj
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production/Generador.X.production.obj
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production/Generador.X.production.obj
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/production/Generador.X.production.obj
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/production/Generador.X.production.obj
+__Hintcode 0 0 CODE 0 intcode dist/default/production/Generador.X.production.obj
+__Lintcode 0 0 CODE 0 intcode dist/default/production/Generador.X.production.obj
+__Hfardata 0 0 FARRAM 0 fardata dist/default/production/Generador.X.production.obj
+__Lfardata 0 0 FARRAM 0 fardata dist/default/production/Generador.X.production.obj
+__Habs1 0 0 ABS 0 abs1 dist/default/production/Generador.X.production.obj
+__Labs1 0 0 ABS 0 abs1 dist/default/production/Generador.X.production.obj
+__CFG_EBTR0$OFF 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+main@F7639 100 0 BANK1 1 dataBANK1 dist/default/production/Generador.X.production.obj
+main@valoresSeno 60 0 BANK0 1 cstackBANK0 dist/default/production/Generador.X.production.obj
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production/Generador.X.production.obj
+__end_of_Lcd_Chr_CP 18F8 0 CODE 0 text21 dist/default/production/Generador.X.production.obj
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production/Generador.X.production.obj
+lcd_goto@x 4 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__CFG_EBTR1$OFF 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+lcd_goto@y 6 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+Imprimir_pantalla@N 9 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__CFG_EBTR2$OFF 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+Lcd_Out2@data 8 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+_cadena D9 0 BANK0 1 bssBANK0 dist/default/production/Generador.X.production.obj
+__Hdata 0 0 ABS 0 data dist/default/production/Generador.X.production.obj
+__Ldata 0 0 ABS 0 data dist/default/production/Generador.X.production.obj
+__CFG_EBTR3$OFF 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+stackhi 7FF 0 ABS 0 - /tmp/cgtkgyS1o.obj
+PWM_generar@duty E 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+Tec@Key 14 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production/Generador.X.production.obj
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production/Generador.X.production.obj
+___almod@sign A 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__pcstackBANK0 60 0 BANK0 1 cstackBANK0 dist/default/production/Generador.X.production.obj
+__Htemp 0 0 COMRAM 1 temp dist/default/production/Generador.X.production.obj
+__Ltemp 0 0 COMRAM 1 temp dist/default/production/Generador.X.production.obj
+stacklo 1DC 0 ABS 0 - /tmp/cgtkgyS1o.obj
+__Hrbit 0 0 COMRAM 1 rbit dist/default/production/Generador.X.production.obj
+__Lrbit 0 0 COMRAM 1 rbit dist/default/production/Generador.X.production.obj
+___lmul 236C 0 CODE 0 text12 dist/default/production/Generador.X.production.obj
+__Hinit 0 0 CODE 0 init dist/default/production/Generador.X.production.obj
+__Linit 0 0 CODE 0 init dist/default/production/Generador.X.production.obj
+__Hintcodelo 0 0 CODE 0 intcodelo dist/default/production/Generador.X.production.obj
+__Lintcodelo 0 0 CODE 0 intcodelo dist/default/production/Generador.X.production.obj
+___wmul 24AC 0 CODE 0 text4 dist/default/production/Generador.X.production.obj
+__Hrbss 0 0 COMRAM 1 rbss dist/default/production/Generador.X.production.obj
+__end_of_main 13C6 0 CODE 0 text0 dist/default/production/Generador.X.production.obj
+__Lrbss 0 0 COMRAM 1 rbss dist/default/production/Generador.X.production.obj
+__end_of_Lcd_Cmd 1C6C 0 CODE 0 text23 dist/default/production/Generador.X.production.obj
+Tec@aux F 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+main@zx C6 0 BANK0 1 cstackBANK0 dist/default/production/Generador.X.production.obj
+__Htext 0 0 ABS 0 text dist/default/production/Generador.X.production.obj
+__Ltext 0 0 ABS 0 text dist/default/production/Generador.X.production.obj
+___lmul@multiplier 1 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+___wmul@multiplier 1 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+_PWM_generar 13C6 0 CODE 0 text5 dist/default/production/Generador.X.production.obj
+__end_of___almod 203A 0 CODE 0 text13 dist/default/production/Generador.X.production.obj
+end_of_initialization 2362 0 CODE 0 cinit dist/default/production/Generador.X.production.obj
+___aldiv@sign A 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+_Frecuencia 244C 0 CODE 0 text10 dist/default/production/Generador.X.production.obj
+_frecuencia ED 0 BANK0 1 bssBANK0 dist/default/production/Generador.X.production.obj
+__size_of_Conv_Entero 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+___lmul@multiplicand 5 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__CFG_nPWRTEN$ON 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+_Recuperar 24F2 0 CODE 0 text18 dist/default/production/Generador.X.production.obj
+___wmul@multiplicand 3 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+Imprimir_pantalla@columna C 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__HdataBANK1 0 0 ABS 0 dataBANK1 dist/default/production/Generador.X.production.obj
+__LdataBANK1 0 0 ABS 0 dataBANK1 dist/default/production/Generador.X.production.obj
+__pdataBANK1 100 0 BANK1 1 dataBANK1 dist/default/production/Generador.X.production.obj
+__size_of_Ciclo 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+Imprimir_pantalla@fila B 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+PWM_generar@fpwm 10 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+_TRISCbits F94 0 ABS 0 - dist/default/production/Generador.X.production.obj
+_TRISDbits F95 0 ABS 0 - dist/default/production/Generador.X.production.obj
+_PORTBbits F81 0 ABS 0 - dist/default/production/Generador.X.production.obj
+_PORTCbits F82 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__CFG_PCLKEN$OFF 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+_PORTDbits F83 0 ABS 0 - dist/default/production/Generador.X.production.obj
+_T2CONbits FBA 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/production/Generador.X.production.obj
+__Libigdata 0 0 CODE 0 ibigdata dist/default/production/Generador.X.production.obj
+__end_of_Tec 1B46 0 CODE 0 text16 dist/default/production/Generador.X.production.obj
+_CCP2CON F97 0 ABS 0 - dist/default/production/Generador.X.production.obj
+main@zx_420 C8 0 BANK0 1 cstackBANK0 dist/default/production/Generador.X.production.obj
+__end_of_atoi 2104 0 CODE 0 text2 dist/default/production/Generador.X.production.obj
+__Hifardata 0 0 CODE 0 ifardata dist/default/production/Generador.X.production.obj
+__Lifardata 0 0 CODE 0 ifardata dist/default/production/Generador.X.production.obj
+__Hbank0 0 0 ABS 0 bank0 dist/default/production/Generador.X.production.obj
+__Lbank0 0 0 ABS 0 bank0 dist/default/production/Generador.X.production.obj
+__Hbank1 0 0 ABS 0 bank1 dist/default/production/Generador.X.production.obj
+__Lbank1 0 0 ABS 0 bank1 dist/default/production/Generador.X.production.obj
+__Hbank2 0 0 ABS 0 bank2 dist/default/production/Generador.X.production.obj
+__Lbank2 0 0 ABS 0 bank2 dist/default/production/Generador.X.production.obj
+Lcd_Init@data 5 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__Hbank3 0 0 ABS 0 bank3 dist/default/production/Generador.X.production.obj
+__Lbank3 0 0 ABS 0 bank3 dist/default/production/Generador.X.production.obj
+__Hbank4 0 0 ABS 0 bank4 dist/default/production/Generador.X.production.obj
+__Lbank4 0 0 ABS 0 bank4 dist/default/production/Generador.X.production.obj
+__end_of___lmul 23C2 0 CODE 0 text12 dist/default/production/Generador.X.production.obj
+__Hbank5 0 0 ABS 0 bank5 dist/default/production/Generador.X.production.obj
+__Lbank5 0 0 ABS 0 bank5 dist/default/production/Generador.X.production.obj
+__Hpowerup 0 0 CODE 0 powerup dist/default/production/Generador.X.production.obj
+__Lpowerup 0 0 CODE 0 powerup dist/default/production/Generador.X.production.obj
+__Hbank6 0 0 ABS 0 bank6 dist/default/production/Generador.X.production.obj
+__Lbank6 0 0 ABS 0 bank6 dist/default/production/Generador.X.production.obj
+__Hbank7 0 0 ABS 0 bank7 dist/default/production/Generador.X.production.obj
+__Lbank7 0 0 ABS 0 bank7 dist/default/production/Generador.X.production.obj
+lcd_goto@data A 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__Htext0 0 0 ABS 0 text0 dist/default/production/Generador.X.production.obj
+__Ltext0 0 0 ABS 0 text0 dist/default/production/Generador.X.production.obj
+__Htext1 0 0 ABS 0 text1 dist/default/production/Generador.X.production.obj
+__Ltext1 0 0 ABS 0 text1 dist/default/production/Generador.X.production.obj
+__ptext0 8E4 0 CODE 0 text0 dist/default/production/Generador.X.production.obj
+_INTCON2bits FF1 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__Htext2 0 0 ABS 0 text2 dist/default/production/Generador.X.production.obj
+__Ltext2 0 0 ABS 0 text2 dist/default/production/Generador.X.production.obj
+__ptext1 2500 0 CODE 0 text1 dist/default/production/Generador.X.production.obj
+__Htext3 0 0 ABS 0 text3 dist/default/production/Generador.X.production.obj
+__Ltext3 0 0 ABS 0 text3 dist/default/production/Generador.X.production.obj
+__ptext2 203A 0 CODE 0 text2 dist/default/production/Generador.X.production.obj
+__Htext4 0 0 ABS 0 text4 dist/default/production/Generador.X.production.obj
+__Ltext4 0 0 ABS 0 text4 dist/default/production/Generador.X.production.obj
+__ptext3 24D2 0 CODE 0 text3 dist/default/production/Generador.X.production.obj
+SENO_GENERAR_50@F7361 1B4 0 BANK1 1 dataBANK1 dist/default/production/Generador.X.production.obj
+__Htext5 0 0 ABS 0 text5 dist/default/production/Generador.X.production.obj
+__Ltext5 0 0 ABS 0 text5 dist/default/production/Generador.X.production.obj
+__ptext4 24AC 0 CODE 0 text4 dist/default/production/Generador.X.production.obj
+__end_of_PWM_generar 15F4 0 CODE 0 text5 dist/default/production/Generador.X.production.obj
+__Htext6 0 0 ABS 0 text6 dist/default/production/Generador.X.production.obj
+__Ltext6 0 0 ABS 0 text6 dist/default/production/Generador.X.production.obj
+__ptext5 13C6 0 CODE 0 text5 dist/default/production/Generador.X.production.obj
+__Htext7 0 0 ABS 0 text7 dist/default/production/Generador.X.production.obj
+__Ltext7 0 0 ABS 0 text7 dist/default/production/Generador.X.production.obj
+__ptext6 222E 0 CODE 0 text6 dist/default/production/Generador.X.production.obj
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production/Generador.X.production.obj
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production/Generador.X.production.obj
+__Htext8 0 0 ABS 0 text8 dist/default/production/Generador.X.production.obj
+__Ltext8 0 0 ABS 0 text8 dist/default/production/Generador.X.production.obj
+__ptext7 22B0 0 CODE 0 text7 dist/default/production/Generador.X.production.obj
+__pbssCOMRAM 3D 0 COMRAM 1 bssCOMRAM dist/default/production/Generador.X.production.obj
+__Htext9 0 0 ABS 0 text9 dist/default/production/Generador.X.production.obj
+__Ltext9 0 0 ABS 0 text9 dist/default/production/Generador.X.production.obj
+__ptext8 2410 0 CODE 0 text8 dist/default/production/Generador.X.production.obj
+_Conv_Entero 15F4 0 CODE 0 text11 dist/default/production/Generador.X.production.obj
+__ptext9 1C6C 0 CODE 0 text9 dist/default/production/Generador.X.production.obj
+__size_of_lcd_goto 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__Hclrtext 0 0 ABS 0 clrtext dist/default/production/Generador.X.production.obj
+__Lclrtext 0 0 ABS 0 clrtext dist/default/production/Generador.X.production.obj
+__size_of_tm_1s 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+Tec@contador 10 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__end_of__initialization 2362 0 CODE 0 cinit dist/default/production/Generador.X.production.obj
+_Lcd_Chr_CP 17CC 0 CODE 0 text21 dist/default/production/Generador.X.production.obj
+Conv_Entero@i 31 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+_Lcd_Cmd 1B46 0 CODE 0 text23 dist/default/production/Generador.X.production.obj
+__end_of_lcd_goto 2410 0 CODE 0 text17 dist/default/production/Generador.X.production.obj
+PWM_generar@AuxCCPR2L 1E 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__size_of_Teclado 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__Hidata 0 0 CODE 0 idata dist/default/production/Generador.X.production.obj
+__Lidata 0 0 CODE 0 idata dist/default/production/Generador.X.production.obj
+__Hrdata 0 0 COMRAM 1 rdata dist/default/production/Generador.X.production.obj
+__Lrdata 0 0 COMRAM 1 rdata dist/default/production/Generador.X.production.obj
+__size_of_PWM_generar 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__Hidloc 200008 0 IDLOC 0 idloc dist/default/production/Generador.X.production.obj
+__Lidloc 200000 0 IDLOC 0 idloc dist/default/production/Generador.X.production.obj
+__end_of_int_teclado 250A 0 CODE 0 text1 dist/default/production/Generador.X.production.obj
+_columna 50 0 COMRAM 1 bssCOMRAM dist/default/production/Generador.X.production.obj
+__Hstack 0 0 STACK 2 stack dist/default/production/Generador.X.production.obj
+__Lstack 0 0 STACK 2 stack dist/default/production/Generador.X.production.obj
+___almod 1F5E 0 CODE 0 text13 dist/default/production/Generador.X.production.obj
+Conv_Entero@num 2F 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__end_of___lldiv 22B0 0 CODE 0 text6 dist/default/production/Generador.X.production.obj
+__Hparam 0 0 ABS 0 rparam dist/default/production/Generador.X.production.obj
+__Lparam 0 0 ABS 0 rparam dist/default/production/Generador.X.production.obj
+_Teclado 2104 0 CODE 0 text19 dist/default/production/Generador.X.production.obj
+__Hspace_0 30000E 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__Lspace_0 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__Hspace_1 1DC 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__Lspace_1 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__Hsmallconst 8E4 0 SMALLCONST 0 smallconst dist/default/production/Generador.X.production.obj
+__Lsmallconst 800 0 SMALLCONST 0 smallconst dist/default/production/Generador.X.production.obj
+__psmallconst 800 0 SMALLCONST 0 smallconst dist/default/production/Generador.X.production.obj
+_Lcd_Out 22B0 0 CODE 0 text7 dist/default/production/Generador.X.production.obj
+?___lmul 1 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__Hspace_2 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__Lspace_2 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+main@key CE 0 BANK0 1 cstackBANK0 dist/default/production/Generador.X.production.obj
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/production/Generador.X.production.obj
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/production/Generador.X.production.obj
+?___wmul 1 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+_isdigit 24D2 0 CODE 0 text3 dist/default/production/Generador.X.production.obj
+__Hcinit 0 0 ABS 0 cinit dist/default/production/Generador.X.production.obj
+__Lcinit 0 0 ABS 0 cinit dist/default/production/Generador.X.production.obj
+__size_of_Lcd_Chr_CP 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+___aldiv 1D86 0 CODE 0 text14 dist/default/production/Generador.X.production.obj
+___lldiv 222E 0 CODE 0 text6 dist/default/production/Generador.X.production.obj
+__pcinit 2312 0 CODE 0 cinit dist/default/production/Generador.X.production.obj
+__CFG_EBTRB$OFF 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+PWM_generar@AuxCCP2CON 18 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__ramtop 800 0 RAM 0 ramtop /tmp/cgtkgyS1o.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst /tmp/cgtkgyS1o.obj
+__size_of_main 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__Hconst 0 0 CODE 0 const dist/default/production/Generador.X.production.obj
+__Lconst 0 0 CODE 0 const dist/default/production/Generador.X.production.obj
+Ciclo@ciclo 15 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__CFG_CFGPLLEN$OFF 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__end_of_isdigit 24F2 0 CODE 0 text3 dist/default/production/Generador.X.production.obj
+__size_of_Lcd_Out 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__size_of_Lcd_Out2 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__CFG_WRT0$OFF 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__CFG_WRT1$OFF 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__HbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production/Generador.X.production.obj
+__LbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production/Generador.X.production.obj
+__CFG_WRT2$OFF 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__pbssBANK0 CF 0 BANK0 1 bssBANK0 dist/default/production/Generador.X.production.obj
+__size_of_isdigit 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+Lcd_Cmd@data 3 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__end_of_Ciclo 24AC 0 CODE 0 text15 dist/default/production/Generador.X.production.obj
+__CFG_WRT3$OFF 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__end_of_Frecuencia 247C 0 CODE 0 text10 dist/default/production/Generador.X.production.obj
+__Htext10 0 0 ABS 0 text10 dist/default/production/Generador.X.production.obj
+__Ltext10 0 0 ABS 0 text10 dist/default/production/Generador.X.production.obj
+__Htext20 0 0 ABS 0 text20 dist/default/production/Generador.X.production.obj
+__Ltext20 0 0 ABS 0 text20 dist/default/production/Generador.X.production.obj
+__ptext10 244C 0 CODE 0 text10 dist/default/production/Generador.X.production.obj
+__Htext11 0 0 ABS 0 text11 dist/default/production/Generador.X.production.obj
+__Ltext11 0 0 ABS 0 text11 dist/default/production/Generador.X.production.obj
+__ptext20 219E 0 CODE 0 text20 dist/default/production/Generador.X.production.obj
+__Htext21 0 0 ABS 0 text21 dist/default/production/Generador.X.production.obj
+__Ltext21 0 0 ABS 0 text21 dist/default/production/Generador.X.production.obj
+__ptext11 15F4 0 CODE 0 text11 dist/default/production/Generador.X.production.obj
+__Htext12 0 0 ABS 0 text12 dist/default/production/Generador.X.production.obj
+__Ltext12 0 0 ABS 0 text12 dist/default/production/Generador.X.production.obj
+__ptext21 17CC 0 CODE 0 text21 dist/default/production/Generador.X.production.obj
+__CFG_CPUDIV$NOCLKDIV 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__Htext22 0 0 ABS 0 text22 dist/default/production/Generador.X.production.obj
+__Ltext22 0 0 ABS 0 text22 dist/default/production/Generador.X.production.obj
+__ptext12 236C 0 CODE 0 text12 dist/default/production/Generador.X.production.obj
+__Htext13 0 0 ABS 0 text13 dist/default/production/Generador.X.production.obj
+PWM_generar@PR2cal 1A 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__Ltext13 0 0 ABS 0 text13 dist/default/production/Generador.X.production.obj
+Lcd_Out@data 8 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__ptext22 18F8 0 CODE 0 text22 dist/default/production/Generador.X.production.obj
+__Htext23 0 0 ABS 0 text23 dist/default/production/Generador.X.production.obj
+__Ltext23 0 0 ABS 0 text23 dist/default/production/Generador.X.production.obj
+__ptext13 1F5E 0 CODE 0 text13 dist/default/production/Generador.X.production.obj
+Frecuencia@frecuencia 15 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__Htext14 0 0 ABS 0 text14 dist/default/production/Generador.X.production.obj
+__Ltext14 0 0 ABS 0 text14 dist/default/production/Generador.X.production.obj
+__ptext23 1B46 0 CODE 0 text23 dist/default/production/Generador.X.production.obj
+__HidataBANK1 0 0 ABS 0 idataBANK1 dist/default/production/Generador.X.production.obj
+__LidataBANK1 0 0 ABS 0 idataBANK1 dist/default/production/Generador.X.production.obj
+__ptext14 1D86 0 CODE 0 text14 dist/default/production/Generador.X.production.obj
+__pidataBANK1 1E82 0 CODE 0 idataBANK1 dist/default/production/Generador.X.production.obj
+__Htext15 0 0 ABS 0 text15 dist/default/production/Generador.X.production.obj
+__Ltext15 0 0 ABS 0 text15 dist/default/production/Generador.X.production.obj
+__ptext15 247C 0 CODE 0 text15 dist/default/production/Generador.X.production.obj
+___inthi_sp 0 0 STACK 2 stack /tmp/cgtkgyS1o.obj
+__Htext16 0 0 ABS 0 text16 dist/default/production/Generador.X.production.obj
+__Ltext16 0 0 ABS 0 text16 dist/default/production/Generador.X.production.obj
+__ptext16 1A20 0 CODE 0 text16 dist/default/production/Generador.X.production.obj
+__Htext17 0 0 ABS 0 text17 dist/default/production/Generador.X.production.obj
+__Ltext17 0 0 ABS 0 text17 dist/default/production/Generador.X.production.obj
+___almod@divisor 5 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__ptext17 23C2 0 CODE 0 text17 dist/default/production/Generador.X.production.obj
+__end_of_tm_1s 1D86 0 CODE 0 text9 dist/default/production/Generador.X.production.obj
+__Htext18 0 0 ABS 0 text18 dist/default/production/Generador.X.production.obj
+__Ltext18 0 0 ABS 0 text18 dist/default/production/Generador.X.production.obj
+__ptext18 24F2 0 CODE 0 text18 dist/default/production/Generador.X.production.obj
+__Htext19 0 0 ABS 0 text19 dist/default/production/Generador.X.production.obj
+__Ltext19 0 0 ABS 0 text19 dist/default/production/Generador.X.production.obj
+__CFG_WDTEN$OFF 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__ptext19 2104 0 CODE 0 text19 dist/default/production/Generador.X.production.obj
+___intlo_sp 0 0 STACK 2 stack /tmp/cgtkgyS1o.obj
+__CFG_CCP2MX$RC1 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__CFG_nLPBOR$OFF 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__Hend_init 4 0 CODE 0 end_init dist/default/production/Generador.X.production.obj
+__Lend_init 0 0 CODE 0 end_init dist/default/production/Generador.X.production.obj
+__size_of_Lcd_Init 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+___aldiv@divisor 5 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__CFG_PLLSEL$PLL4X 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+___lldiv@divisor 5 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__size_of___lldiv 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production/Generador.X.production.obj
+__LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production/Generador.X.production.obj
+__pidataCOMRAM 250A 0 CODE 0 idataCOMRAM dist/default/production/Generador.X.production.obj
+Recuperar@tecl 1 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+SENO_GENERAR_100@F7355 164 0 BANK1 1 dataBANK1 dist/default/production/Generador.X.production.obj
+__CFG_CP0$OFF 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__smallconst 800 0 SMALLCONST 0 smallconst /tmp/cgtkgyS1o.obj
+__CFG_CP1$OFF 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__size_of___wmul 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__end_of_Imprimir_pantalla 244C 0 CODE 0 text8 dist/default/production/Generador.X.production.obj
+__Hreset_vec 0 0 CODE 0 reset_vec dist/default/production/Generador.X.production.obj
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/production/Generador.X.production.obj
+__CFG_CP2$OFF 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__size_of_Tec 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+PWM_generar@prescalador 16 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__CFG_CP3$OFF 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__stringdata 801 0 SMALLCONST 0 smallconst dist/default/production/Generador.X.production.obj
+__CFG_BORV$190 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__size_of_atoi 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__accesstop 60 0 ABS 0 - /tmp/cgtkgyS1o.obj
+__size_of___aldiv 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__CFG_LS48MHZ$SYS24X4 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__Hintcode_body 0 0 ABS 0 intcode_body dist/default/production/Generador.X.production.obj
+__Lintcode_body 0 0 ABS 0 intcode_body dist/default/production/Generador.X.production.obj
+__CFG_PBADEN$ON 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+intlevel0 0 0 CODE 0 text /tmp/cgtkgyS1o.obj
+__end_of_Conv_Entero 17CC 0 CODE 0 text11 dist/default/production/Generador.X.production.obj
+intlevel1 0 0 CODE 0 text /tmp/cgtkgyS1o.obj
+__CFG_WRTB$OFF 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+intlevel2 0 0 CODE 0 text /tmp/cgtkgyS1o.obj
+intlevel3 0 0 CODE 0 text /tmp/cgtkgyS1o.obj
+__size_of___lmul 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__CFG_WRTC$OFF 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+_Lcd_Out2 219E 0 CODE 0 text20 dist/default/production/Generador.X.production.obj
+__CFG_WRTD$OFF 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+_Imprimir_pantalla 2410 0 CODE 0 text8 dist/default/production/Generador.X.production.obj
+__end_of_Recuperar 2500 0 CODE 0 text18 dist/default/production/Generador.X.production.obj
+__HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production/Generador.X.production.obj
+__LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production/Generador.X.production.obj
+__pdataCOMRAM 53 0 COMRAM 1 dataCOMRAM dist/default/production/Generador.X.production.obj
+__CFG_CPB$OFF 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__end_of___wmul 24D2 0 CODE 0 text4 dist/default/production/Generador.X.production.obj
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+start_initialization 2312 0 CODE 0 cinit dist/default/production/Generador.X.production.obj
+___aldiv@quotient B 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__size_of_int_teclado 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+___lldiv@quotient 9 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__size_of_Recuperar 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__CFG_BOREN$SBORDIS 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+?_Conv_Entero F 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__CFG_IESO$OFF 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+SENO_GENERAR_20@F7367 18C 0 BANK1 1 dataBANK1 dist/default/production/Generador.X.production.obj
+__CFG_FOSC$INTOSCIO 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+__initialization 2312 0 CODE 0 cinit dist/default/production/Generador.X.production.obj
+___almod@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+_isdigit$968 2 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__CFG_ICPRT$OFF 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+___almod@counter 9 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__activetblptr 2 0 ABS 0 - dist/default/production/Generador.X.production.obj
+___lmul@product 9 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+___wmul@product 5 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+__CFG_LVP$OFF 0 0 ABS 0 - dist/default/production/Generador.X.production.obj
+___aldiv@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+___lldiv@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+isdigit@c 3 0 COMRAM 1 cstackCOMRAM dist/default/production/Generador.X.production.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect in on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+reset_vec 0 0 0 4 1
+smallconst 0 800 800 E4 1
+config 0 300000 300000 E 1
+idloc 0 200000 200000 8 1
+cstackCOMRAM 1 1 1 54 1
+cstackBANK0 1 60 60 97 1
+dataBANK1 1 100 100 DC 1
+text0 0 8E4 8E4 1C28 1

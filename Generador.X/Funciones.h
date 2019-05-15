@@ -1,3 +1,6 @@
+
+#include "PWM.h"
+
 #define XTAL_FREQ 8000000 
 
 void Presentacion();
@@ -11,73 +14,71 @@ void Ciclo(char *ciclo);
 void Prueba1();
 void Prueba2();
 
-int q,w,e,r,t;
-int a=1,s,d,f,g;
+int q,w,e,r;
+int a=1,d,f,g;
+unsigned int s,t;
 char key;
 unsigned char frecuencia[10],ciclo[10],columna=0,cantidad=0,fila=0,cadena[10],cad[10];
 
 void Presentacion(){
     
        
-      lcd_clear_display();
-      lcd_goto(1,1);
-      lcd_print("Universidad de ");
-      lcd_goto(3,2);
-      lcd_print("Guanajuato");
+      Lcd_Init();
+      Lcd_Cmd(LCD_CLEAR);
+      Lcd_Cmd(LCD_CURSOR_OFF);
+      Lcd_Out2(1,1,"Universidad de ");
+      Lcd_Out2(3,2,"Guanajuato");
       tm_1s();
+      Lcd_Cmd(LCD_CLEAR);
+      Lcd_Out2(1,1,"Proyecto Final");
+      Lcd_Out2(3,2,"Generador");
       tm_1s();
-      lcd_clear_display();
-      lcd_goto(1,1);
-      lcd_print("Proyecto Final");
-      lcd_goto(3,2);
-      lcd_print("Generador");
-      tm_1s();
-      tm_1s();
+     
       
     
 }
 
 void Menu(){
       
-        lcd_clear_display();
-        lcd_goto(1,1);
-        lcd_print("A.-Cuadrada");
-        lcd_goto(1,2);
-        lcd_print("B.-Senoidal");
-        tm_1s();
+        Lcd_Init();
+        Lcd_Cmd(LCD_CLEAR);
+        Lcd_Cmd(LCD_CURSOR_OFF);
+        Lcd_Out2(1,1,"A.-Cuadrada");
+        Lcd_Out2(1,2,"B.-Senoidal");
         tm_1s();
         key = Recuperar(); 
-        lcd_clear_display();
-        lcd_goto(1,1);
-        lcd_print("C.-Triangular");
+        Lcd_Init();
+        Lcd_Cmd(LCD_CLEAR);
+        Lcd_Cmd(LCD_CURSOR_OFF);
+        Lcd_Out2(1,1,"C.-Triangular");
         tm_1s();
-        tm_1s();
+        
         
 }
 
 void Menu_Pwm(){
-        lcd_init();
-        lcd_clear_display();
-        lcd_goto(1,1);
-        lcd_print("1.-Datos");
-        lcd_goto(1,2);
-        lcd_print("2.-Comenzar");
-        
+        Lcd_Init();
+        Lcd_Cmd(LCD_CLEAR);
+        Lcd_Cmd(LCD_CURSOR_OFF);
+        Lcd_Out2(1,1,"1.-Datos");
+        Lcd_Out2(1,2,"2.-Comenzar");
         tm_500();
 }
 
 
 void Frecuencia(char *frecuencia){
-    lcd_init();
-    lcd_clear_display();
-    lcd_print("Ingrese Frecuencia");
-    Tec(frecuencia);
+        Lcd_Init();
+        Lcd_Cmd(LCD_CLEAR);
+        Lcd_Cmd(LCD_CURSOR_OFF);
+        Lcd_Out2(1,1,"Frecuencia:");
+        Tec(frecuencia);
 }
 void Ciclo(char *ciclo){
-    lcd_init();
-    lcd_clear_display();
-    lcd_print("Ingrese ciclo");
-    Tec(ciclo);
+        Lcd_Init();
+        Lcd_Cmd(LCD_CLEAR);
+        Lcd_Cmd(LCD_CURSOR_OFF);
+        Lcd_Out2(1,1,"Ingrese ciclo");
+        Tec(ciclo);
 }
 void Tec(char *cadena){
     
@@ -114,7 +115,7 @@ void Tec(char *cadena){
     }
     lcd_goto(contador,2);
     cadena[j++]=Key;
-    lcd_dato(Key);
+    Lcd_Chr_CP(Key);
     contador++;
     aux=Key;
     }while(1);
@@ -126,11 +127,15 @@ void Tec(char *cadena){
 void Imprimir_pantalla(char *N){
     
     unsigned char fila = 0, columna=0;
-    lcd_clear_display();
-    fila=0; columna=0;
-    lcd_Cadena(N,&columna,&fila);
+    Lcd_Init();
+    Lcd_Cmd(LCD_CLEAR);
+    Lcd_Cmd(LCD_CURSOR_OFF);
+   // fila=0; columna=0;
+   //lcd_Cadena(N,&columna,&fila);
+    Lcd_Out2(1,1,N);
     tm_1s();
-    lcd_clear_display();
+    Lcd_Cmd(LCD_CLEAR);
+    key=Recuperar();
 
 }
 
@@ -144,12 +149,22 @@ void Prueba1(){
 }
 
 void Prueba2(){
-       lcd_init();
-       lcd_clear_display();
-       e=s*100;
-       f=t*100;
+         Lcd_Init();
+        Lcd_Cmd(LCD_CLEAR);
+        Lcd_Cmd(LCD_CURSOR_OFF);
+        Lcd_Out2(1,1,"Fre: ");
+        Lcd_Out2(1,11,"Hz");
+        //fila=0; columna=6;
+       cantidad= Conv_Entero(s,cadena);
+       //lcd_Cadena(cadena,&columna,&fila);
+       Lcd_Out(1,11,cadena);
+       Lcd_Out2(2,1,"Ciclo: ");
+       Lcd_Out2(2,11,"%");
+       //fila=1; columna=8;
+       cantidad= Conv_Entero(t,cadena);
+       //lcd_Cadena(cadena,&columna,&fila);
+       Lcd_Out(8,1,cadena);
+       PWM_generar(t,s);
+
        
-        cantidad= Conv_Entero(e,cadena);
-        lcd_Cadena(cadena,&columna,&fila);
-        tm_1s();
 }

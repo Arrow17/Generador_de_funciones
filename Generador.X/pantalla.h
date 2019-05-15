@@ -1,201 +1,172 @@
-#define RS      LATEbits.LATE0     //Se debe de definir el Pin Usado para RS
-#define EN      LATEbits.LATE1       //Se debe de definir el pin Usado para E
-#define TRISRS  TRISEbits.TRISE0    //Se define el Tris para el RS Para poderlo configurar como Salida
-#define TRISEN  TRISEbits.TRISE1    //Se define el Tris para el E Para poderlo configurar como Salida
-#define PUERTOTRS TRISA             // Se define el TRIS del puerto que se usa como interfaz en este caso el Puerto C
-#define PUERTO LATA                 // Se define El LAT del puerto que se usa como interfaz en este caso el C
-#define _XTAL_FREQ 8000000
+#ifndef LCD_LIB_H
+#define LCD_LIB_H
+#define LCD_RD7     PORTDbits.RD7       // D7
+#define TRISRD7     TRISDbits.TRISD7
 
+#define LCD_RD6     PORTDbits.RD6       // D6
+#define TRISRD6     TRISDbits.TRISD6
 
-void lcd_init();
-void lcd_control(char);
-void lcd_dato(char);
-void lcd_clear_display();
-void lcd_cursor_home();
-void lcd_print(char*);
-void lcd_print_with_position(int, int, char*);
-void lcd_goto(int, int);
-void lcd_put_caracter(char, char[]);
-void lcd_time_control();
-void lcd_Pos(char columna, char fila);
-int lcd_Cadena(char* cadena,unsigned char* columna, unsigned char* fila);
+#define LCD_RD5     PORTDbits.RD5       // D5
+#define TRISRD5     TRISDbits.TRISD5
 
+#define LCD_RD4     PORTDbits.RD4       // D4
+#define TRISRD4     TRISDbits.TRISD4
 
-/*
- * Configuracion de Puertos
- * Iniciliaza el los puertos requeridos para el LCD
- * Ademas lo inicializa a 4 Bits
- */
-void lcd_init() {
-    TRISRS = 0; //Configuramos el Pin RS como salida
-    TRISEN = 0; //Configuramos el Pin E como salida
-    PUERTOTRS = 0b00001111; //Configuramos El nibble mas significativo como Salidas (Bus de 4 Bits))
-    RS = 0; //Aseguramos RS en 0            
-    EN = 0; //Aseguramos E en 0
-    PUERTO = 0; //Aseguramos el Puerto de datos en 0
-    /*
-     * Configuracion del control del LCD
-     */
-    __delay_ms(5); // Tiempo de espera a que se estabilicen los puertos
-    lcd_control(0x02); //Asegura el Cursos del LCD Al inicio (Home)
-    lcd_control(0x28); //Configura el LCD a 4 Bits, 2 Lineas Y Fuente de 5*8; Lineas Esto se llama el function set
-    lcd_control(0x0C); //LCD Prendido, Cursor Apagado, Destello Cursor apagado; Esto se Llama Diplay on/off Control
-    lcd_control(0x06); //No rota el mensaje Y se incrementa el contador de direccion. Esto se Llama Entry Mode Set
+#define LCD_EN      PORTDbits.RD2      // EN
+#define TRISEN      TRISDbits.TRISD2
+
+#define LCD_RS      PORTDbits.RD0      // RS
+#define TRISRS      TRISDbits.TRISD0
+
+#define LCD_RW      PORTDbits.RD1      // RS
+#define TRISRW      TRISDbits.TRISD1
+//comandos disponibles
+#define      LCD_FIRST_ROW           128
+#define      LCD_SECOND_ROW          192
+#define      LCD_THIRD_ROW           148
+#define      LCD_FOURTH_ROW          212
+#define      LCD_CLEAR               1
+#define      LCD_RETURN_HOME         2
+#define      LCD_CURSOR_OFF          12
+#define      LCD_UNDERLINE_ON        14
+#define      LCD_BLINK_CURSOR_ON     15
+#define      LCD_MOVE_CURSOR_LEFT    16
+#define      LCD_MOVE_CURSOR_RIGHT   20
+#define      LCD_TURN_OFF            0
+#define      LCD_TURN_ON             8
+#define      LCD_SHIFT_LEFT          24
+#define      LCD_SHIFT_RIGHT         28
+
+#define _XTAL_FREQ 4000000
+void Lcd_Init(void);
+void Lcd_Out(unsigned char y, unsigned char x, const char *buffer);
+void Lcd_Out2(unsigned char y, unsigned char x, char *buffer);
+void Lcd_Chr_CP(char data);
+void Lcd_Cmd(unsigned char data);
+void lcd_goto(int x, int y);
+
+void Lcd_Init(void){
+unsigned char data;
+TRISRD7 = 0;
+TRISRD6 = 0;
+TRISRD5 = 0;
+TRISRD4 = 0;
+TRISEN = 0;
+TRISRS = 0;
+TRISRW = 0;
+LCD_RD7 = 0;
+LCD_RD6 = 0;
+LCD_RD5 = 0;
+LCD_RD4 = 0;
+LCD_EN = 0;
+LCD_RS = 0;
+LCD_RW = 0;
+__delay_us(5500);
+__delay_us(5500);
+__delay_us(5500);
+__delay_us(5500);
+__delay_us(5500);
+__delay_us(5500);
+for(data = 1; data < 4; data ++)
+{
+    LCD_RD7 = 0;    LCD_RD6 = 0;    LCD_RD5 = 1;    LCD_RD4 = 1;    LCD_EN = 0;
+    LCD_RS = 0;    LCD_RD7 = 0;    LCD_RD6 = 0;    LCD_RD5 = 1;    LCD_RD4 = 1;
+    LCD_EN = 1;    LCD_RS = 0;
+    __delay_us(5);
+    LCD_RD7 = 0;    LCD_RD6 = 0;    LCD_RD5 = 1;    LCD_RD4 = 1;    LCD_EN = 0;
+    LCD_RS = 0;
+    __delay_us(5500);
 }
-
-/*
- * Esta rutina se encarga de tomar un dato y ponerlo en el puerto de datos
- * teniendo en cuenta que es a 4 bits, por lo tanto tiene que hacer cambio de ninbles
- * primer se envia el nible mas significativo y luego se envia el menos significativo
- */
-void lcd_control(char dato) {
-    RS = 0;
-    PUERTO = dato & 0xF0;
-    lcd_time_control();
-    PUERTO = ((dato & 0x0F) << 4);
-    lcd_time_control();
-    __delay_ms(2);
-}
-
-/*
- * Está rutina se encarga de tomar un dato y ponerlo sobre el puerto de datos
- * especificamente para escribir un caracter sobre el LCD
- * 
- */
-void lcd_dato(char dato) {
-    RS = 1;
-    PUERTO = dato & 0xF0;
-    lcd_time_control();
-    PUERTO = ((dato & 0x0F) << 4);
-    lcd_time_control();
-    __delay_us(50);
-}
-
-/*
- * Rutina encargada de limpiar el LCD
- */
-void lcd_clear_display() {
-    lcd_control(0x01);
-}
-
-/*
- * El puntero regresa al inicio sin modificar los datos del LCD
- */
-void lcd_cursor_home() {
-    lcd_control(0x02);
-}
-
-/*
- * Imprime una cadena de caractres en el LCD
- */
-void lcd_print(char *dato) {
-    while (*dato) // Mientras no sea Null
-    {
-        lcd_dato(*dato); // Envio el dato al LCD
-        dato++; // Incrementa el buffer de dato
-    }
-}
-
-/*
- * Imprime una cadena de caracteres en la pisicion X y Y que se le pasen
- */
-void lcd_print_with_position(int x, int y, char *dato) {
-    char posicion;
-    switch (y) {
-        case 1: posicion = 0x80 + x;
-            break;
-        case 2: posicion = 0xC0 + x;
-            break;
-        default: posicion = 0x80 + x;
-            break;
-    }
-    lcd_control(posicion);
-    lcd_print(dato);
+LCD_RD7 = 0; LCD_RD6 = 0; LCD_RD5 = 1; LCD_RD4 = 0; LCD_EN = 0; LCD_RS = 0;
+LCD_RD7 = 0; LCD_RD6 = 0; LCD_RD5 = 1; LCD_RD4 = 0; LCD_EN = 1; LCD_RS = 0;
+__delay_us(5);
+LCD_RD7 = 0; LCD_RD6 = 0; LCD_RD5 = 1; LCD_RD4 = 0; LCD_EN = 0; LCD_RS = 0;
+__delay_us(5500);
+data = 40; Lcd_Cmd(data);
+data = 16; Lcd_Cmd(data);
+data = 1;  Lcd_Cmd(data);
+data = 15; Lcd_Cmd(data);
 }
 
 
+void Lcd_Out(unsigned char y, unsigned char x, const char *buffer)
+{
+unsigned char data;
+switch (y)
+{   
+    case 1: data = 128 + x; break;
+    case 2: data = 192 + x; break;
+    case 3: data = 148 + x; break;
+    case 4: data = 212 + x; break;
+    default: break;
+}
+Lcd_Cmd(data);
+while(*buffer)              // Write data to LCD up to null
+{                
+    Lcd_Chr_CP(*buffer);
+    buffer++;               // Increment buffer
+}
+return;
+}
 
 
+void Lcd_Out2(unsigned char y, unsigned char x, char *buffer)
+{
+unsigned char data;
+switch (y)
+{
+    case 1: data = 128 + x; break;
+    case 2: data = 192 + x; break;
+    case 3: data = 148 + x; break;
+    case 4: data = 212 + x; break;
+    default: break;
+}
+Lcd_Cmd(data);
+while(*buffer)              // Write data to LCD up to null
+{                
+    Lcd_Chr_CP(*buffer);
+    buffer++;               // Increment buffer
+}
+return;
+}
 
 
-/*
- * Pone el puntero en la posicion deseada
- */
+void Lcd_Chr_CP(char data){
+LCD_EN = 0; LCD_RS = 1;
+LCD_RD7 = (data & 0b10000000)>>7; LCD_RD6 = (data & 0b01000000)>>6;
+LCD_RD5 = (data & 0b00100000)>>5; LCD_RD4 = (data & 0b00010000)>>4;
+__delay_us(10);
+LCD_EN = 1; __delay_us(5); LCD_EN = 0;
+LCD_RD7 = (data & 0b00001000)>>3; LCD_RD6 = (data & 0b00000100)>>2;
+LCD_RD5 = (data & 0b00000010)>>1; LCD_RD4 = (data & 0b00000001);
+__delay_us(10);
+LCD_EN = 1; __delay_us(5); LCD_EN = 0;
+__delay_us(5); __delay_us(5500);
+}
+
+
+void Lcd_Cmd(unsigned char data){
+LCD_EN = 0; LCD_RS = 0;
+LCD_RD7 = (data & 0b10000000)>>7; LCD_RD6 = (data & 0b01000000)>>6;
+LCD_RD5 = (data & 0b00100000)>>5; LCD_RD4 = (data & 0b00010000)>>4;
+__delay_us(10);
+LCD_EN = 1; __delay_us(5); LCD_EN = 0;
+LCD_RD7 = (data & 0b00001000)>>3; LCD_RD6 = (data & 0b00000100)>>2;
+LCD_RD5 = (data & 0b00000010)>>1; LCD_RD4 = (data & 0b00000001);
+__delay_us(10);;
+LCD_EN = 1; __delay_us(5); LCD_EN = 0;
+__delay_us(5500);//Delay_5us();
+}
+
 void lcd_goto(int x, int y) {
-    char posicion;
+    unsigned char data;
     switch (y) {
-        case 1: posicion = 0x80 + x;
-            break;
-        case 2: posicion = 0xC0 + x;
-            break;
-        default: posicion = 0x80 + x;
-            break;
+    case 1: data = 128 + x; break;
+    case 2: data = 192 + x; break;
+    case 3: data = 148 + x; break;
+    case 4: data = 212 + x; break;
+    default: break;
     }
-    lcd_control(posicion);
+    Lcd_Cmd(data);
 }
-
-/*
- * Guardar caracteres especiales. en la CGRAM
- */
-void lcd_put_caracter(char adress, char caracter[]) {
-    int i;
-    lcd_control(0x40 + (adress * 8));
-    for (i = 0; i < 8; i++) {
-        lcd_dato(caracter[i]);
-    }
-}
-
-/*
- * Genera un Pulso de control Ese pulso es un pulso de E a 1 milisegundos
- */
-void lcd_time_control() {
-    EN = 1;
-    __delay_us(5);
-    EN = 0;
-    __delay_us(5);
-}
-
-
-int lcd_Cadena(char* cadena,unsigned char* columna, unsigned char* fila)
-{
-    register int conteo=0;//variable usada para saber cuentos caracteres se imprimieron
-
-    //punteros
-    // cadena = contiene una direccion
-    //*cadena = apunta al valor de la direccion guardada en cadena
-    //cadena++ o cadena+=1 o cadena= cadena + 1, apunta a la sig direccion
-
-    //variables
-    //conteo= tiene guardado un valor
-    //&conteo = se obtiene la direccion donde se tiene guardado conteo
-
-    *fila+=(*columna>>4);
-    lcd_Pos(*columna,*fila); //indica la posicion inicial del cursor
-    while(*cadena)// realiza el ciclo minetras la cadena tenga algun valor
-        //el valor 0 o '\0' es fin de cadena
-    {
-        
-        lcd_dato(*(cadena)); //envia el caracter correspondiente
-        (*columna)++; //suma 1 a la columna indicando que se ha escrito un valor
-        if((*columna&0xF)==0) //si la columna es 0 indica que empieza una nueva fila
-        {
-            *fila^=1; //invierte el valor e fila para que se reinciie
-            lcd_Pos(*columna,*fila); //pone el cursor en 0,x
-        }
-
-        cadena++; //el puntero apunta al siguiente caracter
-        conteo++; //suma 1 al conteo total de caracter enviados a la LCD
-    }
-    return conteo;
-}
-
-
-void lcd_Pos(char columna, char fila)
-{
-    register long direccion=0x80;
-    direccion|=columna&0xF;
-    direccion|=((fila&0x1)<<6);
-    lcd_control(direccion);
-    
-}
-
+#endif
