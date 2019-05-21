@@ -1,5 +1,18 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"5514 /opt/microchip/xc8/v1.32/include/pic18f45k50.h
+"13104 /opt/microchip/xc8/v1.32/include/pic18f45k50.h
+[v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
+"5084
+[s S342 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S342 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 TRISA6 TRISA7 ]
+"5094
+[s S343 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S343 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 ]
+"5083
+[u S341 `S342 1 `S343 1 ]
+[n S341 . . . ]
+"5104
+[v _TRISAbits `VS341 ~T0 @X0 0 e@3986 ]
+"5514
 [s S354 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S354 . TRISC0 TRISC1 TRISC2 . TRISC4 TRISC5 TRISC6 TRISC7 ]
 "5524
@@ -39,6 +52,29 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S232 . . . . . . . . ]
 "3459
 [v _PORTCbits `VS232 ~T0 @X0 0 e@3970 ]
+"3154
+[s S222 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S222 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
+"3164
+[s S223 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S223 . AN0 AN1 AN2 AN3 T0CKI AN4 OSC2 ]
+"3173
+[s S224 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S224 . . VREFM VREFP . LVDIN ]
+"3180
+[s S225 :5 `uc 1 :1 `uc 1 ]
+[n S225 . . HLVDIN ]
+"3184
+[s S226 :7 `uc 1 :1 `uc 1 ]
+[n S226 . . RJPU ]
+"3188
+[s S227 :1 `uc 1 ]
+[n S227 . ULPWUIN ]
+"3153
+[u S221 `S222 1 `S223 1 `S224 1 `S225 1 `S226 1 `S227 1 ]
+[n S221 . . . . . . . ]
+"3192
+[v _PORTAbits `VS221 ~T0 @X0 0 e@3968 ]
 [; ;htc.h: 21: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 24: extern void __builtin_software_breakpoint(void);
 [; ;pic18f45k50.h: 47: extern volatile unsigned char SRCON1 @ 0xF57;
@@ -6729,22 +6765,28 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 147: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 149: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 151: extern __nonreentrant void _delay3(unsigned char);
-[; ;senoidal.h: 7: void SENO_100();
-[; ;senoidal.h: 8: void SENO_50();
-[; ;senoidal.h: 9: void SENO_20();
+[; ;senoidal.h: 7: void SENO_GENERAR_1();
+[; ;senoidal.h: 8: void SENO_GENERAR_2();
+[; ;senoidal.h: 9: void SENO_GENERAR_3();
 "8 SENO.c
-[v _SENO_GENERAR_100 `(v ~T0 @X0 1 ef ]
+[v _SENO_GENERAR_1 `(v ~T0 @X0 1 ef ]
 {
-[; ;SENO.c: 8: void SENO_GENERAR_100(){
-[e :U _SENO_GENERAR_100 ]
+[; ;SENO.c: 8: void SENO_GENERAR_1(){
+[e :U _SENO_GENERAR_1 ]
 [f ]
-[; ;SENO.c: 10: TRISCbits.RC2=0;
+[; ;SENO.c: 10: OSCCON=0b01010111;
 "10
-[e = . . _TRISCbits 1 2 -> -> 0 `i `uc ]
-[v F7355 `i ~T0 @X0 -> 20 `i s ]
-[i F7355
-:U ..
+[e = _OSCCON -> -> 87 `i `uc ]
+[; ;SENO.c: 11: TRISAbits.RA6=0;
 "11
+[e = . . _TRISAbits 1 6 -> -> 0 `i `uc ]
+[; ;SENO.c: 12: TRISCbits.RC2=0;
+"12
+[e = . . _TRISCbits 1 2 -> -> 0 `i `uc ]
+[v F7354 `i ~T0 @X0 -> 20 `i s ]
+[i F7354
+:U ..
+"13
 -> 50 `i
 -> 35 `i
 -> 21 `i
@@ -6760,7 +6802,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 79 `i
 -> 90 `i
 -> 98 `i
-"12
 -> 100 `i
 -> 98 `i
 -> 90 `i
@@ -6768,402 +6809,414 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 65 `i
 ..
 ]
-"11
 [v _valoresSeno `i ~T0 @X0 -> 20 `i a ]
-[; ;SENO.c: 11: int valoresSeno [20]= {50,35,21,10, 2, 0, 2,10, 21, 35, 50, 65, 79, 90, 98,
-[; ;SENO.c: 12: 100, 98, 90, 79, 65};
-"12
-[e = _valoresSeno F7355 ]
-"13
+[; ;SENO.c: 13: int valoresSeno [20]= {50,35,21,10, 2, 0, 2,10, 21, 35, 50, 65, 79, 90, 98, 100, 98, 90, 79, 65};
+[e = _valoresSeno F7354 ]
+"14
 [v _i `i ~T0 @X0 1 a ]
 [v _j `i ~T0 @X0 1 a ]
 [v _k `i ~T0 @X0 1 a ]
-[; ;SENO.c: 13: int i, j,k;
-[; ;SENO.c: 14: for (i=0;i<20;i++){
-"14
+[; ;SENO.c: 14: int i, j,k;
+[; ;SENO.c: 15: for (i=0;i<20;i++){
+"15
 {
 [e = _i -> 0 `i ]
 [e $ < _i -> 20 `i 940  ]
 [e $U 941  ]
 [e :U 940 ]
 {
-[; ;SENO.c: 15: valoresSeno [i]=valoresSeno [i];
-"15
-[e = *U + &U _valoresSeno * -> -> _i `ui `ux -> -> # *U &U _valoresSeno `ui `ux *U + &U _valoresSeno * -> -> _i `ui `ux -> -> # *U &U _valoresSeno `ui `ux ]
+[; ;SENO.c: 16: valoresSeno [i]=valoresSeno [i];
 "16
+[e = *U + &U _valoresSeno * -> -> _i `ui `ux -> -> # *U &U _valoresSeno `ui `ux *U + &U _valoresSeno * -> -> _i `ui `ux -> -> # *U &U _valoresSeno `ui `ux ]
+"17
 }
-"14
+"15
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 20 `i 940  ]
 [e :U 941 ]
-"16
-}
-[; ;SENO.c: 16: }
-[; ;SENO.c: 17: while(1){
 "17
+}
+[; ;SENO.c: 17: }
+[; ;SENO.c: 18: while(1){
+"18
 [e :U 944 ]
 {
-[; ;SENO.c: 18: for (i=0;i<20;i++){
-"18
+[; ;SENO.c: 19: for (i=0;i<20;i++){
+"19
 {
 [e = _i -> 0 `i ]
 [e $ < _i -> 20 `i 946  ]
 [e $U 947  ]
 [e :U 946 ]
 {
-[; ;SENO.c: 19: for (j=0;j<valoresSeno[i];j++){
-"19
+[; ;SENO.c: 20: for (j=0;j<valoresSeno[i];j++){
+"20
 {
 [e = _j -> 0 `i ]
 [e $U 952  ]
 [e :U 949 ]
 {
-[; ;SENO.c: 20: PORTCbits.RC2=1;
-"20
-[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
+[; ;SENO.c: 21: PORTCbits.RC2=1;
 "21
+[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
+[; ;SENO.c: 22: PORTAbits.RA6=1;
+"22
+[e = . . _PORTAbits 0 6 -> -> 1 `i `uc ]
+"23
 }
-"19
+"20
 [e ++ _j -> 1 `i ]
 [e :U 952 ]
 [e $ < _j *U + &U _valoresSeno * -> -> _i `ui `ux -> -> # *U &U _valoresSeno `ui `ux 949  ]
 [e :U 950 ]
-"21
-}
-[; ;SENO.c: 21: }
-[; ;SENO.c: 22: k=100-valoresSeno[i];
-"22
-[e = _k - -> 100 `i *U + &U _valoresSeno * -> -> _i `ui `ux -> -> # *U &U _valoresSeno `ui `ux ]
-[; ;SENO.c: 23: for (j=0;j<k;j++){
 "23
+}
+[; ;SENO.c: 23: }
+[; ;SENO.c: 24: k=100-valoresSeno[i];
+"24
+[e = _k - -> 100 `i *U + &U _valoresSeno * -> -> _i `ui `ux -> -> # *U &U _valoresSeno `ui `ux ]
+[; ;SENO.c: 25: for (j=0;j<k;j++){
+"25
 {
 [e = _j -> 0 `i ]
 [e $U 956  ]
 [e :U 953 ]
 {
-[; ;SENO.c: 24: PORTCbits.RC2=0;
-"24
+[; ;SENO.c: 26: PORTCbits.RC2=0;
+"26
 [e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-"25
+[; ;SENO.c: 27: PORTAbits.RA6=0;
+"27
+[e = . . _PORTAbits 0 6 -> -> 0 `i `uc ]
+"28
 }
-"23
+"25
 [e ++ _j -> 1 `i ]
 [e :U 956 ]
 [e $ < _j _k 953  ]
 [e :U 954 ]
-"25
+"28
 }
-"26
+"29
 }
-"18
+"19
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 20 `i 946  ]
 [e :U 947 ]
-"26
+"29
 }
-"27
+[; ;SENO.c: 28: }
+[; ;SENO.c: 29: }
+[; ;SENO.c: 30: return;
+"30
+[e $UE 939  ]
+"31
 }
 [e :U 943 ]
-"17
+"18
 [e $U 944  ]
 [e :U 945 ]
-[; ;SENO.c: 25: }
-[; ;SENO.c: 26: }
-[; ;SENO.c: 27: }
-[; ;SENO.c: 28: return;
-"28
-[e $UE 939  ]
-[; ;SENO.c: 29: }
-"29
+[; ;SENO.c: 31: }
+[; ;SENO.c: 32: }
+"32
 [e :UE 939 ]
 }
-"31
-[v _SENO_GENERAR_50 `(v ~T0 @X0 1 ef ]
-{
-[; ;SENO.c: 31: void SENO_GENERAR_50(){
-[e :U _SENO_GENERAR_50 ]
-[f ]
-[; ;SENO.c: 33: TRISCbits.RC2=0;
-"33
-[e = . . _TRISCbits 1 2 -> -> 0 `i `uc ]
-[v F7361 `i ~T0 @X0 -> 20 `i s ]
-[i F7361
-:U ..
 "34
+[v _SENO_GENERAR_2 `(v ~T0 @X0 1 ef ]
+{
+[; ;SENO.c: 34: void SENO_GENERAR_2(){
+[e :U _SENO_GENERAR_2 ]
+[f ]
+[; ;SENO.c: 36: OSCCON=0b01010111;
+"36
+[e = _OSCCON -> -> 87 `i `uc ]
+[; ;SENO.c: 37: TRISAbits.RA6=0;
+"37
+[e = . . _TRISAbits 1 6 -> -> 0 `i `uc ]
+[; ;SENO.c: 38: TRISCbits.RC2=0;
+"38
+[e = . . _TRISCbits 1 2 -> -> 0 `i `uc ]
+[v F7359 `i ~T0 @X0 -> 18 `i s ]
+[i F7359
+:U ..
+"39
 -> 50 `i
--> 35 `i
--> 21 `i
--> 10 `i
--> 2 `i
--> 0 `i
--> 2 `i
--> 10 `i
--> 21 `i
--> 35 `i
+-> 67 `i
+-> 82 `i
+-> 93 `i
+-> 99 `i
+-> 99 `i
+-> 93 `i
+-> 82 `i
+-> 67 `i
 -> 50 `i
--> 65 `i
--> 79 `i
--> 90 `i
--> 98 `i
-"35
--> 100 `i
--> 98 `i
--> 90 `i
--> 79 `i
--> 65 `i
+-> 33 `i
+-> 18 `i
+-> 7 `i
+-> 1 `i
+-> 1 `i
+-> 7 `i
+-> 18 `i
+-> 33 `i
 ..
 ]
-"34
-[v _valoresSeno `i ~T0 @X0 -> 20 `i a ]
-[; ;SENO.c: 34: int valoresSeno [20]= {50,35,21,10, 2, 0, 2,10, 21, 35, 50, 65, 79, 90, 98,
-[; ;SENO.c: 35: 100, 98, 90, 79, 65};
-"35
-[e = _valoresSeno F7361 ]
-"36
+[v _valoresSeno `i ~T0 @X0 -> 18 `i a ]
+[; ;SENO.c: 39: int valoresSeno [18]= {50,67,82,93,99,99,93,82,67,50,33,18,7,1,1,7,18,33};
+[e = _valoresSeno F7359 ]
+"40
 [v _i `i ~T0 @X0 1 a ]
 [v _j `i ~T0 @X0 1 a ]
 [v _k `i ~T0 @X0 1 a ]
-[; ;SENO.c: 36: int i, j,k;
-[; ;SENO.c: 37: for (i=0;i<20;i++){
-"37
-{
-[e = _i -> 0 `i ]
-[e $ < _i -> 20 `i 958  ]
-[e $U 959  ]
-[e :U 958 ]
-{
-[; ;SENO.c: 38: valoresSeno [i]=valoresSeno [i]/2;
-"38
-[e = *U + &U _valoresSeno * -> -> _i `ui `ux -> -> # *U &U _valoresSeno `ui `ux / *U + &U _valoresSeno * -> -> _i `ui `ux -> -> # *U &U _valoresSeno `ui `ux -> 2 `i ]
-"39
-}
-"37
-[e ++ _i -> 1 `i ]
-[e $ < _i -> 20 `i 958  ]
-[e :U 959 ]
-"39
-}
-[; ;SENO.c: 39: }
-[; ;SENO.c: 40: while(1){
-"40
-[e :U 962 ]
-{
-[; ;SENO.c: 41: for (i=0;i<20;i++){
+[; ;SENO.c: 40: int i, j,k;
+[; ;SENO.c: 41: for (i=0;i<18;i++){
 "41
 {
 [e = _i -> 0 `i ]
-[e $ < _i -> 20 `i 964  ]
+[e $ < _i -> 18 `i 958  ]
+[e $U 959  ]
+[e :U 958 ]
+{
+[; ;SENO.c: 42: valoresSeno [i]=valoresSeno [i];
+"42
+[e = *U + &U _valoresSeno * -> -> _i `ui `ux -> -> # *U &U _valoresSeno `ui `ux *U + &U _valoresSeno * -> -> _i `ui `ux -> -> # *U &U _valoresSeno `ui `ux ]
+"43
+}
+"41
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 18 `i 958  ]
+[e :U 959 ]
+"43
+}
+[; ;SENO.c: 43: }
+[; ;SENO.c: 44: while(1){
+"44
+[e :U 962 ]
+{
+[; ;SENO.c: 45: for (i=0;i<18;i++){
+"45
+{
+[e = _i -> 0 `i ]
+[e $ < _i -> 18 `i 964  ]
 [e $U 965  ]
 [e :U 964 ]
 {
-[; ;SENO.c: 42: for (j=0;j<valoresSeno[i];j++){
-"42
+[; ;SENO.c: 46: for (j=0;j<valoresSeno[i];j++){
+"46
 {
 [e = _j -> 0 `i ]
 [e $U 970  ]
 [e :U 967 ]
 {
-[; ;SENO.c: 43: PORTCbits.RC2=1;
-"43
+[; ;SENO.c: 47: PORTCbits.RC2=1;
+"47
 [e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
-"44
+[; ;SENO.c: 48: PORTAbits.RA6=1;
+"48
+[e = . . _PORTAbits 0 6 -> -> 1 `i `uc ]
+"49
 }
-"42
+"46
 [e ++ _j -> 1 `i ]
 [e :U 970 ]
 [e $ < _j *U + &U _valoresSeno * -> -> _i `ui `ux -> -> # *U &U _valoresSeno `ui `ux 967  ]
 [e :U 968 ]
-"44
+"49
 }
-[; ;SENO.c: 44: }
-[; ;SENO.c: 45: k=100/2-valoresSeno[i];
-"45
-[e = _k - / -> 100 `i -> 2 `i *U + &U _valoresSeno * -> -> _i `ui `ux -> -> # *U &U _valoresSeno `ui `ux ]
-[; ;SENO.c: 46: for (j=0;j<k;j++){
-"46
+[; ;SENO.c: 49: }
+[; ;SENO.c: 50: k=100-valoresSeno[i];
+"50
+[e = _k - -> 100 `i *U + &U _valoresSeno * -> -> _i `ui `ux -> -> # *U &U _valoresSeno `ui `ux ]
+[; ;SENO.c: 51: for (j=0;j<k;j++){
+"51
 {
 [e = _j -> 0 `i ]
 [e $U 974  ]
 [e :U 971 ]
 {
-[; ;SENO.c: 47: PORTCbits.RC2=0;
-"47
+[; ;SENO.c: 52: PORTCbits.RC2=0;
+"52
 [e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-"48
+[; ;SENO.c: 53: PORTAbits.RA6=0;
+"53
+[e = . . _PORTAbits 0 6 -> -> 0 `i `uc ]
+"54
 }
-"46
+"51
 [e ++ _j -> 1 `i ]
 [e :U 974 ]
 [e $ < _j _k 971  ]
 [e :U 972 ]
-"48
+"54
 }
-"49
+"55
 }
-"41
+"45
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 20 `i 964  ]
+[e $ < _i -> 18 `i 964  ]
 [e :U 965 ]
-"49
+"55
 }
-"50
+[; ;SENO.c: 54: }
+[; ;SENO.c: 55: }
+[; ;SENO.c: 56: return;
+"56
+[e $UE 957  ]
+"57
 }
 [e :U 961 ]
-"40
+"44
 [e $U 962  ]
 [e :U 963 ]
-[; ;SENO.c: 48: }
-[; ;SENO.c: 49: }
-[; ;SENO.c: 50: }
-[; ;SENO.c: 51: return;
-"51
-[e $UE 957  ]
-[; ;SENO.c: 52: }
-"52
+[; ;SENO.c: 57: }
+[; ;SENO.c: 59: }
+"59
 [e :UE 957 ]
 }
-"54
-[v _SENO_GENERAR_20 `(v ~T0 @X0 1 ef ]
+"61
+[v _SENO_GENERAR_3 `(v ~T0 @X0 1 ef ]
 {
-[; ;SENO.c: 54: void SENO_GENERAR_20(){
-[e :U _SENO_GENERAR_20 ]
+[; ;SENO.c: 61: void SENO_GENERAR_3(){
+[e :U _SENO_GENERAR_3 ]
 [f ]
-[; ;SENO.c: 56: TRISCbits.RC2=0;
-"56
+[; ;SENO.c: 63: OSCCON=0b01010111;
+"63
+[e = _OSCCON -> -> 87 `i `uc ]
+[; ;SENO.c: 64: TRISAbits.RA6=0;
+"64
+[e = . . _TRISAbits 1 6 -> -> 0 `i `uc ]
+[; ;SENO.c: 65: TRISCbits.RC2=0;
+"65
 [e = . . _TRISCbits 1 2 -> -> 0 `i `uc ]
-[v F7367 `i ~T0 @X0 -> 20 `i s ]
-[i F7367
+[v F7364 `i ~T0 @X0 -> 15 `i s ]
+[i F7364
 :U ..
-"57
+"66
 -> 50 `i
--> 35 `i
+-> 70 `i
+-> 87 `i
+-> 98 `i
+-> 100 `i
+-> 93 `i
+-> 79 `i
+-> 60 `i
+-> 40 `i
 -> 21 `i
--> 10 `i
--> 2 `i
+-> 7 `i
 -> 0 `i
 -> 2 `i
--> 10 `i
--> 21 `i
--> 35 `i
--> 50 `i
--> 65 `i
--> 79 `i
--> 90 `i
--> 98 `i
-"58
--> 100 `i
--> 98 `i
--> 90 `i
--> 79 `i
--> 65 `i
+-> 13 `i
+-> 30 `i
 ..
 ]
-"57
-[v _valoresSeno `i ~T0 @X0 -> 20 `i a ]
-[; ;SENO.c: 57: int valoresSeno [20]= {50,35,21,10, 2, 0, 2,10, 21, 35, 50, 65, 79, 90, 98,
-[; ;SENO.c: 58: 100, 98, 90, 79, 65};
-"58
-[e = _valoresSeno F7367 ]
-"59
+[v _valoresSeno `i ~T0 @X0 -> 15 `i a ]
+[; ;SENO.c: 66: int valoresSeno [15]= {50,70,87,98,100,93,79,60,40,21,7,0,2,13,30};
+[e = _valoresSeno F7364 ]
+"67
 [v _i `i ~T0 @X0 1 a ]
 [v _j `i ~T0 @X0 1 a ]
 [v _k `i ~T0 @X0 1 a ]
-[; ;SENO.c: 59: int i, j,k;
-[; ;SENO.c: 60: for (i=0;i<20;i++){
-"60
+[; ;SENO.c: 67: int i, j,k;
+[; ;SENO.c: 68: for (i=0;i<15;i++){
+"68
 {
 [e = _i -> 0 `i ]
-[e $ < _i -> 20 `i 976  ]
+[e $ < _i -> 15 `i 976  ]
 [e $U 977  ]
 [e :U 976 ]
 {
-[; ;SENO.c: 61: valoresSeno [i]=valoresSeno [i]/3;
-"61
-[e = *U + &U _valoresSeno * -> -> _i `ui `ux -> -> # *U &U _valoresSeno `ui `ux / *U + &U _valoresSeno * -> -> _i `ui `ux -> -> # *U &U _valoresSeno `ui `ux -> 3 `i ]
-"62
+[; ;SENO.c: 69: valoresSeno [i]=valoresSeno [i];
+"69
+[e = *U + &U _valoresSeno * -> -> _i `ui `ux -> -> # *U &U _valoresSeno `ui `ux *U + &U _valoresSeno * -> -> _i `ui `ux -> -> # *U &U _valoresSeno `ui `ux ]
+"70
 }
-"60
+"68
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 20 `i 976  ]
+[e $ < _i -> 15 `i 976  ]
 [e :U 977 ]
-"62
+"70
 }
-[; ;SENO.c: 62: }
-[; ;SENO.c: 63: while(1){
-"63
+[; ;SENO.c: 70: }
+[; ;SENO.c: 71: while(1){
+"71
 [e :U 980 ]
 {
-[; ;SENO.c: 64: for (i=0;i<20;i++){
-"64
+[; ;SENO.c: 72: for (i=0;i<15;i++){
+"72
 {
 [e = _i -> 0 `i ]
-[e $ < _i -> 20 `i 982  ]
+[e $ < _i -> 15 `i 982  ]
 [e $U 983  ]
 [e :U 982 ]
 {
-[; ;SENO.c: 65: for (j=0;j<valoresSeno[i];j++){
-"65
+[; ;SENO.c: 73: for (j=0;j<valoresSeno[i];j++){
+"73
 {
 [e = _j -> 0 `i ]
 [e $U 988  ]
 [e :U 985 ]
 {
-[; ;SENO.c: 66: PORTCbits.RC2=1;
-"66
+[; ;SENO.c: 74: PORTCbits.RC2=1;
+"74
 [e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
-"67
+[; ;SENO.c: 75: PORTAbits.RA6=1;
+"75
+[e = . . _PORTAbits 0 6 -> -> 1 `i `uc ]
+"76
 }
-"65
+"73
 [e ++ _j -> 1 `i ]
 [e :U 988 ]
 [e $ < _j *U + &U _valoresSeno * -> -> _i `ui `ux -> -> # *U &U _valoresSeno `ui `ux 985  ]
 [e :U 986 ]
-"67
+"76
 }
-[; ;SENO.c: 67: }
-[; ;SENO.c: 68: k=100/3-valoresSeno[i];
-"68
-[e = _k - / -> 100 `i -> 3 `i *U + &U _valoresSeno * -> -> _i `ui `ux -> -> # *U &U _valoresSeno `ui `ux ]
-[; ;SENO.c: 69: for (j=0;j<k;j++){
-"69
+[; ;SENO.c: 76: }
+[; ;SENO.c: 77: k=100-valoresSeno[i];
+"77
+[e = _k - -> 100 `i *U + &U _valoresSeno * -> -> _i `ui `ux -> -> # *U &U _valoresSeno `ui `ux ]
+[; ;SENO.c: 78: for (j=0;j<k;j++){
+"78
 {
 [e = _j -> 0 `i ]
 [e $U 992  ]
 [e :U 989 ]
 {
-[; ;SENO.c: 70: PORTCbits.RC2=0;
-"70
+[; ;SENO.c: 79: PORTCbits.RC2=0;
+"79
 [e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-"71
+[; ;SENO.c: 80: PORTAbits.RA6=0;
+"80
+[e = . . _PORTAbits 0 6 -> -> 0 `i `uc ]
+"81
 }
-"69
+"78
 [e ++ _j -> 1 `i ]
 [e :U 992 ]
 [e $ < _j _k 989  ]
 [e :U 990 ]
-"71
+"81
+}
+"82
 }
 "72
-}
-"64
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 20 `i 982  ]
+[e $ < _i -> 15 `i 982  ]
 [e :U 983 ]
-"72
+"82
 }
-"73
+[; ;SENO.c: 81: }
+[; ;SENO.c: 82: }
+[; ;SENO.c: 83: return;
+"83
+[e $UE 975  ]
+"84
 }
 [e :U 979 ]
-"63
+"71
 [e $U 980  ]
 [e :U 981 ]
-[; ;SENO.c: 71: }
-[; ;SENO.c: 72: }
-[; ;SENO.c: 73: }
-[; ;SENO.c: 74: return;
-"74
-[e $UE 975  ]
-[; ;SENO.c: 75: }
-"75
+[; ;SENO.c: 84: }
+[; ;SENO.c: 86: }
+"86
 [e :UE 975 ]
 }

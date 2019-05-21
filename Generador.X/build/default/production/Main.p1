@@ -34,7 +34,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _Lcd_Chr_CP `(v ~T0 @X0 0 ef1`uc ]
 "12 teclado.h
 [v _Recuperar `(uc ~T0 @X0 0 ef ]
-"9 Funciones.h
+"65 Funciones.h
+[v _tm_500 `(i ~T0 @X0 0 ef ]
+"9
 [v _Tec `(v ~T0 @X0 0 ef1`*uc ]
 "67 /opt/microchip/xc8/v1.32/include/stdlib.h
 [v _atoi `(i ~T0 @X0 0 ef1`*Cuc ]
@@ -43,50 +45,24 @@ Version 3.2 HI-TECH Software Intermediate Code
 "7 PWM.h
 [v _PWM_generar `(v ~T0 @X0 0 ef2`ui`ui ]
 [p mainexit ]
-"349 /opt/microchip/xc8/v1.32/include/pic18f45k50.h
+"13104 /opt/microchip/xc8/v1.32/include/pic18f45k50.h
+[v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
+"349
 [v _ANSELD `Vuc ~T0 @X0 0 e@3934 ]
 "10 teclado.h
 [v _int_teclado `(v ~T0 @X0 0 ef ]
-"5514 /opt/microchip/xc8/v1.32/include/pic18f45k50.h
-[s S354 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S354 . TRISC0 TRISC1 TRISC2 . TRISC4 TRISC5 TRISC6 TRISC7 ]
-"5524
-[s S355 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S355 . RC0 RC1 RC2 . RC6 RC7 ]
-"5532
-[s S356 :3 `uc 1 :1 `uc 1 ]
-[n S356 . . TRISC3 ]
-"5513
-[u S353 `S354 1 `S355 1 `S356 1 ]
-[n S353 . . . . ]
-"5537
-[v _TRISCbits `VS353 ~T0 @X0 0 e@3988 ]
-"3416
-[s S233 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S233 . RC0 RC1 RC2 . RC4 RC5 RC6 RC7 ]
-"3426
-[s S234 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S234 . T1OSO T1OSI CCP1 . TX RX ]
-"3434
-[s S235 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S235 . T13CKI . P1A . CK DT ]
-"3442
-[s S236 :1 `uc 1 :1 `uc 1 ]
-[n S236 . . CCP2 ]
-"3446
-[s S237 :2 `uc 1 :1 `uc 1 ]
-[n S237 . . PA1 ]
-"3450
-[s S238 :1 `uc 1 :1 `uc 1 ]
-[n S238 . . PA2 ]
-"3454
-[s S239 :3 `uc 1 :1 `uc 1 ]
-[n S239 . . RC3 ]
-"3415
-[u S232 `S233 1 `S234 1 `S235 1 `S236 1 `S237 1 `S238 1 `S239 1 ]
-[n S232 . . . . . . . . ]
-"3459
-[v _PORTCbits `VS232 ~T0 @X0 0 e@3970 ]
+"7 Triangular.h
+[v _TRIANGULAR_GENERAR_1 `(v ~T0 @X0 0 ef ]
+"8
+[v _TRIANGULAR_GENERAR_2 `(v ~T0 @X0 0 ef ]
+"9
+[v _TRIANGULAR_GENERAR_3 `(v ~T0 @X0 0 ef ]
+"7 senoidal.h
+[v _SENO_GENERAR_1 `(v ~T0 @X0 0 ef ]
+"8
+[v _SENO_GENERAR_2 `(v ~T0 @X0 0 ef ]
+"9
+[v _SENO_GENERAR_3 `(v ~T0 @X0 0 ef ]
 [; ;htc.h: 21: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 24: extern void __builtin_software_breakpoint(void);
 [; ;pic18f45k50.h: 47: extern volatile unsigned char SRCON1 @ 0xF57;
@@ -6912,161 +6888,50 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x EBTRB=OFF ]
 [; ;conversion.h: 10: int Conv_Entero(long long numero,char* conv);
 [; ;PWM.h: 7: void PWM_generar( unsigned int duty, unsigned int fpwm);
-[; ;delays.h: 2: void tm_100();
-[; ;delays.h: 3: void tm_200();
-[; ;delays.h: 4: void tm_500();
-[; ;delays.h: 5: void tm_1s();
-"6 delays.h
-[v _tm_100 `(v ~T0 @X0 1 ef ]
-{
-[; ;delays.h: 6: void tm_100(){
-[e :U _tm_100 ]
-[f ]
-[; ;delays.h: 7: _delay((unsigned long)((50)*(8000000/4000.0)));
-"7
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 8: _delay((unsigned long)((50)*(8000000/4000.0)));
-"8
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 9: }
-"9
-[e :UE 943 ]
-}
-"11
-[v _tm_200 `(v ~T0 @X0 1 ef ]
-{
-[; ;delays.h: 11: void tm_200(){
-[e :U _tm_200 ]
-[f ]
-[; ;delays.h: 12: _delay((unsigned long)((50)*(8000000/4000.0)));
-"12
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 13: _delay((unsigned long)((50)*(8000000/4000.0)));
-"13
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 14: _delay((unsigned long)((50)*(8000000/4000.0)));
-"14
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 15: _delay((unsigned long)((50)*(8000000/4000.0)));
-"15
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 17: }
-"17
-[e :UE 944 ]
-}
-"19
-[v _tm_500 `(v ~T0 @X0 1 ef ]
-{
-[; ;delays.h: 19: void tm_500(){
-[e :U _tm_500 ]
-[f ]
-[; ;delays.h: 20: _delay((unsigned long)((50)*(8000000/4000.0)));
-"20
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 21: _delay((unsigned long)((50)*(8000000/4000.0)));
-"21
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 22: _delay((unsigned long)((50)*(8000000/4000.0)));
-"22
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 23: _delay((unsigned long)((50)*(8000000/4000.0)));
-"23
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 25: _delay((unsigned long)((50)*(8000000/4000.0)));
-"25
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 26: _delay((unsigned long)((50)*(8000000/4000.0)));
-"26
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 27: _delay((unsigned long)((50)*(8000000/4000.0)));
-"27
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 28: _delay((unsigned long)((50)*(8000000/4000.0)));
-"28
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 30: _delay((unsigned long)((50)*(8000000/4000.0)));
-"30
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 31: _delay((unsigned long)((50)*(8000000/4000.0)));
-"31
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 33: }
-"33
-[e :UE 945 ]
-}
-"35
+[; ;delays.h: 3: void tm_1s();
+"4 delays.h
 [v _tm_1s `(v ~T0 @X0 1 ef ]
 {
-[; ;delays.h: 35: void tm_1s(){
+[; ;delays.h: 4: void tm_1s(){
 [e :U _tm_1s ]
 [f ]
-[; ;delays.h: 36: _delay((unsigned long)((50)*(8000000/4000.0)));
-"36
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 37: _delay((unsigned long)((50)*(8000000/4000.0)));
-"37
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 38: _delay((unsigned long)((50)*(8000000/4000.0)));
-"38
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 39: _delay((unsigned long)((50)*(8000000/4000.0)));
-"39
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 41: _delay((unsigned long)((50)*(8000000/4000.0)));
-"41
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 42: _delay((unsigned long)((50)*(8000000/4000.0)));
-"42
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 43: _delay((unsigned long)((50)*(8000000/4000.0)));
-"43
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 44: _delay((unsigned long)((50)*(8000000/4000.0)));
-"44
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 46: _delay((unsigned long)((50)*(8000000/4000.0)));
-"46
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 47: _delay((unsigned long)((50)*(8000000/4000.0)));
-"47
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 49: _delay((unsigned long)((50)*(8000000/4000.0)));
-"49
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 50: _delay((unsigned long)((50)*(8000000/4000.0)));
-"50
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 51: _delay((unsigned long)((50)*(8000000/4000.0)));
-"51
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 52: _delay((unsigned long)((50)*(8000000/4000.0)));
-"52
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 54: _delay((unsigned long)((50)*(8000000/4000.0)));
-"54
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 55: _delay((unsigned long)((50)*(8000000/4000.0)));
-"55
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 56: _delay((unsigned long)((50)*(8000000/4000.0)));
-"56
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 57: _delay((unsigned long)((50)*(8000000/4000.0)));
-"57
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 59: _delay((unsigned long)((50)*(8000000/4000.0)));
-"59
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 60: _delay((unsigned long)((50)*(8000000/4000.0)));
-"60
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;delays.h: 63: }
-"63
-[e :UE 946 ]
+[; ;delays.h: 5: _delay((unsigned long)((100)*(4000000/4000.0)));
+"5
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;delays.h: 6: _delay((unsigned long)((100)*(4000000/4000.0)));
+"6
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;delays.h: 7: _delay((unsigned long)((100)*(4000000/4000.0)));
+"7
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;delays.h: 8: _delay((unsigned long)((100)*(4000000/4000.0)));
+"8
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;delays.h: 9: _delay((unsigned long)((100)*(4000000/4000.0)));
+"9
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;delays.h: 10: _delay((unsigned long)((100)*(4000000/4000.0)));
+"10
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;delays.h: 11: _delay((unsigned long)((100)*(4000000/4000.0)));
+"11
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;delays.h: 12: _delay((unsigned long)((100)*(4000000/4000.0)));
+"12
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;delays.h: 13: _delay((unsigned long)((100)*(4000000/4000.0)));
+"13
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;delays.h: 14: _delay((unsigned long)((100)*(4000000/4000.0)));
+"14
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;delays.h: 18: }
+"18
+[e :UE 943 ]
 }
-[; ;senoidal.h: 7: void SENO_100();
-[; ;senoidal.h: 8: void SENO_50();
-[; ;senoidal.h: 9: void SENO_20();
+[; ;senoidal.h: 7: void SENO_GENERAR_1();
+[; ;senoidal.h: 8: void SENO_GENERAR_2();
+[; ;senoidal.h: 9: void SENO_GENERAR_3();
 [; ;teclado.h: 10: void int_teclado();
 [; ;teclado.h: 11: unsigned char Teclado(void);
 [; ;teclado.h: 12: char Recuperar(void);
@@ -7149,10 +7014,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 "70
 {
 [e = _data -> -> 1 `i `uc ]
-[e $ < -> _data `i -> 4 `i 948  ]
-[e $U 949  ]
+[e $ < -> _data `i -> 4 `i 945  ]
+[e $U 946  ]
 "71
-[e :U 948 ]
+[e :U 945 ]
 [; ;pantalla.h: 71: {
 {
 [; ;pantalla.h: 72: PORTDbits.RD7 = 0; PORTDbits.RD6 = 0; PORTDbits.RD5 = 1; PORTDbits.RD4 = 1; PORTDbits.RD2 = 0;
@@ -7193,8 +7058,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 "70
 [e ++ _data -> -> 1 `i `uc ]
-[e $ < -> _data `i -> 4 `i 948  ]
-[e :U 949 ]
+[e $ < -> _data `i -> 4 `i 945  ]
+[e :U 946 ]
 "79
 }
 [; ;pantalla.h: 79: }
@@ -7246,7 +7111,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _Lcd_Cmd (1 _data ]
 [; ;pantalla.h: 89: }
 "89
-[e :UE 947 ]
+[e :UE 944 ]
 }
 "92
 [v _Lcd_Out `(v ~T0 @X0 1 ef3`uc`uc`*Cuc ]
@@ -7266,54 +7131,54 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pantalla.h: 94: unsigned char data;
 [; ;pantalla.h: 95: switch (y)
 "95
-[e $U 953  ]
+[e $U 950  ]
 [; ;pantalla.h: 96: {
 "96
 {
 [; ;pantalla.h: 97: case 1: data = 128 + x; break;
 "97
-[e :U 954 ]
+[e :U 951 ]
 [e = _data -> + -> 128 `i -> _x `i `uc ]
-[e $U 952  ]
+[e $U 949  ]
 [; ;pantalla.h: 98: case 2: data = 192 + x; break;
 "98
-[e :U 955 ]
+[e :U 952 ]
 [e = _data -> + -> 192 `i -> _x `i `uc ]
-[e $U 952  ]
+[e $U 949  ]
 [; ;pantalla.h: 99: case 3: data = 148 + x; break;
 "99
-[e :U 956 ]
+[e :U 953 ]
 [e = _data -> + -> 148 `i -> _x `i `uc ]
-[e $U 952  ]
+[e $U 949  ]
 [; ;pantalla.h: 100: case 4: data = 212 + x; break;
 "100
-[e :U 957 ]
+[e :U 954 ]
 [e = _data -> + -> 212 `i -> _x `i `uc ]
-[e $U 952  ]
+[e $U 949  ]
 [; ;pantalla.h: 101: default: break;
 "101
-[e :U 958 ]
-[e $U 952  ]
+[e :U 955 ]
+[e $U 949  ]
 "102
 }
 [; ;pantalla.h: 102: }
-[e $U 952  ]
+[e $U 949  ]
 "95
-[e :U 953 ]
-[e [\ _y , $ -> -> 1 `i `uc 954
- , $ -> -> 2 `i `uc 955
- , $ -> -> 3 `i `uc 956
- , $ -> -> 4 `i `uc 957
- 958 ]
+[e :U 950 ]
+[e [\ _y , $ -> -> 1 `i `uc 951
+ , $ -> -> 2 `i `uc 952
+ , $ -> -> 3 `i `uc 953
+ , $ -> -> 4 `i `uc 954
+ 955 ]
 "102
-[e :U 952 ]
+[e :U 949 ]
 [; ;pantalla.h: 103: Lcd_Cmd(data);
 "103
 [e ( _Lcd_Cmd (1 _data ]
 [; ;pantalla.h: 104: while(*buffer)
 "104
-[e $U 959  ]
-[e :U 960 ]
+[e $U 956  ]
+[e :U 957 ]
 [; ;pantalla.h: 105: {
 "105
 {
@@ -7325,17 +7190,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ++ _buffer * -> -> 1 `i `x -> -> # *U _buffer `i `x ]
 "108
 }
-[e :U 959 ]
+[e :U 956 ]
 "104
-[e $ != -> *U _buffer `i -> -> -> 0 `i `Cuc `i 960  ]
-[e :U 961 ]
+[e $ != -> *U _buffer `i -> -> -> 0 `i `Cuc `i 957  ]
+[e :U 958 ]
 [; ;pantalla.h: 108: }
 [; ;pantalla.h: 109: return;
 "109
-[e $UE 951  ]
+[e $UE 948  ]
 [; ;pantalla.h: 110: }
 "110
-[e :UE 951 ]
+[e :UE 948 ]
 }
 "113
 [v _Lcd_Out2 `(v ~T0 @X0 1 ef3`uc`uc`*uc ]
@@ -7355,54 +7220,54 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pantalla.h: 115: unsigned char data;
 [; ;pantalla.h: 116: switch (y)
 "116
-[e $U 964  ]
+[e $U 961  ]
 [; ;pantalla.h: 117: {
 "117
 {
 [; ;pantalla.h: 118: case 1: data = 128 + x; break;
 "118
-[e :U 965 ]
+[e :U 962 ]
 [e = _data -> + -> 128 `i -> _x `i `uc ]
-[e $U 963  ]
+[e $U 960  ]
 [; ;pantalla.h: 119: case 2: data = 192 + x; break;
 "119
-[e :U 966 ]
+[e :U 963 ]
 [e = _data -> + -> 192 `i -> _x `i `uc ]
-[e $U 963  ]
+[e $U 960  ]
 [; ;pantalla.h: 120: case 3: data = 148 + x; break;
 "120
-[e :U 967 ]
+[e :U 964 ]
 [e = _data -> + -> 148 `i -> _x `i `uc ]
-[e $U 963  ]
+[e $U 960  ]
 [; ;pantalla.h: 121: case 4: data = 212 + x; break;
 "121
-[e :U 968 ]
+[e :U 965 ]
 [e = _data -> + -> 212 `i -> _x `i `uc ]
-[e $U 963  ]
+[e $U 960  ]
 [; ;pantalla.h: 122: default: break;
 "122
-[e :U 969 ]
-[e $U 963  ]
+[e :U 966 ]
+[e $U 960  ]
 "123
 }
 [; ;pantalla.h: 123: }
-[e $U 963  ]
+[e $U 960  ]
 "116
-[e :U 964 ]
-[e [\ _y , $ -> -> 1 `i `uc 965
- , $ -> -> 2 `i `uc 966
- , $ -> -> 3 `i `uc 967
- , $ -> -> 4 `i `uc 968
- 969 ]
+[e :U 961 ]
+[e [\ _y , $ -> -> 1 `i `uc 962
+ , $ -> -> 2 `i `uc 963
+ , $ -> -> 3 `i `uc 964
+ , $ -> -> 4 `i `uc 965
+ 966 ]
 "123
-[e :U 963 ]
+[e :U 960 ]
 [; ;pantalla.h: 124: Lcd_Cmd(data);
 "124
 [e ( _Lcd_Cmd (1 _data ]
 [; ;pantalla.h: 125: while(*buffer)
 "125
-[e $U 970  ]
-[e :U 971 ]
+[e $U 967  ]
+[e :U 968 ]
 [; ;pantalla.h: 126: {
 "126
 {
@@ -7414,17 +7279,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ++ _buffer * -> -> 1 `i `x -> -> # *U _buffer `i `x ]
 "129
 }
-[e :U 970 ]
+[e :U 967 ]
 "125
-[e $ != -> *U _buffer `i -> -> -> 0 `i `uc `i 971  ]
-[e :U 972 ]
+[e $ != -> *U _buffer `i -> -> -> 0 `i `uc `i 968  ]
+[e :U 969 ]
 [; ;pantalla.h: 129: }
 [; ;pantalla.h: 130: return;
 "130
-[e $UE 962  ]
+[e $UE 959  ]
 [; ;pantalla.h: 131: }
 "131
-[e :UE 962 ]
+[e :UE 959 ]
 }
 "134
 [v _Lcd_Chr_CP `(v ~T0 @X0 1 ef1`uc ]
@@ -7475,7 +7340,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 5500 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
 [; ;pantalla.h: 145: }
 "145
-[e :UE 973 ]
+[e :UE 970 ]
 }
 "148
 [v _Lcd_Cmd `(v ~T0 @X0 1 ef1`uc ]
@@ -7525,7 +7390,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 5500 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
 [; ;pantalla.h: 159: }
 "159
-[e :UE 974 ]
+[e :UE 971 ]
 }
 "161
 [v _lcd_goto `(v ~T0 @X0 1 ef2`i`i ]
@@ -7540,51 +7405,51 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pantalla.h: 162: unsigned char data;
 [; ;pantalla.h: 163: switch (y) {
 "163
-[e $U 977  ]
+[e $U 974  ]
 {
 [; ;pantalla.h: 164: case 1: data = 128 + x; break;
 "164
-[e :U 978 ]
+[e :U 975 ]
 [e = _data -> + -> 128 `i _x `uc ]
-[e $U 976  ]
+[e $U 973  ]
 [; ;pantalla.h: 165: case 2: data = 192 + x; break;
 "165
-[e :U 979 ]
+[e :U 976 ]
 [e = _data -> + -> 192 `i _x `uc ]
-[e $U 976  ]
+[e $U 973  ]
 [; ;pantalla.h: 166: case 3: data = 148 + x; break;
 "166
-[e :U 980 ]
+[e :U 977 ]
 [e = _data -> + -> 148 `i _x `uc ]
-[e $U 976  ]
+[e $U 973  ]
 [; ;pantalla.h: 167: case 4: data = 212 + x; break;
 "167
-[e :U 981 ]
+[e :U 978 ]
 [e = _data -> + -> 212 `i _x `uc ]
-[e $U 976  ]
+[e $U 973  ]
 [; ;pantalla.h: 168: default: break;
 "168
-[e :U 982 ]
-[e $U 976  ]
+[e :U 979 ]
+[e $U 973  ]
 "169
 }
 [; ;pantalla.h: 169: }
-[e $U 976  ]
+[e $U 973  ]
 "163
-[e :U 977 ]
-[e [\ _y , $ -> 1 `i 978
- , $ -> 2 `i 979
- , $ -> 3 `i 980
- , $ -> 4 `i 981
- 982 ]
+[e :U 974 ]
+[e [\ _y , $ -> 1 `i 975
+ , $ -> 2 `i 976
+ , $ -> 3 `i 977
+ , $ -> 4 `i 978
+ 979 ]
 "169
-[e :U 976 ]
+[e :U 973 ]
 [; ;pantalla.h: 170: Lcd_Cmd(data);
 "170
 [e ( _Lcd_Cmd (1 _data ]
 [; ;pantalla.h: 171: }
 "171
-[e :UE 975 ]
+[e :UE 972 ]
 }
 [; ;Funciones.h: 6: void Presentacion();
 [; ;Funciones.h: 7: void Menu();
@@ -7673,7 +7538,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _tm_1s ..  ]
 [; ;Funciones.h: 39: }
 "39
-[e :UE 983 ]
+[e :UE 980 ]
 }
 "41
 [v _Menu `(v ~T0 @X0 1 ef ]
@@ -7719,7 +7584,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _tm_1s ..  ]
 [; ;Funciones.h: 57: }
 "57
-[e :UE 984 ]
+[e :UE 981 ]
 }
 "59
 [v _Menu_Pwm `(v ~T0 @X0 1 ef ]
@@ -7747,7 +7612,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _tm_500 ..  ]
 [; ;Funciones.h: 66: }
 "66
-[e :UE 985 ]
+[e :UE 982 ]
 }
 "69
 [v _Frecuencia `(v ~T0 @X0 1 ef1`*uc ]
@@ -7773,7 +7638,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _Tec (1 _frecuencia ]
 [; ;Funciones.h: 75: }
 "75
-[e :UE 986 ]
+[e :UE 983 ]
 }
 "76
 [v _Ciclo `(v ~T0 @X0 1 ef1`*uc ]
@@ -7799,7 +7664,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _Tec (1 _ciclo ]
 [; ;Funciones.h: 82: }
 "82
-[e :UE 987 ]
+[e :UE 984 ]
 }
 "83
 [v _Tec `(v ~T0 @X0 1 ef1`*uc ]
@@ -7826,54 +7691,54 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _lcd_goto (2 , -> _contador `i -> 2 `i ]
 [; ;Funciones.h: 89: do{
 "89
-[e :U 991 ]
+[e :U 988 ]
 {
 [; ;Funciones.h: 92: Key = Recuperar();
 "92
 [e = _Key ( _Recuperar ..  ]
 [; ;Funciones.h: 93: if( Key == ' ')continue;
 "93
-[e $ ! == -> _Key `ui -> 32 `ui 992  ]
-[e $U 989  ]
-[e :U 992 ]
+[e $ ! == -> _Key `ui -> 32 `ui 989  ]
+[e $U 986  ]
+[e :U 989 ]
 [; ;Funciones.h: 94: if( Key == '*')break;
 "94
-[e $ ! == -> _Key `ui -> 42 `ui 993  ]
-[e $U 990  ]
-[e :U 993 ]
+[e $ ! == -> _Key `ui -> 42 `ui 990  ]
+[e $U 987  ]
+[e :U 990 ]
 [; ;Funciones.h: 95: if(Key == 'B') {
 "95
-[e $ ! == -> _Key `ui -> 66 `ui 994  ]
+[e $ ! == -> _Key `ui -> 66 `ui 991  ]
 {
 [; ;Funciones.h: 96: lcd_goto(--contador,2);
 "96
 [e ( _lcd_goto (2 , -> =- _contador -> -> 1 `i `ui `i -> 2 `i ]
 [; ;Funciones.h: 97: if(j!= 0) j--;
 "97
-[e $ ! != _j -> -> 0 `i `ui 995  ]
+[e $ ! != _j -> -> 0 `i `ui 992  ]
 [e -- _j -> -> 1 `i `ui ]
-[e :U 995 ]
+[e :U 992 ]
 [; ;Funciones.h: 98: aux = '\0';
 "98
 [e = _aux -> -> 0 `ui `uc ]
 [; ;Funciones.h: 99: continue;
 "99
-[e $U 989  ]
+[e $U 986  ]
 "101
 }
-[e :U 994 ]
+[e :U 991 ]
 [; ;Funciones.h: 101: }
 [; ;Funciones.h: 102: if(Key == aux){
 "102
-[e $ ! == -> _Key `i -> _aux `i 996  ]
+[e $ ! == -> _Key `i -> _aux `i 993  ]
 {
 [; ;Funciones.h: 104: if(Key!='#')
 "104
-[e $ ! != -> _Key `ui -> 35 `ui 997  ]
+[e $ ! != -> _Key `ui -> 35 `ui 994  ]
 [; ;Funciones.h: 105: contador --,j--;
 "105
 [e ; -- _contador -> -> 1 `i `ui -- _j -> -> 1 `i `ui ]
-[e :U 997 ]
+[e :U 994 ]
 [; ;Funciones.h: 106: lcd_goto(contador++,2);
 "106
 [e ( _lcd_goto (2 , -> ++ _contador -> -> 1 `i `ui `i -> 2 `i ]
@@ -7882,27 +7747,27 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = *U + _cadena * -> ++ _j -> -> 1 `i `ui `ux -> -> # *U _cadena `ui `ux _Key ]
 [; ;Funciones.h: 108: continue;
 "108
-[e $U 989  ]
+[e $U 986  ]
 "109
 }
-[e :U 996 ]
+[e :U 993 ]
 [; ;Funciones.h: 109: }
 [; ;Funciones.h: 110: i = 0;
 "110
 [e = _i -> -> 0 `i `ui ]
 [; ;Funciones.h: 112: if(Key == '#' && Key!=aux ){
 "112
-[e $ ! && == -> _Key `ui -> 35 `ui != -> _Key `i -> _aux `i 998  ]
+[e $ ! && == -> _Key `ui -> 35 `ui != -> _Key `i -> _aux `i 995  ]
 {
 [; ;Funciones.h: 113: aux = Key;
 "113
 [e = _aux _Key ]
 [; ;Funciones.h: 114: continue;
 "114
-[e $U 989  ]
+[e $U 986  ]
 "115
 }
-[e :U 998 ]
+[e :U 995 ]
 [; ;Funciones.h: 115: }
 [; ;Funciones.h: 116: lcd_goto(contador,2);
 "116
@@ -7921,16 +7786,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _aux _Key ]
 "121
 }
-[e :U 989 ]
+[e :U 986 ]
 [; ;Funciones.h: 121: }while(1);
-[e $ != -> 1 `i -> 0 `i 991  ]
-[e :U 990 ]
+[e $ != -> 1 `i -> 0 `i 988  ]
+[e :U 987 ]
 [; ;Funciones.h: 122: cadena[j] = '\0';
 "122
 [e = *U + _cadena * -> _j `ux -> -> # *U _cadena `ui `ux -> -> 0 `ui `uc ]
 [; ;Funciones.h: 125: }
 "125
-[e :UE 988 ]
+[e :UE 985 ]
 }
 "127
 [v _Imprimir_pantalla `(v ~T0 @X0 1 ef1`*uc ]
@@ -7968,7 +7833,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _key ( _Recuperar ..  ]
 [; ;Funciones.h: 140: }
 "140
-[e :UE 999 ]
+[e :UE 996 ]
 }
 "142
 [v _Prueba1 `(v ~T0 @X0 1 ef ]
@@ -7996,7 +7861,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _t -> ( _atoi (1 -> &U _ciclo `*Cuc `ui ]
 [; ;Funciones.h: 149: }
 "149
-[e :UE 1000 ]
+[e :UE 997 ]
 }
 "151
 [v _Prueba2 `(v ~T0 @X0 1 ef ]
@@ -8042,614 +7907,512 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _PWM_generar (2 , _t _s ]
 [; ;Funciones.h: 170: }
 "170
-[e :UE 1001 ]
+[e :UE 998 ]
 }
-[; ;Main.c: 23: int q,w,e,r;
-"27 Main.c
+[; ;Triangular.h: 7: void TRIANGULAR_GENERAR_1();
+[; ;Triangular.h: 8: void TRIANGULAR_GENERAR_2();
+[; ;Triangular.h: 9: void TRIANGULAR_GENERAR_3();
+[; ;Main.c: 24: int q,w,e,r;
+"28 Main.c
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;Main.c: 27: void main() {
+[; ;Main.c: 28: void main() {
 [e :U _main ]
 [f ]
 [v _key `uc ~T0 @X0 1 a ]
-[; ;Main.c: 29: char key;
-[; ;Main.c: 31: ANSELD=0;
-"31
-[e = _ANSELD -> -> 0 `i `uc ]
-[; ;Main.c: 32: Lcd_Init();
+[; ;Main.c: 30: char key;
+[; ;Main.c: 32: OSCCON=0b01010111;
 "32
-[e ( _Lcd_Init ..  ]
-[; ;Main.c: 33: int_teclado();
+[e = _OSCCON -> -> 87 `i `uc ]
+[; ;Main.c: 33: ANSELD=0;
 "33
-[e ( _int_teclado ..  ]
-[; ;Main.c: 34: do{
+[e = _ANSELD -> -> 0 `i `uc ]
+[; ;Main.c: 34: Lcd_Init();
 "34
-[e :U 1005 ]
-{
-[; ;Main.c: 38: key = Recuperar();
-"38
-[e = _key ( _Recuperar ..  ]
-[; ;Main.c: 42: if(key==' '){
-"42
-[e $ ! == -> _key `ui -> 32 `ui 1006  ]
-{
-[; ;Main.c: 43: q=1;
-"43
-[e = _q -> 1 `i ]
-[; ;Main.c: 44: do{
-"44
-[e :U 1009 ]
-{
-[; ;Main.c: 45: int_teclado();
-"45
-[e ( _int_teclado ..  ]
-[; ;Main.c: 46: Lcd_Init();
-"46
 [e ( _Lcd_Init ..  ]
-[; ;Main.c: 47: Lcd_Cmd(1);
-"47
-[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
-[; ;Main.c: 48: Lcd_Cmd(12);
-"48
-[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
-[; ;Main.c: 49: Lcd_Out2(1,1,"Universidad de ");
-"49
-[e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> :s 16C `*uc ]
-[; ;Main.c: 50: _delay((unsigned long)((100)*(4000000/4000.0)));
-"50
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 51: Lcd_Out2(2,3,"Guanajuato");
-"51
-[e ( _Lcd_Out2 (3 , , -> -> 2 `i `uc -> -> 3 `i `uc -> :s 17C `*uc ]
-[; ;Main.c: 52: _delay((unsigned long)((100)*(4000000/4000.0)));
-"52
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 53: Lcd_Cmd(1);
-"53
-[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
-[; ;Main.c: 54: Lcd_Out2(1,1,"Proyecto Final");
-"54
-[e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> :s 18C `*uc ]
-[; ;Main.c: 55: Lcd_Out2(2,3,"Generador");
-"55
-[e ( _Lcd_Out2 (3 , , -> -> 2 `i `uc -> -> 3 `i `uc -> :s 19C `*uc ]
-[; ;Main.c: 56: _delay((unsigned long)((100)*(4000000/4000.0)));
-"56
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 57: Lcd_Cmd(1);
-"57
-[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
-[; ;Main.c: 58: Lcd_Cmd(12);
-"58
-[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
-[; ;Main.c: 59: _delay((unsigned long)((50)*(4000000/4000.0)));
-"59
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 60: _delay((unsigned long)((50)*(4000000/4000.0)));
-"60
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 61: key=Recuperar();
-"61
-[e = _key ( _Recuperar ..  ]
-[; ;Main.c: 62: if(key=='D' | key=='0'){
-"62
-[e $ ! | == -> _key `ui -> 68 `ui == -> _key `ui -> 48 `ui 1010  ]
+[; ;Main.c: 35: int_teclado();
+"35
+[e ( _int_teclado ..  ]
+[; ;Main.c: 36: do{
+"36
+[e :U 1002 ]
 {
-[; ;Main.c: 63: q=0;
+[; ;Main.c: 40: key = Recuperar();
+"40
+[e = _key ( _Recuperar ..  ]
+[; ;Main.c: 44: if(key==' '){
+"44
+[e $ ! == -> _key `ui -> 32 `ui 1003  ]
+{
+[; ;Main.c: 45: q=1;
+"45
+[e = _q -> 1 `i ]
+[; ;Main.c: 46: do{
+"46
+[e :U 1006 ]
+{
+[; ;Main.c: 47: int_teclado();
+"47
+[e ( _int_teclado ..  ]
+[; ;Main.c: 48: Lcd_Init();
+"48
+[e ( _Lcd_Init ..  ]
+[; ;Main.c: 49: Lcd_Cmd(1);
+"49
+[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
+[; ;Main.c: 50: Lcd_Cmd(12);
+"50
+[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
+[; ;Main.c: 51: Lcd_Out2(1,1,"Universidad de ");
+"51
+[e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> :s 16C `*uc ]
+[; ;Main.c: 52: tm_1s();
+"52
+[e ( _tm_1s ..  ]
+[; ;Main.c: 53: Lcd_Out2(2,3,"Guanajuato");
+"53
+[e ( _Lcd_Out2 (3 , , -> -> 2 `i `uc -> -> 3 `i `uc -> :s 17C `*uc ]
+[; ;Main.c: 54: tm_1s();
+"54
+[e ( _tm_1s ..  ]
+[; ;Main.c: 55: Lcd_Cmd(1);
+"55
+[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
+[; ;Main.c: 56: Lcd_Out2(1,1,"Proyecto Final");
+"56
+[e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> :s 18C `*uc ]
+[; ;Main.c: 57: Lcd_Out2(2,3,"Generador");
+"57
+[e ( _Lcd_Out2 (3 , , -> -> 2 `i `uc -> -> 3 `i `uc -> :s 19C `*uc ]
+[; ;Main.c: 58: tm_1s();
+"58
+[e ( _tm_1s ..  ]
+[; ;Main.c: 59: Lcd_Cmd(1);
+"59
+[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
+[; ;Main.c: 60: Lcd_Cmd(12);
+"60
+[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
+[; ;Main.c: 61: _delay((unsigned long)((100)*(4000000/4000.0)));
+"61
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;Main.c: 62: key=Recuperar();
+"62
+[e = _key ( _Recuperar ..  ]
+[; ;Main.c: 63: if(key=='D' | key=='0'){
 "63
-[e = _q -> 0 `i ]
+[e $ ! | == -> _key `ui -> 68 `ui == -> _key `ui -> 48 `ui 1007  ]
+{
+[; ;Main.c: 64: q=0;
 "64
-}
-[e :U 1010 ]
+[e = _q -> 0 `i ]
 "65
 }
-[; ;Main.c: 64: }
-[; ;Main.c: 65: }while(q==1);
-[e $ == _q -> 1 `i 1009  ]
-[e :U 1008 ]
+[e :U 1007 ]
 "66
 }
-[e :U 1006 ]
-[; ;Main.c: 66: }
-[; ;Main.c: 69: if(key=='D'){
-"69
-[e $ ! == -> _key `ui -> 68 `ui 1011  ]
-{
-[; ;Main.c: 70: key = Recuperar();
+[; ;Main.c: 65: }
+[; ;Main.c: 66: }while(q==1);
+[e $ == _q -> 1 `i 1006  ]
+[e :U 1005 ]
+"67
+}
+[e :U 1003 ]
+[; ;Main.c: 67: }
+[; ;Main.c: 70: if(key=='D'){
 "70
-[e = _key ( _Recuperar ..  ]
-[; ;Main.c: 71: q=1;
+[e $ ! == -> _key `ui -> 68 `ui 1008  ]
+{
+[; ;Main.c: 71: key = Recuperar();
 "71
-[e = _q -> 1 `i ]
-[; ;Main.c: 72: do{
+[e = _key ( _Recuperar ..  ]
+[; ;Main.c: 72: q=1;
 "72
-[e :U 1014 ]
-{
-[; ;Main.c: 73: Lcd_Init();
+[e = _q -> 1 `i ]
+[; ;Main.c: 73: do{
 "73
-[e ( _Lcd_Init ..  ]
-[; ;Main.c: 74: Lcd_Cmd(1);
+[e :U 1011 ]
+{
+[; ;Main.c: 74: Lcd_Init();
 "74
-[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
-[; ;Main.c: 75: Lcd_Cmd(12);
+[e ( _Lcd_Init ..  ]
+[; ;Main.c: 75: Lcd_Cmd(1);
 "75
-[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
-[; ;Main.c: 76: Lcd_Out2(1,1,"A.-Cuadrada");
+[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
+[; ;Main.c: 76: Lcd_Cmd(12);
 "76
-[e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> :s 20C `*uc ]
-[; ;Main.c: 77: Lcd_Out2(2,1,"B.-Senoidal");
+[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
+[; ;Main.c: 77: Lcd_Out2(1,1,"A.-Cuadrada");
 "77
-[e ( _Lcd_Out2 (3 , , -> -> 2 `i `uc -> -> 1 `i `uc -> :s 21C `*uc ]
-[; ;Main.c: 78: _delay((unsigned long)((100)*(4000000/4000.0)));
+[e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> :s 20C `*uc ]
+[; ;Main.c: 78: Lcd_Out2(2,1,"B.-Senoidal");
 "78
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 79: _delay((unsigned long)((100)*(4000000/4000.0)));
+[e ( _Lcd_Out2 (3 , , -> -> 2 `i `uc -> -> 1 `i `uc -> :s 21C `*uc ]
+[; ;Main.c: 79: tm_1s();
 "79
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 80: _delay((unsigned long)((100)*(4000000/4000.0)));
+[e ( _tm_1s ..  ]
+[; ;Main.c: 80: key = Recuperar();
 "80
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 81: key = Recuperar();
+[e = _key ( _Recuperar ..  ]
+[; ;Main.c: 81: Lcd_Init();
 "81
-[e = _key ( _Recuperar ..  ]
-[; ;Main.c: 82: Lcd_Init();
+[e ( _Lcd_Init ..  ]
+[; ;Main.c: 82: Lcd_Cmd(1);
 "82
-[e ( _Lcd_Init ..  ]
-[; ;Main.c: 83: Lcd_Cmd(1);
+[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
+[; ;Main.c: 83: Lcd_Cmd(12);
 "83
-[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
-[; ;Main.c: 84: Lcd_Cmd(12);
+[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
+[; ;Main.c: 84: Lcd_Out2(1,1,"C.-Triangular");
 "84
-[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
-[; ;Main.c: 85: Lcd_Out2(1,1,"C.-Triangular");
-"85
 [e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> :s 22C `*uc ]
-[; ;Main.c: 86: _delay((unsigned long)((100)*(4000000/4000.0)));
+[; ;Main.c: 85: tm_1s();
+"85
+[e ( _tm_1s ..  ]
+[; ;Main.c: 86: key = Recuperar();
 "86
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 87: _delay((unsigned long)((100)*(4000000/4000.0)));
-"87
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 88: _delay((unsigned long)((100)*(4000000/4000.0)));
-"88
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 89: key = Recuperar();
+[e = _key ( _Recuperar ..  ]
+[; ;Main.c: 89: if(key=='C'){
 "89
-[e = _key ( _Recuperar ..  ]
-[; ;Main.c: 92: if(key=='C'){
-"92
-[e $ ! == -> _key `ui -> 67 `ui 1015  ]
+[e $ ! == -> _key `ui -> 67 `ui 1012  ]
 {
-[; ;Main.c: 93: w=1;
-"93
+[; ;Main.c: 90: w=1;
+"90
 [e = _w -> 1 `i ]
-[; ;Main.c: 94: Lcd_Init();
+[; ;Main.c: 91: Lcd_Init();
+"91
+[e ( _Lcd_Init ..  ]
+[; ;Main.c: 92: Lcd_Cmd(1);
+"92
+[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
+[; ;Main.c: 93: Lcd_Cmd(12);
+"93
+[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
+[; ;Main.c: 94: int_teclado();
 "94
-[e ( _Lcd_Init ..  ]
-[; ;Main.c: 95: Lcd_Cmd(1);
-"95
-[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
-[; ;Main.c: 96: Lcd_Cmd(12);
-"96
-[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
-[; ;Main.c: 97: int_teclado();
-"97
 [e ( _int_teclado ..  ]
-[; ;Main.c: 98: key=Recuperar();
-"98
+[; ;Main.c: 95: key=Recuperar();
+"95
 [e = _key ( _Recuperar ..  ]
-[; ;Main.c: 99: do{
-"99
-[e :U 1018 ]
+[; ;Main.c: 96: do{
+"96
+[e :U 1015 ]
 {
-[; ;Main.c: 100: Lcd_Init();
-"100
+[; ;Main.c: 97: Lcd_Init();
+"97
 [e ( _Lcd_Init ..  ]
-[; ;Main.c: 101: Lcd_Cmd(1);
-"101
+[; ;Main.c: 98: Lcd_Cmd(1);
+"98
 [e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
-[; ;Main.c: 102: Lcd_Cmd(12);
-"102
+[; ;Main.c: 99: Lcd_Cmd(12);
+"99
 [e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
-[; ;Main.c: 103: Lcd_Out2(1,1,"A.-Senal 1");
-"103
+[; ;Main.c: 100: Lcd_Out2(1,1,"A.-Senal 1");
+"100
 [e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> :s 23C `*uc ]
-[; ;Main.c: 104: Lcd_Out2(2,1,"B.-Señal 2");
-"104
+[; ;Main.c: 101: Lcd_Out2(2,1,"B.-Señal 2");
+"101
 [e ( _Lcd_Out2 (3 , , -> -> 2 `i `uc -> -> 1 `i `uc -> :s 24C `*uc ]
-[; ;Main.c: 105: _delay((unsigned long)((100)*(4000000/4000.0)));
+[; ;Main.c: 102: tm_1s();
+"102
+[e ( _tm_1s ..  ]
+[; ;Main.c: 103: Lcd_Cmd(1);
+"103
+[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
+[; ;Main.c: 104: Lcd_Cmd(12);
+"104
+[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
+[; ;Main.c: 105: Lcd_Out2(1,1,"C.-Senal 3");
 "105
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 106: _delay((unsigned long)((100)*(4000000/4000.0)));
+[e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> :s 25C `*uc ]
+[; ;Main.c: 106: tm_1s();
 "106
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[e ( _tm_1s ..  ]
 [; ;Main.c: 107: key = Recuperar();
 "107
 [e = _key ( _Recuperar ..  ]
-[; ;Main.c: 108: Lcd_Init();
-"108
-[e ( _Lcd_Init ..  ]
-[; ;Main.c: 109: Lcd_Cmd(1);
+[; ;Main.c: 109: if(key=='A'){
 "109
-[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
-[; ;Main.c: 110: Lcd_Cmd(12);
+[e $ ! == -> _key `ui -> 65 `ui 1016  ]
+{
+[; ;Main.c: 110: q=1;
 "110
-[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
-[; ;Main.c: 111: Lcd_Out2(1,1,"C.-Senal 3");
-"111
-[e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> :s 25C `*uc ]
-[; ;Main.c: 112: _delay((unsigned long)((100)*(4000000/4000.0)));
-"112
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 113: _delay((unsigned long)((100)*(4000000/4000.0)));
-"113
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 114: key = Recuperar();
-"114
-[e = _key ( _Recuperar ..  ]
-[; ;Main.c: 115: if(key=='A'){
-"115
-[e $ ! == -> _key `ui -> 65 `ui 1019  ]
-{
-[; ;Main.c: 116: q=1;
-"116
 [e = _q -> 1 `i ]
-[; ;Main.c: 117: Lcd_Init();
-"117
+[; ;Main.c: 111: Lcd_Init();
+"111
 [e ( _Lcd_Init ..  ]
-[; ;Main.c: 118: Lcd_Cmd(1);
-"118
+[; ;Main.c: 112: Lcd_Cmd(1);
+"112
 [e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
-[; ;Main.c: 119: Lcd_Cmd(12);
-"119
+[; ;Main.c: 113: Lcd_Cmd(12);
+"113
 [e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
-[; ;Main.c: 120: int_teclado();
-"120
-[e ( _int_teclado ..  ]
-[; ;Main.c: 121: key=Recuperar();
-"121
-[e = _key ( _Recuperar ..  ]
-[; ;Main.c: 122: do{
-"122
-[e :U 1022 ]
-{
-[; ;Main.c: 123: Lcd_Init();
-"123
-[e ( _Lcd_Init ..  ]
-[; ;Main.c: 124: Lcd_Cmd(1);
-"124
-[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
-[; ;Main.c: 125: Lcd_Cmd(12);
-"125
-[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
-[; ;Main.c: 126: Lcd_Out2(1,1,"Señal 1");
-"126
+[; ;Main.c: 114: Lcd_Out2(1,1,"A.-Senal 1");
+"114
 [e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> :s 26C `*uc ]
-[; ;Main.c: 128: TRISCbits.RC2=0;
+[; ;Main.c: 115: int_teclado();
+"115
+[e ( _int_teclado ..  ]
+[; ;Main.c: 116: key=Recuperar();
+"116
+[e = _key ( _Recuperar ..  ]
+[; ;Main.c: 117: do{
+"117
+[e :U 1019 ]
+{
+[; ;Main.c: 118: TRIANGULAR_GENERAR_1();
+"118
+[e ( _TRIANGULAR_GENERAR_1 ..  ]
+[; ;Main.c: 119: key=Recuperar();
+"119
+[e = _key ( _Recuperar ..  ]
+[; ;Main.c: 120: if(key=='*'){q=0;}
+"120
+[e $ ! == -> _key `ui -> 42 `ui 1020  ]
+{
+[e = _q -> 0 `i ]
+}
+[e :U 1020 ]
+"121
+}
+[; ;Main.c: 121: }while(q==1);
+[e $ == _q -> 1 `i 1019  ]
+[e :U 1018 ]
+"122
+}
+[e :U 1016 ]
+[; ;Main.c: 122: }
+[; ;Main.c: 125: if(key=='B'){
+"125
+[e $ ! == -> _key `ui -> 66 `ui 1021  ]
+{
+[; ;Main.c: 126: q=1;
+"126
+[e = _q -> 1 `i ]
+[; ;Main.c: 127: Lcd_Init();
+"127
+[e ( _Lcd_Init ..  ]
+[; ;Main.c: 128: Lcd_Cmd(1);
 "128
-[e = . . _TRISCbits 1 2 -> -> 0 `i `uc ]
-[v F7639 `i ~T0 @X0 -> 50 `i s ]
-[i F7639
-:U ..
+[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
+[; ;Main.c: 129: Lcd_Cmd(12);
 "129
--> 4 `i
--> 8 `i
--> 12 `i
--> 16 `i
--> 20 `i
--> 24 `i
--> 28 `i
--> 32 `i
+[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
+[; ;Main.c: 130: Lcd_Out2(1,1,"B.-Senal 2");
 "130
--> 36 `i
--> 40 `i
--> 44 `i
--> 48 `i
--> 52 `i
--> 56 `i
--> 60 `i
--> 64 `i
+[e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> :s 27C `*uc ]
+[; ;Main.c: 131: int_teclado();
 "131
--> 68 `i
--> 72 `i
--> 76 `i
--> 80 `i
--> 84 `i
--> 88 `i
--> 92 `i
--> 96 `i
+[e ( _int_teclado ..  ]
+[; ;Main.c: 132: key=Recuperar();
 "132
--> 100 `i
--> 96 `i
--> 92 `i
--> 88 `i
--> 84 `i
--> 80 `i
--> 76 `i
--> 72 `i
+[e = _key ( _Recuperar ..  ]
+[; ;Main.c: 133: do{
 "133
--> 68 `i
--> 64 `i
--> 60 `i
--> 56 `i
--> 52 `i
--> 48 `i
--> 44 `i
--> 40 `i
-"134
--> 36 `i
--> 32 `i
--> 28 `i
--> 24 `i
--> 20 `i
--> 16 `i
--> 12 `i
--> 8 `i
-"135
--> 4 `i
--> 0 `i
-..
-]
-"129
-[v _valoresSeno `i ~T0 @X0 -> 50 `i a ]
-[; ;Main.c: 129: int valoresSeno [50]= {4,8,12,16,20,24,28,32,
-[; ;Main.c: 130: 36,40,44,48,52,56,60,64,
-[; ;Main.c: 131: 68,72,76,80,84,88,92,96,
-[; ;Main.c: 132: 100,96,92,88,84,80,76,72,
-[; ;Main.c: 133: 68,64,60,56,52,48,44,40,
-[; ;Main.c: 134: 36,32,28,24,20,16,12,8,
-[; ;Main.c: 135: 4,0};
-"135
-[e = _valoresSeno F7639 ]
-"136
-[v _i `i ~T0 @X0 1 a ]
-[v _j `i ~T0 @X0 1 a ]
-[v _k `i ~T0 @X0 1 a ]
-[; ;Main.c: 136: int i, j,k;
-[; ;Main.c: 137: for (i=0;i<50;i++){
-"137
-{
-[e = _i -> 0 `i ]
-[e $ < _i -> 50 `i 1023  ]
-[e $U 1024  ]
-[e :U 1023 ]
-{
-[; ;Main.c: 138: valoresSeno [i]=valoresSeno [i];
-"138
-[e = *U + &U _valoresSeno * -> -> _i `ui `ux -> -> # *U &U _valoresSeno `ui `ux *U + &U _valoresSeno * -> -> _i `ui `ux -> -> # *U &U _valoresSeno `ui `ux ]
-"139
-}
-"137
-[e ++ _i -> 1 `i ]
-[e $ < _i -> 50 `i 1023  ]
 [e :U 1024 ]
-"139
+{
+[; ;Main.c: 134: TRIANGULAR_GENERAR_2();
+"134
+[e ( _TRIANGULAR_GENERAR_2 ..  ]
+[; ;Main.c: 135: key=Recuperar();
+"135
+[e = _key ( _Recuperar ..  ]
+[; ;Main.c: 136: if(key=='*'){q=0;}
+"136
+[e $ ! == -> _key `ui -> 42 `ui 1025  ]
+{
+[e = _q -> 0 `i ]
 }
-[; ;Main.c: 139: }
-[; ;Main.c: 140: while(1){
+[e :U 1025 ]
+"137
+}
+[; ;Main.c: 137: }while(q==1);
+[e $ == _q -> 1 `i 1024  ]
+[e :U 1023 ]
+"138
+}
+[e :U 1021 ]
+[; ;Main.c: 138: }
+[; ;Main.c: 140: if(key=='C'){
 "140
-[e :U 1027 ]
+[e $ ! == -> _key `ui -> 67 `ui 1026  ]
 {
-[; ;Main.c: 141: for (i=0;i<50;i++){
+[; ;Main.c: 141: q=1;
 "141
-{
-[e = _i -> 0 `i ]
-[e $ < _i -> 50 `i 1029  ]
-[e $U 1030  ]
+[e = _q -> 1 `i ]
+[; ;Main.c: 142: Lcd_Init();
+"142
+[e ( _Lcd_Init ..  ]
+[; ;Main.c: 143: Lcd_Cmd(1);
+"143
+[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
+[; ;Main.c: 144: Lcd_Cmd(12);
+"144
+[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
+[; ;Main.c: 145: Lcd_Out2(1,1,"C.-Senal 3");
+"145
+[e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> :s 28C `*uc ]
+[; ;Main.c: 146: int_teclado();
+"146
+[e ( _int_teclado ..  ]
+[; ;Main.c: 147: key=Recuperar();
+"147
+[e = _key ( _Recuperar ..  ]
+[; ;Main.c: 148: do{
+"148
 [e :U 1029 ]
 {
-[; ;Main.c: 142: for (j=0;j<valoresSeno[i];j++){
-"142
-{
-[e = _j -> 0 `i ]
-[e $U 1035  ]
-[e :U 1032 ]
-{
-[; ;Main.c: 143: PORTCbits.RC2=1;
-"143
-[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
-"144
-}
-"142
-[e ++ _j -> 1 `i ]
-[e :U 1035 ]
-[e $ < _j *U + &U _valoresSeno * -> -> _i `ui `ux -> -> # *U &U _valoresSeno `ui `ux 1032  ]
-[e :U 1033 ]
-"144
-}
-[; ;Main.c: 144: }
-[; ;Main.c: 145: k=100-valoresSeno[i];
-"145
-[e = _k - -> 100 `i *U + &U _valoresSeno * -> -> _i `ui `ux -> -> # *U &U _valoresSeno `ui `ux ]
-[; ;Main.c: 146: for (j=0;j<k;j++){
-"146
-{
-[e = _j -> 0 `i ]
-[e $U 1039  ]
-[e :U 1036 ]
-{
-[; ;Main.c: 147: PORTCbits.RC2=0;
-"147
-[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-"148
-}
-"146
-[e ++ _j -> 1 `i ]
-[e :U 1039 ]
-[e $ < _j _k 1036  ]
-[e :U 1037 ]
-"148
-}
+[; ;Main.c: 149: TRIANGULAR_GENERAR_3();
 "149
-}
-"141
-[e ++ _i -> 1 `i ]
-[e $ < _i -> 50 `i 1029  ]
-[e :U 1030 ]
-"149
-}
+[e ( _TRIANGULAR_GENERAR_3 ..  ]
+[; ;Main.c: 150: key=Recuperar();
 "150
+[e = _key ( _Recuperar ..  ]
+[; ;Main.c: 151: if(key=='*'){q=0;}
+"151
+[e $ ! == -> _key `ui -> 42 `ui 1030  ]
+{
+[e = _q -> 0 `i ]
+}
+[e :U 1030 ]
+"152
+}
+[; ;Main.c: 152: }while(q==1);
+[e $ == _q -> 1 `i 1029  ]
+[e :U 1028 ]
+"153
 }
 [e :U 1026 ]
-"140
-[e $U 1027  ]
-[e :U 1028 ]
-[; ;Main.c: 148: }
-[; ;Main.c: 149: }
-[; ;Main.c: 150: } _delay((unsigned long)((100)*(4000000/4000.0)));
-"150
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 151: _delay((unsigned long)((100)*(4000000/4000.0)));
-"151
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 152: _delay((unsigned long)((100)*(4000000/4000.0)));
-"152
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 153: _delay((unsigned long)((100)*(4000000/4000.0)));
-"153
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 154: _delay((unsigned long)((100)*(4000000/4000.0)));
-"154
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 155: _delay((unsigned long)((100)*(4000000/4000.0)));
+[; ;Main.c: 153: }
+[; ;Main.c: 155: if(key=='D'){w=0;}
 "155
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 156: _delay((unsigned long)((100)*(4000000/4000.0)));
+[e $ ! == -> _key `ui -> 68 `ui 1031  ]
+{
+[e = _w -> 0 `i ]
+}
+[e :U 1031 ]
 "156
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 157: key=Recuperar();
+}
+[; ;Main.c: 156: }while(w==1);
+[e $ == _w -> 1 `i 1015  ]
+[e :U 1014 ]
 "157
-[e = _key ( _Recuperar ..  ]
-[; ;Main.c: 158: _delay((unsigned long)((100)*(4000000/4000.0)));
-"158
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 159: _delay((unsigned long)((100)*(4000000/4000.0)));
-"159
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 160: _delay((unsigned long)((100)*(4000000/4000.0)));
-"160
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 161: _delay((unsigned long)((100)*(4000000/4000.0)));
-"161
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 162: _delay((unsigned long)((100)*(4000000/4000.0)));
+}
+[e :U 1012 ]
+[; ;Main.c: 157: }
+[; ;Main.c: 162: if(key=='B'){
 "162
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 163: _delay((unsigned long)((100)*(4000000/4000.0)));
+[e $ ! == -> _key `ui -> 66 `ui 1032  ]
+{
+[; ;Main.c: 163: w=1;
 "163
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 164: _delay((unsigned long)((100)*(4000000/4000.0)));
+[e = _w -> 1 `i ]
+[; ;Main.c: 164: Lcd_Init();
 "164
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 165: key=Recuperar();
+[e ( _Lcd_Init ..  ]
+[; ;Main.c: 165: Lcd_Cmd(1);
 "165
-[e = _key ( _Recuperar ..  ]
-[; ;Main.c: 166: if(key=='*'){q=0;}
+[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
+[; ;Main.c: 166: Lcd_Cmd(12);
 "166
+[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
+[; ;Main.c: 167: int_teclado();
+"167
+[e ( _int_teclado ..  ]
+[; ;Main.c: 168: key=Recuperar();
+"168
+[e = _key ( _Recuperar ..  ]
+[; ;Main.c: 169: do{
+"169
+[e :U 1035 ]
+{
+[; ;Main.c: 170: Lcd_Init();
+"170
+[e ( _Lcd_Init ..  ]
+[; ;Main.c: 171: Lcd_Cmd(1);
+"171
+[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
+[; ;Main.c: 172: Lcd_Cmd(12);
+"172
+[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
+[; ;Main.c: 173: Lcd_Out2(1,1,"A.-Senal 1");
+"173
+[e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> :s 29C `*uc ]
+[; ;Main.c: 174: Lcd_Out2(2,1,"B.-Señal 2");
+"174
+[e ( _Lcd_Out2 (3 , , -> -> 2 `i `uc -> -> 1 `i `uc -> :s 30C `*uc ]
+[; ;Main.c: 175: tm_1s();
+"175
+[e ( _tm_1s ..  ]
+[; ;Main.c: 176: Lcd_Cmd(1);
+"176
+[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
+[; ;Main.c: 177: Lcd_Cmd(12);
+"177
+[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
+[; ;Main.c: 178: Lcd_Out2(1,1,"C.-Senal 3");
+"178
+[e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> :s 31C `*uc ]
+[; ;Main.c: 179: tm_1s();
+"179
+[e ( _tm_1s ..  ]
+[; ;Main.c: 180: key = Recuperar();
+"180
+[e = _key ( _Recuperar ..  ]
+[; ;Main.c: 182: if(key=='A'){
+"182
+[e $ ! == -> _key `ui -> 65 `ui 1036  ]
+{
+[; ;Main.c: 183: q=1;
+"183
+[e = _q -> 1 `i ]
+[; ;Main.c: 184: Lcd_Init();
+"184
+[e ( _Lcd_Init ..  ]
+[; ;Main.c: 185: Lcd_Cmd(1);
+"185
+[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
+[; ;Main.c: 186: Lcd_Cmd(12);
+"186
+[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
+[; ;Main.c: 187: Lcd_Out2(1,1,"A.-Senal 1");
+"187
+[e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> :s 32C `*uc ]
+[; ;Main.c: 188: int_teclado();
+"188
+[e ( _int_teclado ..  ]
+[; ;Main.c: 189: key=Recuperar();
+"189
+[e = _key ( _Recuperar ..  ]
+[; ;Main.c: 190: do{
+"190
+[e :U 1039 ]
+{
+[; ;Main.c: 191: SENO_GENERAR_1();
+"191
+[e ( _SENO_GENERAR_1 ..  ]
+[; ;Main.c: 192: key=Recuperar();
+"192
+[e = _key ( _Recuperar ..  ]
+[; ;Main.c: 193: if(key=='*'){q=0;}
+"193
 [e $ ! == -> _key `ui -> 42 `ui 1040  ]
 {
 [e = _q -> 0 `i ]
 }
 [e :U 1040 ]
-"167
-}
-[; ;Main.c: 167: }while(q==1);
-[e $ == _q -> 1 `i 1022  ]
-[e :U 1021 ]
-"168
-}
-[e :U 1019 ]
-[; ;Main.c: 168: }
-[; ;Main.c: 169: if(key=='D'){w=0;}
-"169
-[e $ ! == -> _key `ui -> 68 `ui 1041  ]
-{
-[e = _w -> 0 `i ]
-}
-[e :U 1041 ]
-"170
-}
-[; ;Main.c: 170: }while(w==1);
-[e $ == _w -> 1 `i 1018  ]
-[e :U 1017 ]
-"171
-}
-[e :U 1015 ]
-[; ;Main.c: 171: }
-[; ;Main.c: 175: if(key=='B'){
-"175
-[e $ ! == -> _key `ui -> 66 `ui 1042  ]
-{
-[; ;Main.c: 176: w=1;
-"176
-[e = _w -> 1 `i ]
-[; ;Main.c: 177: Lcd_Init();
-"177
-[e ( _Lcd_Init ..  ]
-[; ;Main.c: 178: Lcd_Cmd(1);
-"178
-[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
-[; ;Main.c: 179: Lcd_Cmd(12);
-"179
-[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
-[; ;Main.c: 180: int_teclado();
-"180
-[e ( _int_teclado ..  ]
-[; ;Main.c: 181: key=Recuperar();
-"181
-[e = _key ( _Recuperar ..  ]
-[; ;Main.c: 182: do{
-"182
-[e :U 1045 ]
-{
-[; ;Main.c: 183: Lcd_Init();
-"183
-[e ( _Lcd_Init ..  ]
-[; ;Main.c: 184: Lcd_Cmd(1);
-"184
-[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
-[; ;Main.c: 185: Lcd_Cmd(12);
-"185
-[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
-[; ;Main.c: 186: Lcd_Out2(1,1,"A.-Senal 1");
-"186
-[e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> :s 27C `*uc ]
-[; ;Main.c: 187: Lcd_Out2(2,1,"B.-Señal 2");
-"187
-[e ( _Lcd_Out2 (3 , , -> -> 2 `i `uc -> -> 1 `i `uc -> :s 28C `*uc ]
-[; ;Main.c: 188: _delay((unsigned long)((100)*(4000000/4000.0)));
-"188
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 189: _delay((unsigned long)((100)*(4000000/4000.0)));
-"189
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 190: key = Recuperar();
-"190
-[e = _key ( _Recuperar ..  ]
-[; ;Main.c: 191: Lcd_Init();
-"191
-[e ( _Lcd_Init ..  ]
-[; ;Main.c: 192: Lcd_Cmd(1);
-"192
-[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
-[; ;Main.c: 193: Lcd_Cmd(12);
-"193
-[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
-[; ;Main.c: 194: Lcd_Out2(1,1,"C.-Senal 3");
 "194
-[e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> :s 29C `*uc ]
-[; ;Main.c: 195: _delay((unsigned long)((100)*(4000000/4000.0)));
+}
+[; ;Main.c: 194: }while(q==1);
+[e $ == _q -> 1 `i 1039  ]
+[e :U 1038 ]
 "195
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 196: _delay((unsigned long)((100)*(4000000/4000.0)));
-"196
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 197: key = Recuperar();
-"197
-[e = _key ( _Recuperar ..  ]
-[; ;Main.c: 198: if(key=='A'){
+}
+[e :U 1036 ]
+[; ;Main.c: 195: }
+[; ;Main.c: 198: if(key=='B'){
 "198
-[e $ ! == -> _key `ui -> 65 `ui 1046  ]
+[e $ ! == -> _key `ui -> 66 `ui 1041  ]
 {
 [; ;Main.c: 199: q=1;
 "199
@@ -8663,492 +8426,511 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Main.c: 202: Lcd_Cmd(12);
 "202
 [e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
-[; ;Main.c: 203: int_teclado();
+[; ;Main.c: 203: Lcd_Out2(1,1,"B.-Senal 2");
 "203
-[e ( _int_teclado ..  ]
-[; ;Main.c: 204: key=Recuperar();
+[e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> :s 33C `*uc ]
+[; ;Main.c: 204: int_teclado();
 "204
-[e = _key ( _Recuperar ..  ]
-[; ;Main.c: 205: do{
+[e ( _int_teclado ..  ]
+[; ;Main.c: 205: key=Recuperar();
 "205
+[e = _key ( _Recuperar ..  ]
+[; ;Main.c: 206: do{
+"206
+[e :U 1044 ]
+{
+[; ;Main.c: 207: SENO_GENERAR_2();
+"207
+[e ( _SENO_GENERAR_2 ..  ]
+[; ;Main.c: 208: key=Recuperar();
+"208
+[e = _key ( _Recuperar ..  ]
+[; ;Main.c: 209: if(key=='*'){q=0;}
+"209
+[e $ ! == -> _key `ui -> 42 `ui 1045  ]
+{
+[e = _q -> 0 `i ]
+}
+[e :U 1045 ]
+"210
+}
+[; ;Main.c: 210: }while(q==1);
+[e $ == _q -> 1 `i 1044  ]
+[e :U 1043 ]
+"211
+}
+[e :U 1041 ]
+[; ;Main.c: 211: }
+[; ;Main.c: 213: if(key=='C'){
+"213
+[e $ ! == -> _key `ui -> 67 `ui 1046  ]
+{
+[; ;Main.c: 214: q=1;
+"214
+[e = _q -> 1 `i ]
+[; ;Main.c: 215: Lcd_Init();
+"215
+[e ( _Lcd_Init ..  ]
+[; ;Main.c: 216: Lcd_Cmd(1);
+"216
+[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
+[; ;Main.c: 217: Lcd_Cmd(12);
+"217
+[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
+[; ;Main.c: 218: Lcd_Out2(1,1,"C.-Senal 3");
+"218
+[e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> :s 34C `*uc ]
+[; ;Main.c: 219: int_teclado();
+"219
+[e ( _int_teclado ..  ]
+[; ;Main.c: 220: key=Recuperar();
+"220
+[e = _key ( _Recuperar ..  ]
+[; ;Main.c: 221: do{
+"221
 [e :U 1049 ]
 {
-[; ;Main.c: 206: Lcd_Init();
-"206
-[e ( _Lcd_Init ..  ]
-[; ;Main.c: 207: Lcd_Cmd(1);
-"207
-[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
-[; ;Main.c: 208: Lcd_Cmd(12);
-"208
-[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
-[; ;Main.c: 209: Lcd_Out2(1,1,"Señal 1");
-"209
-[e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> :s 30C `*uc ]
-[; ;Main.c: 210: _delay((unsigned long)((100)*(4000000/4000.0)));
-"210
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 211: key=Recuperar();
-"211
+[; ;Main.c: 222: SENO_GENERAR_3();
+"222
+[e ( _SENO_GENERAR_3 ..  ]
+[; ;Main.c: 223: key=Recuperar();
+"223
 [e = _key ( _Recuperar ..  ]
-[; ;Main.c: 212: if(key=='*'){q=0;}
-"212
+[; ;Main.c: 224: if(key=='*'){q=0;}
+"224
 [e $ ! == -> _key `ui -> 42 `ui 1050  ]
 {
 [e = _q -> 0 `i ]
 }
 [e :U 1050 ]
-"213
+"225
 }
-[; ;Main.c: 213: }while(q==1);
+[; ;Main.c: 225: }while(q==1);
 [e $ == _q -> 1 `i 1049  ]
 [e :U 1048 ]
-"214
+"226
 }
 [e :U 1046 ]
-[; ;Main.c: 214: }
-[; ;Main.c: 215: if(key=='D'){w=0;}
-"215
+[; ;Main.c: 226: }
+[; ;Main.c: 228: if(key=='D'){w=0;}
+"228
 [e $ ! == -> _key `ui -> 68 `ui 1051  ]
 {
 [e = _w -> 0 `i ]
 }
 [e :U 1051 ]
-"216
+"229
 }
-[; ;Main.c: 216: }while(w==1);
-[e $ == _w -> 1 `i 1045  ]
-[e :U 1044 ]
-"217
+[; ;Main.c: 229: }while(w==1);
+[e $ == _w -> 1 `i 1035  ]
+[e :U 1034 ]
+"230
 }
-[e :U 1042 ]
-[; ;Main.c: 217: }
-[; ;Main.c: 219: if(key=='A'){
-"219
+[e :U 1032 ]
+[; ;Main.c: 230: }
+[; ;Main.c: 233: if(key=='A'){
+"233
 [e $ ! == -> _key `ui -> 65 `ui 1052  ]
 {
-[; ;Main.c: 220: w=1;
-"220
+[; ;Main.c: 234: w=1;
+"234
 [e = _w -> 1 `i ]
-[; ;Main.c: 221: Lcd_Init();
-"221
-[e ( _Lcd_Init ..  ]
-[; ;Main.c: 222: Lcd_Cmd(1);
-"222
-[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
-[; ;Main.c: 223: Lcd_Cmd(12);
-"223
-[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
-[; ;Main.c: 224: int_teclado();
-"224
-[e ( _int_teclado ..  ]
-[; ;Main.c: 225: key=Recuperar();
-"225
-[e = _key ( _Recuperar ..  ]
-[; ;Main.c: 226: do{
-"226
+[; ;Main.c: 236: do{
+"236
 [e :U 1055 ]
 {
-[; ;Main.c: 227: Lcd_Init();
-"227
-[e ( _Lcd_Init ..  ]
-[; ;Main.c: 228: Lcd_Cmd(1);
-"228
-[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
-[; ;Main.c: 229: Lcd_Cmd(12);
-"229
-[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
-[; ;Main.c: 230: Lcd_Out2(1,1,"1.-Datos");
-"230
-[e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> :s 31C `*uc ]
-[; ;Main.c: 231: Lcd_Out2(2,1,"2.-Comenzar");
-"231
-[e ( _Lcd_Out2 (3 , , -> -> 2 `i `uc -> -> 1 `i `uc -> :s 32C `*uc ]
-[; ;Main.c: 232: _delay((unsigned long)((100)*(4000000/4000.0)));
-"232
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 233: _delay((unsigned long)((100)*(4000000/4000.0)));
-"233
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 234: key=Recuperar();
-"234
-[e = _key ( _Recuperar ..  ]
-[; ;Main.c: 235: if(key=='1') {
-"235
-[e $ ! == -> _key `ui -> 49 `ui 1056  ]
-{
-[; ;Main.c: 236: r=1;
-"236
-[e = _r -> 1 `i ]
-[; ;Main.c: 237: do{
+[; ;Main.c: 237: Lcd_Init();
 "237
-[e :U 1059 ]
-{
+[e ( _Lcd_Init ..  ]
 [; ;Main.c: 238: Lcd_Cmd(1);
 "238
 [e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
 [; ;Main.c: 239: Lcd_Cmd(12);
 "239
 [e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
-[; ;Main.c: 240: Lcd_Out2(1,1,"1.-Frecuencia");
+[; ;Main.c: 240: Lcd_Out2(1,1,"1.-Datos");
 "240
-[e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> :s 33C `*uc ]
-[; ;Main.c: 241: Lcd_Out2(2,1,"2.-Ciclo");
+[e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> :s 35C `*uc ]
+[; ;Main.c: 241: Lcd_Out2(2,1,"2.-Comenzar");
 "241
-[e ( _Lcd_Out2 (3 , , -> -> 2 `i `uc -> -> 1 `i `uc -> :s 34C `*uc ]
-[; ;Main.c: 242: _delay((unsigned long)((100)*(4000000/4000.0)));
+[e ( _Lcd_Out2 (3 , , -> -> 2 `i `uc -> -> 1 `i `uc -> :s 36C `*uc ]
+[; ;Main.c: 242: tm_1s();
 "242
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 243: _delay((unsigned long)((100)*(4000000/4000.0)));
+[e ( _tm_1s ..  ]
+[; ;Main.c: 243: key=Recuperar();
 "243
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 244: key=Recuperar();
-"244
 [e = _key ( _Recuperar ..  ]
-[; ;Main.c: 245: if(key=='1'){
-"245
-[e $ ! == -> _key `ui -> 49 `ui 1060  ]
+[; ;Main.c: 244: if(key=='1') {
+"244
+[e $ ! == -> _key `ui -> 49 `ui 1056  ]
 {
+[; ;Main.c: 245: r=1;
+"245
+[e = _r -> 1 `i ]
+[; ;Main.c: 246: do{
 "246
-[v _zx `i ~T0 @X0 1 a ]
-[; ;Main.c: 246: int zx=1;
-[e = _zx -> 1 `i ]
-[; ;Main.c: 247: do{
+[e :U 1059 ]
+{
+[; ;Main.c: 247: Lcd_Cmd(1);
 "247
+[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
+[; ;Main.c: 248: Lcd_Cmd(12);
+"248
+[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
+[; ;Main.c: 249: Lcd_Out2(1,1,"A.-Frecuencia");
+"249
+[e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> :s 37C `*uc ]
+[; ;Main.c: 250: Lcd_Out2(2,1,"B.-Ciclo");
+"250
+[e ( _Lcd_Out2 (3 , , -> -> 2 `i `uc -> -> 1 `i `uc -> :s 38C `*uc ]
+[; ;Main.c: 251: tm_1s();
+"251
+[e ( _tm_1s ..  ]
+[; ;Main.c: 252: key=Recuperar();
+"252
+[e = _key ( _Recuperar ..  ]
+[; ;Main.c: 253: if(key=='A'){
+"253
+[e $ ! == -> _key `ui -> 65 `ui 1060  ]
+{
+"254
+[v _zx `i ~T0 @X0 1 a ]
+[; ;Main.c: 254: int zx=1;
+[e = _zx -> 1 `i ]
+[; ;Main.c: 255: do{
+"255
 [e :U 1063 ]
 {
-[; ;Main.c: 248: Frecuencia(frecuencia);
-"248
+[; ;Main.c: 256: Frecuencia(frecuencia);
+"256
 [e ( _Frecuencia (1 &U _frecuencia ]
-[; ;Main.c: 249: Imprimir_pantalla(frecuencia);
-"249
+[; ;Main.c: 257: Imprimir_pantalla(frecuencia);
+"257
 [e ( _Imprimir_pantalla (1 &U _frecuencia ]
-[; ;Main.c: 250: s=atoi(frecuencia);
-"250
+[; ;Main.c: 258: s=atoi(frecuencia);
+"258
 [e = _s -> ( _atoi (1 -> &U _frecuencia `*Cuc `ui ]
-[; ;Main.c: 251: key=Recuperar();
-"251
+[; ;Main.c: 259: key=Recuperar();
+"259
 [e = _key ( _Recuperar ..  ]
-[; ;Main.c: 252: if(key=='#'){
-"252
+[; ;Main.c: 260: if(key=='#'){
+"260
 [e $ ! == -> _key `ui -> 35 `ui 1064  ]
 {
-[; ;Main.c: 253: zx=0;
-"253
+[; ;Main.c: 261: zx=0;
+"261
 [e = _zx -> 0 `i ]
-"254
+"262
 }
 [e :U 1064 ]
-"255
+"263
 }
-[; ;Main.c: 254: }
-[; ;Main.c: 255: }while(zx==1);
+[; ;Main.c: 262: }
+[; ;Main.c: 263: }while(zx==1);
 [e $ == _zx -> 1 `i 1063  ]
 [e :U 1062 ]
-"256
+"264
 }
 [e :U 1060 ]
-[; ;Main.c: 256: }
-[; ;Main.c: 257: if(key=='2'){
-"257
-[e $ ! == -> _key `ui -> 50 `ui 1065  ]
+[; ;Main.c: 264: }
+[; ;Main.c: 265: if(key=='B'){
+"265
+[e $ ! == -> _key `ui -> 66 `ui 1065  ]
 {
-"258
+"266
 [v _zx `i ~T0 @X0 1 a ]
-[; ;Main.c: 258: int zx=1;
+[; ;Main.c: 266: int zx=1;
 [e = _zx -> 1 `i ]
-[; ;Main.c: 259: do{
-"259
+[; ;Main.c: 267: do{
+"267
 [e :U 1068 ]
 {
-[; ;Main.c: 260: Ciclo(ciclo);
-"260
+[; ;Main.c: 268: Ciclo(ciclo);
+"268
 [e ( _Ciclo (1 &U _ciclo ]
-[; ;Main.c: 261: Imprimir_pantalla(ciclo);
-"261
+[; ;Main.c: 269: Imprimir_pantalla(ciclo);
+"269
 [e ( _Imprimir_pantalla (1 &U _ciclo ]
-[; ;Main.c: 262: t=atoi(ciclo);
-"262
+[; ;Main.c: 270: t=atoi(ciclo);
+"270
 [e = _t -> ( _atoi (1 -> &U _ciclo `*Cuc `ui ]
-[; ;Main.c: 263: key=Recuperar();
-"263
+[; ;Main.c: 271: key=Recuperar();
+"271
 [e = _key ( _Recuperar ..  ]
-[; ;Main.c: 264: if(key=='#'){
-"264
+[; ;Main.c: 272: if(key=='#'){
+"272
 [e $ ! == -> _key `ui -> 35 `ui 1069  ]
 {
-[; ;Main.c: 265: zx=0;
-"265
+[; ;Main.c: 273: zx=0;
+"273
 [e = _zx -> 0 `i ]
-"266
+"274
 }
 [e :U 1069 ]
-"267
+"275
 }
-[; ;Main.c: 266: }
-[; ;Main.c: 267: }while(zx==1);
+[; ;Main.c: 274: }
+[; ;Main.c: 275: }while(zx==1);
 [e $ == _zx -> 1 `i 1068  ]
 [e :U 1067 ]
-"268
+"276
 }
 [e :U 1065 ]
-[; ;Main.c: 268: }
-[; ;Main.c: 269: if(key=='*'){
-"269
+[; ;Main.c: 276: }
+[; ;Main.c: 277: if(key=='*'){
+"277
 [e $ ! == -> _key `ui -> 42 `ui 1070  ]
 {
-[; ;Main.c: 270: r=0;
-"270
+[; ;Main.c: 278: r=0;
+"278
 [e = _r -> 0 `i ]
-"271
+"279
 }
 [e :U 1070 ]
-"272
+"280
 }
-[; ;Main.c: 271: }
-[; ;Main.c: 272: }while(r==1);
+[; ;Main.c: 279: }
+[; ;Main.c: 280: }while(r==1);
 [e $ == _r -> 1 `i 1059  ]
 [e :U 1058 ]
-"273
+"281
 }
 [e :U 1056 ]
-[; ;Main.c: 273: }
-[; ;Main.c: 276: if(key=='2') {
-"276
+[; ;Main.c: 281: }
+[; ;Main.c: 284: if(key=='2') {
+"284
 [e $ ! == -> _key `ui -> 50 `ui 1071  ]
 {
-[; ;Main.c: 277: Lcd_Init();
-"277
-[e ( _Lcd_Init ..  ]
-[; ;Main.c: 278: Lcd_Cmd(1);
-"278
-[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
-[; ;Main.c: 279: Lcd_Cmd(12);
-"279
-[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
-[; ;Main.c: 280: Lcd_Out2(1,1,"Fre: ");
-"280
-[e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> :s 35C `*uc ]
-[; ;Main.c: 281: Lcd_Out2(1,13,"Hz");
-"281
-[e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 13 `i `uc -> :s 36C `*uc ]
-[; ;Main.c: 283: cantidad= Conv_Entero(s,cadena);
-"283
-[e = _cantidad -> ( _Conv_Entero (2 , -> _s `l &U _cadena `uc ]
-[; ;Main.c: 285: Lcd_Out(1,8,cadena);
+[; ;Main.c: 285: Lcd_Init();
 "285
-[e ( _Lcd_Out (3 , , -> -> 1 `i `uc -> -> 8 `i `uc -> &U _cadena `*Cuc ]
-[; ;Main.c: 286: Lcd_Out2(2,1,"Ciclo: ");
+[e ( _Lcd_Init ..  ]
+[; ;Main.c: 286: Lcd_Cmd(1);
 "286
-[e ( _Lcd_Out2 (3 , , -> -> 2 `i `uc -> -> 1 `i `uc -> :s 37C `*uc ]
-[; ;Main.c: 287: Lcd_Out2(2,12,"%");
+[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
+[; ;Main.c: 287: Lcd_Cmd(12);
 "287
-[e ( _Lcd_Out2 (3 , , -> -> 2 `i `uc -> -> 12 `i `uc -> :s 38C `*uc ]
-[; ;Main.c: 289: cantidad= Conv_Entero(t,cadena);
+[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
+[; ;Main.c: 288: Lcd_Out2(1,1,"Fre: ");
+"288
+[e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> :s 39C `*uc ]
+[; ;Main.c: 289: Lcd_Out2(1,13,"Hz");
 "289
-[e = _cantidad -> ( _Conv_Entero (2 , -> _t `l &U _cadena `uc ]
-[; ;Main.c: 291: Lcd_Out(2,8,cadena);
+[e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 13 `i `uc -> :s 40C `*uc ]
+[; ;Main.c: 291: cantidad= Conv_Entero(s,cadena);
 "291
-[e ( _Lcd_Out (3 , , -> -> 2 `i `uc -> -> 8 `i `uc -> &U _cadena `*Cuc ]
-[; ;Main.c: 292: PWM_generar(t,s);
-"292
-[e ( _PWM_generar (2 , _t _s ]
-[; ;Main.c: 294: key=Recuperar();
+[e = _cantidad -> ( _Conv_Entero (2 , -> _s `l &U _cadena `uc ]
+[; ;Main.c: 293: Lcd_Out(1,8,cadena);
+"293
+[e ( _Lcd_Out (3 , , -> -> 1 `i `uc -> -> 8 `i `uc -> &U _cadena `*Cuc ]
+[; ;Main.c: 294: Lcd_Out2(2,1,"Ciclo: ");
 "294
-[e = _key ( _Recuperar ..  ]
-[; ;Main.c: 295: r=1;
+[e ( _Lcd_Out2 (3 , , -> -> 2 `i `uc -> -> 1 `i `uc -> :s 41C `*uc ]
+[; ;Main.c: 295: Lcd_Out2(2,12,"%");
 "295
+[e ( _Lcd_Out2 (3 , , -> -> 2 `i `uc -> -> 12 `i `uc -> :s 42C `*uc ]
+[; ;Main.c: 297: cantidad= Conv_Entero(t,cadena);
+"297
+[e = _cantidad -> ( _Conv_Entero (2 , -> _t `l &U _cadena `uc ]
+[; ;Main.c: 299: Lcd_Out(2,8,cadena);
+"299
+[e ( _Lcd_Out (3 , , -> -> 2 `i `uc -> -> 8 `i `uc -> &U _cadena `*Cuc ]
+[; ;Main.c: 300: PWM_generar(t,s);
+"300
+[e ( _PWM_generar (2 , _t _s ]
+[; ;Main.c: 302: key=Recuperar();
+"302
+[e = _key ( _Recuperar ..  ]
+[; ;Main.c: 303: r=1;
+"303
 [e = _r -> 1 `i ]
-[; ;Main.c: 296: do{
-"296
+[; ;Main.c: 304: do{
+"304
 [e :U 1074 ]
 {
-[; ;Main.c: 298: key=Recuperar();
-"298
+[; ;Main.c: 306: key=Recuperar();
+"306
 [e = _key ( _Recuperar ..  ]
-[; ;Main.c: 301: if(key=='*'){
-"301
+[; ;Main.c: 309: if(key=='*'){
+"309
 [e $ ! == -> _key `ui -> 42 `ui 1075  ]
 {
-[; ;Main.c: 303: r=0;
-"303
+[; ;Main.c: 311: r=0;
+"311
 [e = _r -> 0 `i ]
-"304
+"312
 }
 [e :U 1075 ]
-"306
+"314
 }
-[; ;Main.c: 304: }
-[; ;Main.c: 306: }while(r==1);
+[; ;Main.c: 312: }
+[; ;Main.c: 314: }while(r==1);
 [e $ == _r -> 1 `i 1074  ]
 [e :U 1073 ]
-"307
-}
-[e :U 1071 ]
-[; ;Main.c: 307: }
-[; ;Main.c: 310: if(key=='D')
-"310
-[e $ ! == -> _key `ui -> 68 `ui 1076  ]
-[; ;Main.c: 311: {
-"311
-{
-[; ;Main.c: 313: Lcd_Cmd(1);
-"313
-[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
-[; ;Main.c: 314: w=0;
-"314
-[e = _w -> 0 `i ]
 "315
 }
-[e :U 1076 ]
-"316
-}
+[e :U 1071 ]
 [; ;Main.c: 315: }
-[; ;Main.c: 316: }while(w==1);
-[e $ == _w -> 1 `i 1055  ]
-[e :U 1054 ]
+[; ;Main.c: 318: if(key=='D')
 "318
-}
-[e :U 1052 ]
-[; ;Main.c: 318: };
-[; ;Main.c: 320: if(key=='#'){
-"320
-[e $ ! == -> _key `ui -> 35 `ui 1077  ]
+[e $ ! == -> _key `ui -> 68 `ui 1076  ]
+[; ;Main.c: 319: {
+"319
 {
 [; ;Main.c: 321: Lcd_Cmd(1);
 "321
 [e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
-[; ;Main.c: 322: q=0;
+[; ;Main.c: 322: w=0;
 "322
-[e = _q -> 0 `i ]
+[e = _w -> 0 `i ]
 "323
 }
-[e :U 1077 ]
+[e :U 1076 ]
 "324
 }
 [; ;Main.c: 323: }
-[; ;Main.c: 324: }while(q==1);
-[e $ == _q -> 1 `i 1014  ]
-[e :U 1013 ]
-"325
+[; ;Main.c: 324: }while(w==1);
+[e $ == _w -> 1 `i 1055  ]
+[e :U 1054 ]
+"326
 }
-[e :U 1011 ]
-[; ;Main.c: 325: }
-[; ;Main.c: 327: if(key=='0'){
-"327
+[e :U 1052 ]
+[; ;Main.c: 326: };
+[; ;Main.c: 328: if(key=='#'){
+"328
+[e $ ! == -> _key `ui -> 35 `ui 1077  ]
+{
+[; ;Main.c: 329: Lcd_Cmd(1);
+"329
+[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
+[; ;Main.c: 330: q=0;
+"330
+[e = _q -> 0 `i ]
+"331
+}
+[e :U 1077 ]
+"332
+}
+[; ;Main.c: 331: }
+[; ;Main.c: 332: }while(q==1);
+[e $ == _q -> 1 `i 1011  ]
+[e :U 1010 ]
+"333
+}
+[e :U 1008 ]
+[; ;Main.c: 333: }
+[; ;Main.c: 335: if(key=='0'){
+"335
 [e $ ! == -> _key `ui -> 48 `ui 1078  ]
 {
-[; ;Main.c: 328: q=1;
-"328
-[e = _q -> 1 `i ]
-[; ;Main.c: 329: Lcd_Init();
-"329
-[e ( _Lcd_Init ..  ]
-[; ;Main.c: 330: Lcd_Cmd(1);
-"330
-[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
-[; ;Main.c: 331: Lcd_Cmd(12);
-"331
-[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
-[; ;Main.c: 332: Lcd_Out2(1,1,"Adios");
-"332
-[e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> :s 39C `*uc ]
-[; ;Main.c: 334: _delay((unsigned long)((100)*(4000000/4000.0)));
-"334
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 335: _delay((unsigned long)((100)*(4000000/4000.0)));
-"335
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 336: _delay((unsigned long)((100)*(4000000/4000.0)));
+[; ;Main.c: 336: q=1;
 "336
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;Main.c: 337: key = Recuperar();
+[e = _q -> 1 `i ]
+[; ;Main.c: 337: Lcd_Init();
 "337
-[e = _key ( _Recuperar ..  ]
-[; ;Main.c: 338: do{
+[e ( _Lcd_Init ..  ]
+[; ;Main.c: 338: Lcd_Cmd(1);
 "338
+[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
+[; ;Main.c: 339: Lcd_Cmd(12);
+"339
+[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
+[; ;Main.c: 340: Lcd_Out2(1,1,"Adios");
+"340
+[e ( _Lcd_Out2 (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> :s 43C `*uc ]
+[; ;Main.c: 341: tm_1s();
+"341
+[e ( _tm_1s ..  ]
+[; ;Main.c: 342: key = Recuperar();
+"342
+[e = _key ( _Recuperar ..  ]
+[; ;Main.c: 343: do{
+"343
 [e :U 1081 ]
 {
-[; ;Main.c: 339: Lcd_Init();
-"339
+[; ;Main.c: 344: Lcd_Init();
+"344
 [e ( _Lcd_Init ..  ]
-[; ;Main.c: 340: Lcd_Cmd(1);
-"340
-[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
-[; ;Main.c: 341: Lcd_Cmd(12);
-"341
-[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
-[; ;Main.c: 342: Lcd_Cmd(0);
-"342
-[e ( _Lcd_Cmd (1 -> -> 0 `i `uc ]
-[; ;Main.c: 343: key = Recuperar();
-"343
-[e = _key ( _Recuperar ..  ]
-[; ;Main.c: 345: if(key=='*'){
+[; ;Main.c: 345: Lcd_Cmd(1);
 "345
+[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
+[; ;Main.c: 346: Lcd_Cmd(12);
+"346
+[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
+[; ;Main.c: 347: Lcd_Cmd(0);
+"347
+[e ( _Lcd_Cmd (1 -> -> 0 `i `uc ]
+[; ;Main.c: 348: key = Recuperar();
+"348
+[e = _key ( _Recuperar ..  ]
+[; ;Main.c: 350: if(key=='*'){
+"350
 [e $ ! == -> _key `ui -> 42 `ui 1082  ]
 {
-[; ;Main.c: 346: q=0;
-"346
+[; ;Main.c: 351: q=0;
+"351
 [e = _q -> 0 `i ]
-"347
-}
-[e :U 1082 ]
-"348
-}
-[; ;Main.c: 347: }
-[; ;Main.c: 348: }while(q==1);
-[e $ == _q -> 1 `i 1081  ]
-[e :U 1080 ]
-"350
-}
-[e :U 1078 ]
 "352
 }
-[; ;Main.c: 350: }
-[; ;Main.c: 352: }while(1);
-[e $ != -> 1 `i -> 0 `i 1005  ]
-[e :U 1004 ]
-[; ;Main.c: 353: }
+[e :U 1082 ]
 "353
-[e :UE 1002 ]
+}
+[; ;Main.c: 352: }
+[; ;Main.c: 353: }while(q==1);
+[e $ == _q -> 1 `i 1081  ]
+[e :U 1080 ]
+"355
+}
+[e :U 1078 ]
+"357
+}
+[; ;Main.c: 355: }
+[; ;Main.c: 357: }while(1);
+[e $ != -> 1 `i -> 0 `i 1002  ]
+[e :U 1001 ]
+[; ;Main.c: 358: }
+"358
+[e :UE 999 ]
 }
 [a 13C 72 122 0 ]
-[a 36C 72 122 0 ]
+[a 40C 72 122 0 ]
 [a 8C 49 46 45 68 97 116 111 115 0 ]
-[a 31C 49 46 45 68 97 116 111 115 0 ]
-[a 39C 65 100 105 111 115 0 ]
+[a 35C 49 46 45 68 97 116 111 115 0 ]
+[a 43C 65 100 105 111 115 0 ]
 [a 4C 71 101 110 101 114 97 100 111 114 0 ]
 [a 19C 71 101 110 101 114 97 100 111 114 0 ]
 [a 9C 50 46 45 67 111 109 101 110 122 97 114 0 ]
-[a 32C 50 46 45 67 111 109 101 110 122 97 114 0 ]
+[a 36C 50 46 45 67 111 109 101 110 122 97 114 0 ]
 [a 7C 67 46 45 84 114 105 97 110 103 117 108 97 114 0 ]
 [a 22C 67 46 45 84 114 105 97 110 103 117 108 97 114 0 ]
 [a 2C 71 117 97 110 97 106 117 97 116 111 0 ]
 [a 17C 71 117 97 110 97 106 117 97 116 111 0 ]
 [a 11C 73 110 103 114 101 115 101 32 99 105 99 108 111 0 ]
-[a 34C 50 46 45 67 105 99 108 111 0 ]
+[a 38C 66 46 45 67 105 99 108 111 0 ]
 [a 3C 80 114 111 121 101 99 116 111 32 70 105 110 97 108 0 ]
 [a 18C 80 114 111 121 101 99 116 111 32 70 105 110 97 108 0 ]
 [a 6C 66 46 45 83 101 110 111 105 100 97 108 0 ]
 [a 21C 66 46 45 83 101 110 111 105 100 97 108 0 ]
-[a 33C 49 46 45 70 114 101 99 117 101 110 99 105 97 0 ]
+[a 37C 65 46 45 70 114 101 99 117 101 110 99 105 97 0 ]
 [a 5C 65 46 45 67 117 97 100 114 97 100 97 0 ]
 [a 20C 65 46 45 67 117 97 100 114 97 100 97 0 ]
 [a 10C 70 114 101 99 117 101 110 99 105 97 58 0 ]
 [a 25C 67 46 45 83 101 110 97 108 32 51 0 ]
-[a 29C 67 46 45 83 101 110 97 108 32 51 0 ]
+[a 28C 67 46 45 83 101 110 97 108 32 51 0 ]
+[a 31C 67 46 45 83 101 110 97 108 32 51 0 ]
+[a 34C 67 46 45 83 101 110 97 108 32 51 0 ]
+[a 27C 66 46 45 83 101 110 97 108 32 50 0 ]
+[a 33C 66 46 45 83 101 110 97 108 32 50 0 ]
 [a 24C 66 46 45 83 101 241 97 108 32 50 0 ]
-[a 28C 66 46 45 83 101 241 97 108 32 50 0 ]
+[a 30C 66 46 45 83 101 241 97 108 32 50 0 ]
 [a 23C 65 46 45 83 101 110 97 108 32 49 0 ]
-[a 27C 65 46 45 83 101 110 97 108 32 49 0 ]
-[a 26C 83 101 241 97 108 32 49 0 ]
-[a 30C 83 101 241 97 108 32 49 0 ]
+[a 26C 65 46 45 83 101 110 97 108 32 49 0 ]
+[a 29C 65 46 45 83 101 110 97 108 32 49 0 ]
+[a 32C 65 46 45 83 101 110 97 108 32 49 0 ]
 [a 15C 37 0 ]
-[a 38C 37 0 ]
+[a 42C 37 0 ]
 [a 1C 85 110 105 118 101 114 115 105 100 97 100 32 100 101 32 0 ]
 [a 16C 85 110 105 118 101 114 115 105 100 97 100 32 100 101 32 0 ]
 [a 14C 67 105 99 108 111 58 32 0 ]
-[a 37C 67 105 99 108 111 58 32 0 ]
+[a 41C 67 105 99 108 111 58 32 0 ]
 [a 12C 70 114 101 58 32 0 ]
-[a 35C 70 114 101 58 32 0 ]
+[a 39C 70 114 101 58 32 0 ]

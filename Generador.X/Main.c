@@ -16,6 +16,7 @@
 #include "teclado.h"
 #include "pantalla.h"
 #include "Funciones.h"
+#include "Triangular.h"
 
 #define XTAL_FREQ 4000000 //8Mhz
 
@@ -28,6 +29,7 @@ void main() {
 //PWM_generar(50,5000);
 char key;    
 //OSCCON= 0b01100011;        //configuración del Oscilador
+OSCCON=0b01010111;
 ANSELD=0;
 Lcd_Init();
 int_teclado();
@@ -47,17 +49,16 @@ do{
       Lcd_Cmd(LCD_CLEAR);
       Lcd_Cmd(LCD_CURSOR_OFF);
       Lcd_Out2(1,1,"Universidad de ");
-      __delay_ms(100);
+      tm_1s();
       Lcd_Out2(2,3,"Guanajuato");
-      __delay_ms(100);
+      tm_1s();
       Lcd_Cmd(LCD_CLEAR);
       Lcd_Out2(1,1,"Proyecto Final");
       Lcd_Out2(2,3,"Generador");
-      __delay_ms(100);
+      tm_1s();
       Lcd_Cmd(LCD_CLEAR);
-      Lcd_Cmd(LCD_CURSOR_OFF);
-      __delay_ms(50);
-      __delay_ms(50);
+      Lcd_Cmd(LCD_CURSOR_OFF); 
+      __delay_ms(100);
       key=Recuperar();
       if(key=='D' | key=='0'){
           q=0;
@@ -75,17 +76,13 @@ if(key=='D'){
             Lcd_Cmd(LCD_CURSOR_OFF);
             Lcd_Out2(1,1,"A.-Cuadrada");
             Lcd_Out2(2,1,"B.-Senoidal");
-            __delay_ms(100);
-            __delay_ms(100);
-            __delay_ms(100);
+            tm_1s();
             key = Recuperar();  
             Lcd_Init();
             Lcd_Cmd(LCD_CLEAR);
             Lcd_Cmd(LCD_CURSOR_OFF);
             Lcd_Out2(1,1,"C.-Triangular");
-            __delay_ms(100);
-            __delay_ms(100);
-            __delay_ms(100);
+            tm_1s();
             key = Recuperar();  
        
       //menu triangular
@@ -102,77 +99,67 @@ if(key=='D'){
             Lcd_Cmd(LCD_CURSOR_OFF);
             Lcd_Out2(1,1,"A.-Senal 1");
             Lcd_Out2(2,1,"B.-Señal 2");
-            __delay_ms(100);
-            __delay_ms(100);
-            key = Recuperar();  
-            Lcd_Init();
+            tm_1s();
             Lcd_Cmd(LCD_CLEAR);
             Lcd_Cmd(LCD_CURSOR_OFF);
             Lcd_Out2(1,1,"C.-Senal 3");
-            __delay_ms(100);
-            __delay_ms(100);
-            key = Recuperar();  
+            tm_1s();
+            key = Recuperar();
+            
          if(key=='A'){
-             q=1;
-             Lcd_Init();
-             Lcd_Cmd(LCD_CLEAR);
-             Lcd_Cmd(LCD_CURSOR_OFF);
-             int_teclado();  
-             key=Recuperar();
-             do{
+            q=1;
             Lcd_Init();
             Lcd_Cmd(LCD_CLEAR);
             Lcd_Cmd(LCD_CURSOR_OFF);
-            Lcd_Out2(1,1,"Señal 1");
-      
-            TRISCbits.RC2=0; 
-    int valoresSeno [50]= {4,8,12,16,20,24,28,32,
-36,40,44,48,52,56,60,64,
-68,72,76,80,84,88,92,96,
-100,96,92,88,84,80,76,72,
-68,64,60,56,52,48,44,40,
-36,32,28,24,20,16,12,8,
-4,0};
-    int i, j,k;
-    for (i=0;i<50;i++){    
-        valoresSeno [i]=valoresSeno [i];
-    }
-    while(1){
-        for (i=0;i<50;i++){    
-            for (j=0;j<valoresSeno[i];j++){
-                PORTCbits.RC2=1;
-            }
-            k=100-valoresSeno[i];
-            for (j=0;j<k;j++){
-                PORTCbits.RC2=0;
-            }
-        }
-    }      __delay_ms(100);
-           __delay_ms(100);
-           __delay_ms(100);
-           __delay_ms(100);
-          __delay_ms(100);
-          __delay_ms(100);
-           __delay_ms(100);
-            key=Recuperar();
-            __delay_ms(100);
-           __delay_ms(100);
-           __delay_ms(100);
-           __delay_ms(100);
-          __delay_ms(100);
-          __delay_ms(100);
-           __delay_ms(100);
+            Lcd_Out2(1,1,"A.-Senal 1");
+             int_teclado();  
+             key=Recuperar();
+            do{
+            TRIANGULAR_GENERAR_1();
             key=Recuperar();
             if(key=='*'){q=0;} 
              }while(q==1);
          }    
+            
+            
+      if(key=='B'){
+            q=1;
+            Lcd_Init();
+            Lcd_Cmd(LCD_CLEAR);
+            Lcd_Cmd(LCD_CURSOR_OFF);
+            Lcd_Out2(1,1,"B.-Senal 2");
+             int_teclado();  
+             key=Recuperar();
+            do{
+            TRIANGULAR_GENERAR_2();
+            key=Recuperar();
+            if(key=='*'){q=0;} 
+             }while(q==1);
+         }      
+           
+            if(key=='C'){
+            q=1;
+            Lcd_Init();
+            Lcd_Cmd(LCD_CLEAR);
+            Lcd_Cmd(LCD_CURSOR_OFF);
+            Lcd_Out2(1,1,"C.-Senal 3");
+             int_teclado();  
+             key=Recuperar();
+            do{
+            TRIANGULAR_GENERAR_3();
+            key=Recuperar();
+            if(key=='*'){q=0;} 
+             }while(q==1);
+         }  
+            
          if(key=='D'){w=0;}
          }while(w==1);
      }   
+     
             
             
       //Menu seno      
-     if(key=='B'){
+        if(key=='B'){
         w=1;
         Lcd_Init();
         Lcd_Cmd(LCD_CLEAR);
@@ -185,76 +172,97 @@ if(key=='D'){
             Lcd_Cmd(LCD_CURSOR_OFF);
             Lcd_Out2(1,1,"A.-Senal 1");
             Lcd_Out2(2,1,"B.-Señal 2");
-            __delay_ms(100);
-            __delay_ms(100);
-            key = Recuperar();  
-            Lcd_Init();
+            tm_1s();
             Lcd_Cmd(LCD_CLEAR);
             Lcd_Cmd(LCD_CURSOR_OFF);
             Lcd_Out2(1,1,"C.-Senal 3");
-            __delay_ms(100);
-            __delay_ms(100);
-            key = Recuperar();  
+            tm_1s();
+            key = Recuperar();
+            
          if(key=='A'){
-             q=1;
-             Lcd_Init();
-             Lcd_Cmd(LCD_CLEAR);
-             Lcd_Cmd(LCD_CURSOR_OFF);
-             int_teclado();  
-             key=Recuperar();
-             do{
+            q=1;
             Lcd_Init();
             Lcd_Cmd(LCD_CLEAR);
             Lcd_Cmd(LCD_CURSOR_OFF);
-            Lcd_Out2(1,1,"Señal 1");
-            __delay_ms(100);
+            Lcd_Out2(1,1,"A.-Senal 1");
+            int_teclado();  
+            key=Recuperar();
+            do{
+            SENO_GENERAR_1();
             key=Recuperar();
             if(key=='*'){q=0;} 
              }while(q==1);
          }    
+            
+            
+      if(key=='B'){
+            q=1;
+            Lcd_Init();
+            Lcd_Cmd(LCD_CLEAR);
+            Lcd_Cmd(LCD_CURSOR_OFF);
+            Lcd_Out2(1,1,"B.-Senal 2");
+             int_teclado();  
+             key=Recuperar();
+            do{
+            SENO_GENERAR_2();
+            key=Recuperar();
+            if(key=='*'){q=0;} 
+             }while(q==1);
+         }      
+           
+            if(key=='C'){
+            q=1;
+            Lcd_Init();
+            Lcd_Cmd(LCD_CLEAR);
+            Lcd_Cmd(LCD_CURSOR_OFF);
+            Lcd_Out2(1,1,"C.-Senal 3");
+             int_teclado();  
+             key=Recuperar();
+            do{
+            SENO_GENERAR_3();
+            key=Recuperar();
+            if(key=='*'){q=0;} 
+             }while(q==1);
+         }  
+            
          if(key=='D'){w=0;}
          }while(w==1);
-     }       
+     }   
+     
 // Menu del pwm
  if(key=='A'){
         w=1;
-        Lcd_Init();
-        Lcd_Cmd(LCD_CLEAR);
-        Lcd_Cmd(LCD_CURSOR_OFF);
-        int_teclado();  
-        key=Recuperar();
+
         do{
         Lcd_Init();
         Lcd_Cmd(LCD_CLEAR);
         Lcd_Cmd(LCD_CURSOR_OFF);
         Lcd_Out2(1,1,"1.-Datos");
         Lcd_Out2(2,1,"2.-Comenzar");
-       __delay_ms(100);
-       __delay_ms(100);
+        tm_1s();
         key=Recuperar();          
   if(key=='1') { 
         r=1;
-            do{
-         Lcd_Cmd(LCD_CLEAR);
+        do{
+        Lcd_Cmd(LCD_CLEAR);
         Lcd_Cmd(LCD_CURSOR_OFF);
-        Lcd_Out2(1,1,"1.-Frecuencia");
-        Lcd_Out2(2,1,"2.-Ciclo");
-        __delay_ms(100);
-        __delay_ms(100);
+        Lcd_Out2(1,1,"A.-Frecuencia");
+        Lcd_Out2(2,1,"B.-Ciclo");
+        tm_1s();
         key=Recuperar();         
-        if(key=='1'){
+        if(key=='A'){
             int zx=1;
             do{
                 Frecuencia(frecuencia);
                 Imprimir_pantalla(frecuencia);
                 s=atoi(frecuencia);
                 key=Recuperar();  
-              if(key=='#'){
+             if(key=='#'){
                   zx=0;
               }  
             }while(zx==1);
         }
-     if(key=='2'){
+     if(key=='B'){
             int zx=1;
             do{
                 Ciclo(ciclo);
@@ -330,10 +338,7 @@ if(key=='D'){
         Lcd_Cmd(LCD_CLEAR);
         Lcd_Cmd(LCD_CURSOR_OFF);
         Lcd_Out2(1,1,"Adios");
-        
-        __delay_ms(100);
-        __delay_ms(100);
-        __delay_ms(100);
+        tm_1s();
         key = Recuperar();
         do{
         Lcd_Init();

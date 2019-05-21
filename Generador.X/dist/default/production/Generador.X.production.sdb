@@ -131,13 +131,7 @@
 [v ___aslmul __aslmul `(ul  1 e 4 0 ]
 "12 /home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/conversion.c
 [v _Conv_Entero Conv_Entero `(i  1 e 2 0 ]
-"6 /home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/delays.h
-[v _tm_100 tm_100 `(v  1 e 0 0 ]
-"11
-[v _tm_200 tm_200 `(v  1 e 0 0 ]
-"19
-[v _tm_500 tm_500 `(v  1 e 0 0 ]
-"35
+"4 /home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/delays.h
 [v _tm_1s tm_1s `(v  1 e 0 0 ]
 "23 /home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h
 [v _Presentacion Presentacion `(v  1 e 0 0 ]
@@ -157,7 +151,7 @@
 [v _Prueba1 Prueba1 `(v  1 e 0 0 ]
 "151
 [v _Prueba2 Prueba2 `(v  1 e 0 0 ]
-"27 /home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c
+"28 /home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c
 [v _main main `(v  1 e 0 0 ]
 "48 /home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/pantalla.h
 [v _Lcd_Init Lcd_Init `(v  1 e 0 0 ]
@@ -174,24 +168,66 @@
 "10 /home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c
 [v _PWM_generar PWM_generar `(v  1 e 0 0 ]
 "8 /home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/SENO.c
-[v _SENO_GENERAR_100 SENO_GENERAR_100 `(v  1 e 0 0 ]
-"31
-[v _SENO_GENERAR_50 SENO_GENERAR_50 `(v  1 e 0 0 ]
-"54
-[v _SENO_GENERAR_20 SENO_GENERAR_20 `(v  1 e 0 0 ]
+[v _SENO_GENERAR_1 SENO_GENERAR_1 `(v  1 e 0 0 ]
+"34
+[v _SENO_GENERAR_2 SENO_GENERAR_2 `(v  1 e 0 0 ]
+"61
+[v _SENO_GENERAR_3 SENO_GENERAR_3 `(v  1 e 0 0 ]
 "13 /home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c
 [v _int_teclado int_teclado `(v  1 e 0 0 ]
 "19
 [v _Teclado Teclado `(uc  1 e 1 0 ]
 "56
 [v _Recuperar Recuperar `(uc  1 e 1 0 ]
+"10 /home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Triangular.c
+[v _TRIANGULAR_GENERAR_1 TRIANGULAR_GENERAR_1 `(v  1 e 0 0 ]
+"37
+[v _TRIANGULAR_GENERAR_2 TRIANGULAR_GENERAR_2 `(v  1 e 0 0 ]
+"64
+[v _TRIANGULAR_GENERAR_3 TRIANGULAR_GENERAR_3 `(v  1 e 0 0 ]
 "267 /opt/microchip/xc8/v1.32/include/pic18f45k50.h
 [v _ANSELB ANSELB `VEuc  1 e 1 @3932 ]
+"316
+[v _ANSELC ANSELC `VEuc  1 e 1 @3933 ]
 "349
 [v _ANSELD ANSELD `VEuc  1 e 1 @3934 ]
+[s S653 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+"3192
+[s S662 . 1 `uc 1 AN0 1 0 :1:0 
+`uc 1 AN1 1 0 :1:1 
+`uc 1 AN2 1 0 :1:2 
+`uc 1 AN3 1 0 :1:3 
+`uc 1 T0CKI 1 0 :1:4 
+`uc 1 AN4 1 0 :1:5 
+`uc 1 OSC2 1 0 :1:6 
+]
+[s S670 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 VREFM 1 0 :1:2 
+`uc 1 VREFP 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 LVDIN 1 0 :1:5 
+]
+[s S676 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 HLVDIN 1 0 :1:5 
+]
+[s S679 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 RJPU 1 0 :1:7 
+]
+[s S682 . 1 `uc 1 ULPWUIN 1 0 :1:0 
+]
+[u S684 . 1 `S653 1 . 1 0 `S662 1 . 1 0 `S670 1 . 1 0 `S676 1 . 1 0 `S679 1 . 1 0 `S682 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES684  1 e 1 @3968 ]
 "3301
 [v _PORTB PORTB `VEuc  1 e 1 @3969 ]
-[s S535 . 1 `uc 1 RB0 1 0 :1:0 
+[s S449 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -201,7 +237,7 @@
 `uc 1 RB7 1 0 :1:7 
 ]
 "3331
-[s S544 . 1 `uc 1 INT0 1 0 :1:0 
+[s S458 . 1 `uc 1 INT0 1 0 :1:0 
 `uc 1 INT1 1 0 :1:1 
 `uc 1 INT2 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
@@ -209,12 +245,12 @@
 `uc 1 PGC 1 0 :1:6 
 `uc 1 PGD 1 0 :1:7 
 ]
-[s S552 . 1 `uc 1 . 1 0 :3:0 
+[s S466 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 CCP2_PA2 1 0 :1:3 
 ]
-[u S555 . 1 `S535 1 . 1 0 `S544 1 . 1 0 `S552 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES555  1 e 1 @3969 ]
-[s S198 . 1 `uc 1 RC0 1 0 :1:0 
+[u S469 . 1 `S449 1 . 1 0 `S458 1 . 1 0 `S466 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES469  1 e 1 @3969 ]
+[s S574 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -224,34 +260,34 @@
 `uc 1 RC7 1 0 :1:7 
 ]
 "3459
-[s S207 . 1 `uc 1 T1OSO 1 0 :1:0 
+[s S583 . 1 `uc 1 T1OSO 1 0 :1:0 
 `uc 1 T1OSI 1 0 :1:1 
 `uc 1 CCP1 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 TX 1 0 :1:6 
 `uc 1 RX 1 0 :1:7 
 ]
-[s S214 . 1 `uc 1 T13CKI 1 0 :1:0 
+[s S590 . 1 `uc 1 T13CKI 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 P1A 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 CK 1 0 :1:6 
 `uc 1 DT 1 0 :1:7 
 ]
-[s S221 . 1 `uc 1 . 1 0 :1:0 
+[s S597 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 CCP2 1 0 :1:1 
 ]
-[s S224 . 1 `uc 1 . 1 0 :2:0 
+[s S600 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PA1 1 0 :1:2 
 ]
-[s S227 . 1 `uc 1 . 1 0 :1:0 
+[s S603 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 PA2 1 0 :1:1 
 ]
-[s S230 . 1 `uc 1 . 1 0 :3:0 
+[s S606 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 RC3 1 0 :1:3 
 ]
-[u S233 . 1 `S198 1 . 1 0 `S207 1 . 1 0 `S214 1 . 1 0 `S221 1 . 1 0 `S224 1 . 1 0 `S227 1 . 1 0 `S230 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES233  1 e 1 @3970 ]
+[u S609 . 1 `S574 1 . 1 0 `S583 1 . 1 0 `S590 1 . 1 0 `S597 1 . 1 0 `S600 1 . 1 0 `S603 1 . 1 0 `S606 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES609  1 e 1 @3970 ]
 [s S36 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
@@ -278,9 +314,29 @@
 [v _PORTDbits PORTDbits `VES88  1 e 1 @3971 ]
 "5035
 [v _CCPR2L CCPR2L `VEuc  1 e 1 @3984 ]
+[s S512 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+`uc 1 TRISA7 1 0 :1:7 
+]
+"5104
+[s S521 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+]
+[u S529 . 1 `S512 1 . 1 0 `S521 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES529  1 e 1 @3986 ]
 "5282
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
-[s S155 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S314 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -290,18 +346,18 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "5537
-[s S164 . 1 `uc 1 RC0 1 0 :1:0 
+[s S323 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 RC6 1 0 :1:6 
 `uc 1 RC7 1 0 :1:7 
 ]
-[s S171 . 1 `uc 1 . 1 0 :3:0 
+[s S330 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 TRISC3 1 0 :1:3 
 ]
-[u S174 . 1 `S155 1 . 1 0 `S164 1 . 1 0 `S171 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES174  1 e 1 @3988 ]
+[u S333 . 1 `S314 1 . 1 0 `S323 1 . 1 0 `S330 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES333  1 e 1 @3988 ]
 [s S27 . 1 `uc 1 TRISD0 1 0 :1:0 
 `uc 1 TRISD1 1 0 :1:1 
 `uc 1 TRISD2 1 0 :1:2 
@@ -318,12 +374,12 @@
 [v _CCP2CON CCP2CON `VEuc  1 e 1 @3991 ]
 "9787
 [v _T2CON T2CON `VEuc  1 e 1 @4026 ]
-[s S454 . 1 `uc 1 T2CKPS 1 0 :2:0 
+[s S362 . 1 `uc 1 T2CKPS 1 0 :2:0 
 `uc 1 TMR2ON 1 0 :1:2 
 `uc 1 T2OUTPS 1 0 :4:3 
 ]
 "9808
-[s S458 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+[s S366 . 1 `uc 1 T2CKPS0 1 0 :1:0 
 `uc 1 T2CKPS1 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 T2OUTPS0 1 0 :1:3 
@@ -331,17 +387,19 @@
 `uc 1 T2OUTPS2 1 0 :1:5 
 `uc 1 T2OUTPS3 1 0 :1:6 
 ]
-[u S466 . 1 `S454 1 . 1 0 `S458 1 . 1 0 ]
-[v _T2CONbits T2CONbits `VES466  1 e 1 @4026 ]
+[u S374 . 1 `S362 1 . 1 0 `S366 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES374  1 e 1 @4026 ]
 "9857
 [v _PR2 PR2 `VEuc  1 e 1 @4027 ]
 "9876
 [v _TMR2 TMR2 `VEuc  1 e 1 @4028 ]
-[s S493 . 1 `uc 1 . 1 0 :7:0 
+"13104
+[v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
+[s S407 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 NOT_RBPU 1 0 :1:7 
 ]
 "13632
-[s S496 . 1 `uc 1 IOCIP 1 0 :1:0 
+[s S410 . 1 `uc 1 IOCIP 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 TMR0IP 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -350,13 +408,13 @@
 `uc 1 INTEDG0 1 0 :1:6 
 `uc 1 nRBPU 1 0 :1:7 
 ]
-[s S505 . 1 `uc 1 . 1 0 :2:0 
+[s S419 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T0IP 1 0 :1:2 
 `uc 1 . 1 0 :4:3 
 `uc 1 RBPU 1 0 :1:7 
 ]
-[u S510 . 1 `S493 1 . 1 0 `S496 1 . 1 0 `S505 1 . 1 0 ]
-[v _INTCON2bits INTCON2bits `VES510  1 e 1 @4081 ]
+[u S424 . 1 `S407 1 . 1 0 `S410 1 . 1 0 `S419 1 . 1 0 ]
+[v _INTCON2bits INTCON2bits `VES424  1 e 1 @4081 ]
 "17 /home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h
 [v _q q `i  1 e 2 0 ]
 [v _w w `i  1 e 2 0 ]
@@ -380,24 +438,16 @@
 [v _fila fila `uc  1 e 1 0 ]
 [v _cadena cadena `[10]uc  1 e 10 0 ]
 [v _cad cad `[10]uc  1 e 10 0 ]
-"27 /home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c
+"28 /home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Main.c
 [v _main main `(v  1 e 0 0 ]
 {
-"258
-[v main@zx_420 zx `i  1 a 2 104 ]
-"246
-[v main@zx zx `i  1 a 2 102 ]
-"129
-[v main@valoresSeno valoresSeno `[50]i  1 a 100 0 ]
-"136
-[v main@i i `i  1 a 2 108 ]
-[v main@j j `i  1 a 2 106 ]
-[v main@k k `i  1 a 2 100 ]
-"27
-[v main@key key `uc  1 a 1 110 ]
-"128
-[v main@F7639 F7639 `[50]i  1 s 100 F7639 ]
-"353
+"266
+[v main@zx_308 zx `i  1 a 2 62 ]
+"254
+[v main@zx zx `i  1 a 2 60 ]
+"28
+[v main@key key `uc  1 a 1 64 ]
+"358
 } 0
 "13 /home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/teclado.c
 [v _int_teclado int_teclado `(v  1 e 0 0 ]
@@ -433,6 +483,97 @@
 [v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
 [v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
 "53
+} 0
+"64 /home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Triangular.c
+[v _TRIANGULAR_GENERAR_3 TRIANGULAR_GENERAR_3 `(v  1 e 0 0 ]
+{
+"68
+[v TRIANGULAR_GENERAR_3@valoresSeno valoresSeno `[20]i  1 a 40 13 ]
+"69
+[v TRIANGULAR_GENERAR_3@i i `i  1 a 2 57 ]
+[v TRIANGULAR_GENERAR_3@j j `i  1 a 2 55 ]
+[v TRIANGULAR_GENERAR_3@k k `i  1 a 2 53 ]
+"67
+[v TRIANGULAR_GENERAR_3@F7364 F7364 `[20]i  1 s 40 F7364 ]
+"90
+} 0
+"37
+[v _TRIANGULAR_GENERAR_2 TRIANGULAR_GENERAR_2 `(v  1 e 0 0 ]
+{
+"41
+[v TRIANGULAR_GENERAR_2@valoresSeno valoresSeno `[20]i  1 a 40 13 ]
+"42
+[v TRIANGULAR_GENERAR_2@i i `i  1 a 2 57 ]
+[v TRIANGULAR_GENERAR_2@j j `i  1 a 2 55 ]
+[v TRIANGULAR_GENERAR_2@k k `i  1 a 2 53 ]
+"40
+[v TRIANGULAR_GENERAR_2@F7359 F7359 `[20]i  1 s 40 F7359 ]
+"63
+} 0
+"8 /opt/microchip/xc8/v1.32/sources/common/awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"11
+[v ___awdiv@quotient quotient `i  1 a 2 6 ]
+"12
+[v ___awdiv@sign sign `uc  1 a 1 5 ]
+[v ___awdiv@counter counter `uc  1 a 1 4 ]
+"8
+[v ___awdiv@dividend dividend `i  1 p 2 0 ]
+[v ___awdiv@divisor divisor `i  1 p 2 2 ]
+"42
+} 0
+"10 /home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Triangular.c
+[v _TRIANGULAR_GENERAR_1 TRIANGULAR_GENERAR_1 `(v  1 e 0 0 ]
+{
+"14
+[v TRIANGULAR_GENERAR_1@valoresSeno valoresSeno `[20]i  1 a 40 5 ]
+"15
+[v TRIANGULAR_GENERAR_1@i i `i  1 a 2 49 ]
+[v TRIANGULAR_GENERAR_1@j j `i  1 a 2 47 ]
+[v TRIANGULAR_GENERAR_1@k k `i  1 a 2 45 ]
+"13
+[v TRIANGULAR_GENERAR_1@F7354 F7354 `[20]i  1 s 40 F7354 ]
+"36
+} 0
+"61 /home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/SENO.c
+[v _SENO_GENERAR_3 SENO_GENERAR_3 `(v  1 e 0 0 ]
+{
+"66
+[v SENO_GENERAR_3@valoresSeno valoresSeno `[15]i  1 a 30 5 ]
+"67
+[v SENO_GENERAR_3@i i `i  1 a 2 39 ]
+[v SENO_GENERAR_3@j j `i  1 a 2 37 ]
+[v SENO_GENERAR_3@k k `i  1 a 2 35 ]
+"65
+[v SENO_GENERAR_3@F7364 F7364 `[15]i  1 s 30 F7364 ]
+"86
+} 0
+"34
+[v _SENO_GENERAR_2 SENO_GENERAR_2 `(v  1 e 0 0 ]
+{
+"39
+[v SENO_GENERAR_2@valoresSeno valoresSeno `[18]i  1 a 36 5 ]
+"40
+[v SENO_GENERAR_2@i i `i  1 a 2 45 ]
+[v SENO_GENERAR_2@j j `i  1 a 2 43 ]
+[v SENO_GENERAR_2@k k `i  1 a 2 41 ]
+"38
+[v SENO_GENERAR_2@F7359 F7359 `[18]i  1 s 36 F7359 ]
+"59
+} 0
+"8
+[v _SENO_GENERAR_1 SENO_GENERAR_1 `(v  1 e 0 0 ]
+{
+"13
+[v SENO_GENERAR_1@valoresSeno valoresSeno `[20]i  1 a 40 5 ]
+"14
+[v SENO_GENERAR_1@i i `i  1 a 2 49 ]
+[v SENO_GENERAR_1@j j `i  1 a 2 47 ]
+[v SENO_GENERAR_1@k k `i  1 a 2 45 ]
+"12
+[v SENO_GENERAR_1@F7354 F7354 `[20]i  1 s 40 F7354 ]
+"32
 } 0
 "10 /home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/PWM.c
 [v _PWM_generar PWM_generar `(v  1 e 0 0 ]
@@ -485,10 +626,10 @@
 [v Imprimir_pantalla@N N `*.39uc  1 p 2 8 ]
 "140
 } 0
-"35 /home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/delays.h
+"4 /home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/delays.h
 [v _tm_1s tm_1s `(v  1 e 0 0 ]
 {
-"63
+"18
 } 0
 "69 /home/francisco/Documentos/Tareas_ayuda/Proyecto_Mplab/Generador_de_señales/Generador.X/Funciones.h
 [v _Frecuencia Frecuencia `(v  1 e 0 0 ]

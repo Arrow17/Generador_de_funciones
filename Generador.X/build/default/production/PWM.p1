@@ -13,6 +13,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S353 . . . . ]
 "5537
 [v _TRISCbits `VS353 ~T0 @X0 0 e@3988 ]
+"316
+[v _ANSELC `Vuc ~T0 @X0 0 e@3933 ]
 "9787
 [v _T2CON `Vuc ~T0 @X0 0 e@4026 ]
 "9857
@@ -6736,6 +6738,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;PWM.c: 17: TRISCbits.RC1=0;
 "17
 [e = . . _TRISCbits 1 1 -> -> 0 `i `uc ]
+[; ;PWM.c: 18: ANSELC=0;
+"18
+[e = _ANSELC -> -> 0 `i `uc ]
 "19
 [v _prescalador `ui ~T0 @X0 1 a ]
 [; ;PWM.c: 19: unsigned int prescalador=1;

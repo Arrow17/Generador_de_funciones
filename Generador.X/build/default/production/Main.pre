@@ -8722,74 +8722,28 @@ int Conv_Entero(long long numero,char* conv);
 # 7 "PWM.h"
 void PWM_generar( unsigned int duty, unsigned int fpwm);
 
-# 2 "delays.h"
-void tm_100();
-void tm_200();
-void tm_500();
+# 3 "delays.h"
 void tm_1s();
-void tm_100(){
-_delay((unsigned long)((50)*(8000000/4000.0)));
-_delay((unsigned long)((50)*(8000000/4000.0)));
-}
-
-void tm_200(){
-_delay((unsigned long)((50)*(8000000/4000.0)));
-_delay((unsigned long)((50)*(8000000/4000.0)));
-_delay((unsigned long)((50)*(8000000/4000.0)));
-_delay((unsigned long)((50)*(8000000/4000.0)));
-
-}
-
-void tm_500(){
-_delay((unsigned long)((50)*(8000000/4000.0)));
-_delay((unsigned long)((50)*(8000000/4000.0)));
-_delay((unsigned long)((50)*(8000000/4000.0)));
-_delay((unsigned long)((50)*(8000000/4000.0)));
-
-_delay((unsigned long)((50)*(8000000/4000.0)));
-_delay((unsigned long)((50)*(8000000/4000.0)));
-_delay((unsigned long)((50)*(8000000/4000.0)));
-_delay((unsigned long)((50)*(8000000/4000.0)));
-
-_delay((unsigned long)((50)*(8000000/4000.0)));
-_delay((unsigned long)((50)*(8000000/4000.0)));
-
-}
-
 void tm_1s(){
-_delay((unsigned long)((50)*(8000000/4000.0)));
-_delay((unsigned long)((50)*(8000000/4000.0)));
-_delay((unsigned long)((50)*(8000000/4000.0)));
-_delay((unsigned long)((50)*(8000000/4000.0)));
+_delay((unsigned long)((100)*(4000000/4000.0)));
+_delay((unsigned long)((100)*(4000000/4000.0)));
+_delay((unsigned long)((100)*(4000000/4000.0)));
+_delay((unsigned long)((100)*(4000000/4000.0)));
+_delay((unsigned long)((100)*(4000000/4000.0)));
+_delay((unsigned long)((100)*(4000000/4000.0)));
+_delay((unsigned long)((100)*(4000000/4000.0)));
+_delay((unsigned long)((100)*(4000000/4000.0)));
+_delay((unsigned long)((100)*(4000000/4000.0)));
+_delay((unsigned long)((100)*(4000000/4000.0)));
 
-_delay((unsigned long)((50)*(8000000/4000.0)));
-_delay((unsigned long)((50)*(8000000/4000.0)));
-_delay((unsigned long)((50)*(8000000/4000.0)));
-_delay((unsigned long)((50)*(8000000/4000.0)));
-
-_delay((unsigned long)((50)*(8000000/4000.0)));
-_delay((unsigned long)((50)*(8000000/4000.0)));
-
-_delay((unsigned long)((50)*(8000000/4000.0)));
-_delay((unsigned long)((50)*(8000000/4000.0)));
-_delay((unsigned long)((50)*(8000000/4000.0)));
-_delay((unsigned long)((50)*(8000000/4000.0)));
-
-_delay((unsigned long)((50)*(8000000/4000.0)));
-_delay((unsigned long)((50)*(8000000/4000.0)));
-_delay((unsigned long)((50)*(8000000/4000.0)));
-_delay((unsigned long)((50)*(8000000/4000.0)));
-
-_delay((unsigned long)((50)*(8000000/4000.0)));
-_delay((unsigned long)((50)*(8000000/4000.0)));
 
 
 }
 
 # 7 "senoidal.h"
-void SENO_100();
-void SENO_50();
-void SENO_20();
+void SENO_GENERAR_1();
+void SENO_GENERAR_2();
+void SENO_GENERAR_3();
 
 # 10 "teclado.h"
 void int_teclado();
@@ -9096,7 +9050,12 @@ PWM_generar(t,s);
 
 }
 
-# 23 "Main.c"
+# 7 "Triangular.h"
+void TRIANGULAR_GENERAR_1();
+void TRIANGULAR_GENERAR_2();
+void TRIANGULAR_GENERAR_3();
+
+# 24 "Main.c"
 int q,w,e,r;
 
 
@@ -9105,6 +9064,7 @@ void main() {
 
 char key;
 
+OSCCON=0b01010111;
 ANSELD=0;
 Lcd_Init();
 int_teclado();
@@ -9124,17 +9084,16 @@ Lcd_Init();
 Lcd_Cmd(1);
 Lcd_Cmd(12);
 Lcd_Out2(1,1,"Universidad de ");
-_delay((unsigned long)((100)*(4000000/4000.0)));
+tm_1s();
 Lcd_Out2(2,3,"Guanajuato");
-_delay((unsigned long)((100)*(4000000/4000.0)));
+tm_1s();
 Lcd_Cmd(1);
 Lcd_Out2(1,1,"Proyecto Final");
 Lcd_Out2(2,3,"Generador");
-_delay((unsigned long)((100)*(4000000/4000.0)));
+tm_1s();
 Lcd_Cmd(1);
 Lcd_Cmd(12);
-_delay((unsigned long)((50)*(4000000/4000.0)));
-_delay((unsigned long)((50)*(4000000/4000.0)));
+_delay((unsigned long)((100)*(4000000/4000.0)));
 key=Recuperar();
 if(key=='D' | key=='0'){
 q=0;
@@ -9152,17 +9111,13 @@ Lcd_Cmd(1);
 Lcd_Cmd(12);
 Lcd_Out2(1,1,"A.-Cuadrada");
 Lcd_Out2(2,1,"B.-Senoidal");
-_delay((unsigned long)((100)*(4000000/4000.0)));
-_delay((unsigned long)((100)*(4000000/4000.0)));
-_delay((unsigned long)((100)*(4000000/4000.0)));
+tm_1s();
 key = Recuperar();
 Lcd_Init();
 Lcd_Cmd(1);
 Lcd_Cmd(12);
 Lcd_Out2(1,1,"C.-Triangular");
-_delay((unsigned long)((100)*(4000000/4000.0)));
-_delay((unsigned long)((100)*(4000000/4000.0)));
-_delay((unsigned long)((100)*(4000000/4000.0)));
+tm_1s();
 key = Recuperar();
 
 
@@ -9179,73 +9134,63 @@ Lcd_Cmd(1);
 Lcd_Cmd(12);
 Lcd_Out2(1,1,"A.-Senal 1");
 Lcd_Out2(2,1,"B.-Señal 2");
-_delay((unsigned long)((100)*(4000000/4000.0)));
-_delay((unsigned long)((100)*(4000000/4000.0)));
-key = Recuperar();
-Lcd_Init();
+tm_1s();
 Lcd_Cmd(1);
 Lcd_Cmd(12);
 Lcd_Out2(1,1,"C.-Senal 3");
-_delay((unsigned long)((100)*(4000000/4000.0)));
-_delay((unsigned long)((100)*(4000000/4000.0)));
+tm_1s();
 key = Recuperar();
+
 if(key=='A'){
 q=1;
 Lcd_Init();
 Lcd_Cmd(1);
 Lcd_Cmd(12);
+Lcd_Out2(1,1,"A.-Senal 1");
 int_teclado();
 key=Recuperar();
 do{
-Lcd_Init();
-Lcd_Cmd(1);
-Lcd_Cmd(12);
-Lcd_Out2(1,1,"Señal 1");
-
-TRISCbits.RC2=0;
-int valoresSeno [50]= {4,8,12,16,20,24,28,32,
-36,40,44,48,52,56,60,64,
-68,72,76,80,84,88,92,96,
-100,96,92,88,84,80,76,72,
-68,64,60,56,52,48,44,40,
-36,32,28,24,20,16,12,8,
-4,0};
-int i, j,k;
-for (i=0;i<50;i++){
-valoresSeno [i]=valoresSeno [i];
-}
-while(1){
-for (i=0;i<50;i++){
-for (j=0;j<valoresSeno[i];j++){
-PORTCbits.RC2=1;
-}
-k=100-valoresSeno[i];
-for (j=0;j<k;j++){
-PORTCbits.RC2=0;
-}
-}
-} _delay((unsigned long)((100)*(4000000/4000.0)));
-_delay((unsigned long)((100)*(4000000/4000.0)));
-_delay((unsigned long)((100)*(4000000/4000.0)));
-_delay((unsigned long)((100)*(4000000/4000.0)));
-_delay((unsigned long)((100)*(4000000/4000.0)));
-_delay((unsigned long)((100)*(4000000/4000.0)));
-_delay((unsigned long)((100)*(4000000/4000.0)));
-key=Recuperar();
-_delay((unsigned long)((100)*(4000000/4000.0)));
-_delay((unsigned long)((100)*(4000000/4000.0)));
-_delay((unsigned long)((100)*(4000000/4000.0)));
-_delay((unsigned long)((100)*(4000000/4000.0)));
-_delay((unsigned long)((100)*(4000000/4000.0)));
-_delay((unsigned long)((100)*(4000000/4000.0)));
-_delay((unsigned long)((100)*(4000000/4000.0)));
+TRIANGULAR_GENERAR_1();
 key=Recuperar();
 if(key=='*'){q=0;}
 }while(q==1);
 }
+
+
+if(key=='B'){
+q=1;
+Lcd_Init();
+Lcd_Cmd(1);
+Lcd_Cmd(12);
+Lcd_Out2(1,1,"B.-Senal 2");
+int_teclado();
+key=Recuperar();
+do{
+TRIANGULAR_GENERAR_2();
+key=Recuperar();
+if(key=='*'){q=0;}
+}while(q==1);
+}
+
+if(key=='C'){
+q=1;
+Lcd_Init();
+Lcd_Cmd(1);
+Lcd_Cmd(12);
+Lcd_Out2(1,1,"C.-Senal 3");
+int_teclado();
+key=Recuperar();
+do{
+TRIANGULAR_GENERAR_3();
+key=Recuperar();
+if(key=='*'){q=0;}
+}while(q==1);
+}
+
 if(key=='D'){w=0;}
 }while(w==1);
 }
+
 
 
 
@@ -9262,64 +9207,85 @@ Lcd_Cmd(1);
 Lcd_Cmd(12);
 Lcd_Out2(1,1,"A.-Senal 1");
 Lcd_Out2(2,1,"B.-Señal 2");
-_delay((unsigned long)((100)*(4000000/4000.0)));
-_delay((unsigned long)((100)*(4000000/4000.0)));
-key = Recuperar();
-Lcd_Init();
+tm_1s();
 Lcd_Cmd(1);
 Lcd_Cmd(12);
 Lcd_Out2(1,1,"C.-Senal 3");
-_delay((unsigned long)((100)*(4000000/4000.0)));
-_delay((unsigned long)((100)*(4000000/4000.0)));
+tm_1s();
 key = Recuperar();
+
 if(key=='A'){
 q=1;
 Lcd_Init();
 Lcd_Cmd(1);
 Lcd_Cmd(12);
+Lcd_Out2(1,1,"A.-Senal 1");
 int_teclado();
 key=Recuperar();
 do{
-Lcd_Init();
-Lcd_Cmd(1);
-Lcd_Cmd(12);
-Lcd_Out2(1,1,"Señal 1");
-_delay((unsigned long)((100)*(4000000/4000.0)));
+SENO_GENERAR_1();
 key=Recuperar();
 if(key=='*'){q=0;}
 }while(q==1);
 }
+
+
+if(key=='B'){
+q=1;
+Lcd_Init();
+Lcd_Cmd(1);
+Lcd_Cmd(12);
+Lcd_Out2(1,1,"B.-Senal 2");
+int_teclado();
+key=Recuperar();
+do{
+SENO_GENERAR_2();
+key=Recuperar();
+if(key=='*'){q=0;}
+}while(q==1);
+}
+
+if(key=='C'){
+q=1;
+Lcd_Init();
+Lcd_Cmd(1);
+Lcd_Cmd(12);
+Lcd_Out2(1,1,"C.-Senal 3");
+int_teclado();
+key=Recuperar();
+do{
+SENO_GENERAR_3();
+key=Recuperar();
+if(key=='*'){q=0;}
+}while(q==1);
+}
+
 if(key=='D'){w=0;}
 }while(w==1);
 }
 
+
 if(key=='A'){
 w=1;
-Lcd_Init();
-Lcd_Cmd(1);
-Lcd_Cmd(12);
-int_teclado();
-key=Recuperar();
+
 do{
 Lcd_Init();
 Lcd_Cmd(1);
 Lcd_Cmd(12);
 Lcd_Out2(1,1,"1.-Datos");
 Lcd_Out2(2,1,"2.-Comenzar");
-_delay((unsigned long)((100)*(4000000/4000.0)));
-_delay((unsigned long)((100)*(4000000/4000.0)));
+tm_1s();
 key=Recuperar();
 if(key=='1') {
 r=1;
 do{
 Lcd_Cmd(1);
 Lcd_Cmd(12);
-Lcd_Out2(1,1,"1.-Frecuencia");
-Lcd_Out2(2,1,"2.-Ciclo");
-_delay((unsigned long)((100)*(4000000/4000.0)));
-_delay((unsigned long)((100)*(4000000/4000.0)));
+Lcd_Out2(1,1,"A.-Frecuencia");
+Lcd_Out2(2,1,"B.-Ciclo");
+tm_1s();
 key=Recuperar();
-if(key=='1'){
+if(key=='A'){
 int zx=1;
 do{
 Frecuencia(frecuencia);
@@ -9331,7 +9297,7 @@ zx=0;
 }
 }while(zx==1);
 }
-if(key=='2'){
+if(key=='B'){
 int zx=1;
 do{
 Ciclo(ciclo);
@@ -9407,10 +9373,7 @@ Lcd_Init();
 Lcd_Cmd(1);
 Lcd_Cmd(12);
 Lcd_Out2(1,1,"Adios");
-
-_delay((unsigned long)((100)*(4000000/4000.0)));
-_delay((unsigned long)((100)*(4000000/4000.0)));
-_delay((unsigned long)((100)*(4000000/4000.0)));
+tm_1s();
 key = Recuperar();
 do{
 Lcd_Init();

@@ -15,7 +15,7 @@ void PWM_generar( unsigned int duty, unsigned int fpwm){
 
            
     TRISCbits.RC1=0;
-    
+    ANSELC=0;
     unsigned int prescalador=1;
     unsigned long PR2cal=_XTAL_FREQ;
     PR2cal=PR2cal/fpwm;

@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=Main.c PWM.c teclado.c SENO.c conversion.c
+SOURCEFILES_QUOTED_IF_SPACED=Main.c PWM.c teclado.c SENO.c conversion.c Triangular.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/Main.p1 ${OBJECTDIR}/PWM.p1 ${OBJECTDIR}/teclado.p1 ${OBJECTDIR}/SENO.p1 ${OBJECTDIR}/conversion.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/Main.p1.d ${OBJECTDIR}/PWM.p1.d ${OBJECTDIR}/teclado.p1.d ${OBJECTDIR}/SENO.p1.d ${OBJECTDIR}/conversion.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/Main.p1 ${OBJECTDIR}/PWM.p1 ${OBJECTDIR}/teclado.p1 ${OBJECTDIR}/SENO.p1 ${OBJECTDIR}/conversion.p1 ${OBJECTDIR}/Triangular.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/Main.p1.d ${OBJECTDIR}/PWM.p1.d ${OBJECTDIR}/teclado.p1.d ${OBJECTDIR}/SENO.p1.d ${OBJECTDIR}/conversion.p1.d ${OBJECTDIR}/Triangular.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/Main.p1 ${OBJECTDIR}/PWM.p1 ${OBJECTDIR}/teclado.p1 ${OBJECTDIR}/SENO.p1 ${OBJECTDIR}/conversion.p1
+OBJECTFILES=${OBJECTDIR}/Main.p1 ${OBJECTDIR}/PWM.p1 ${OBJECTDIR}/teclado.p1 ${OBJECTDIR}/SENO.p1 ${OBJECTDIR}/conversion.p1 ${OBJECTDIR}/Triangular.p1
 
 # Source Files
-SOURCEFILES=Main.c PWM.c teclado.c SENO.c conversion.c
+SOURCEFILES=Main.c PWM.c teclado.c SENO.c conversion.c Triangular.c
 
 
 CFLAGS=
@@ -133,6 +133,14 @@ ${OBJECTDIR}/conversion.p1: conversion.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/conversion.d ${OBJECTDIR}/conversion.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/conversion.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/Triangular.p1: Triangular.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Triangular.p1.d 
+	@${RM} ${OBJECTDIR}/Triangular.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1  --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/Triangular.p1 Triangular.c 
+	@-${MV} ${OBJECTDIR}/Triangular.d ${OBJECTDIR}/Triangular.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Triangular.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 else
 ${OBJECTDIR}/Main.p1: Main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -173,6 +181,14 @@ ${OBJECTDIR}/conversion.p1: conversion.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/conversion.p1 conversion.c 
 	@-${MV} ${OBJECTDIR}/conversion.d ${OBJECTDIR}/conversion.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/conversion.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/Triangular.p1: Triangular.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Triangular.p1.d 
+	@${RM} ${OBJECTDIR}/Triangular.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/Triangular.p1 Triangular.c 
+	@-${MV} ${OBJECTDIR}/Triangular.d ${OBJECTDIR}/Triangular.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Triangular.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 
